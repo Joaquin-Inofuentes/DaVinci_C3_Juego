@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6904722386697950704}
   - component: {fileID: 8236966880232318087}
   - component: {fileID: 3434105700595866134}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Mano Izq (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 6499065421251797764}
   - component: {fileID: 8392576709809790915}
   - component: {fileID: 935515690249112964}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ojo Izq (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 2262675387001213415}
   - component: {fileID: 3979975086814750623}
   - component: {fileID: 2014297223889349340}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Gorra arriba
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -260,7 +260,7 @@ GameObject:
   - component: {fileID: 1400932408376888053}
   - component: {fileID: 5034288817546581971}
   - component: {fileID: 2694098378416741200}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Mirilla (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -343,7 +343,7 @@ GameObject:
   - component: {fileID: 1469090177224682407}
   - component: {fileID: 6952028583454516858}
   - component: {fileID: 7023350946649839507}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ojo Der
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -426,7 +426,7 @@ GameObject:
   - component: {fileID: 5584054569362798118}
   - component: {fileID: 2829747172808596322}
   - component: {fileID: 6746144421574475973}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Mirilla (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -509,7 +509,7 @@ GameObject:
   - component: {fileID: 381783578392428919}
   - component: {fileID: 1052772885249678395}
   - component: {fileID: 793869564246499376}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Mano Izq
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -594,12 +594,10 @@ GameObject:
   - component: {fileID: 6535397418946965274}
   - component: {fileID: 1289897502474679376}
   - component: {fileID: 5263833319647774318}
-  - component: {fileID: 3599843931633217432}
-  - component: {fileID: 3398527833921072015}
   - component: {fileID: 3703943428713328689}
   - component: {fileID: 4214509379365873314}
   - component: {fileID: 2495696182358824888}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemigo
   m_TagString: Aliado
   m_Icon: {fileID: 0}
@@ -614,7 +612,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6580775878839417417}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.9857416, z: -0, w: 0.16826615}
+  m_LocalRotation: {x: 0, y: -0.9857417, z: 0, w: 0.16826564}
   m_LocalPosition: {x: 2.7594242, y: 2.27, z: 11.859616}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -736,57 +734,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &3599843931633217432
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6580775878839417417}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e382ba697cd8f34b8404b80df4c5474, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Velocidad: 5
-  VelMinima: 5
-  VelMaxima: 12
-  fuerzaSalto: 7
-  Jugador: {fileID: 8473066035109566567}
-  Suelo:
-    serializedVersion: 2
-    m_Bits: 8
-  rb: {fileID: 5263833319647774318}
-  inputX: 0
-  inputZ: 0
-  enSuelo: 0
-  movimientoBloqueado: 0
---- !u!114 &3398527833921072015
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6580775878839417417}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b79bde16fc5a5324ca40a279df6ae04a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  capaEnemigos:
-    serializedVersion: 2
-    m_Bits: 0
-  capaObstaculos:
-    serializedVersion: 2
-    m_Bits: 0
-  intervaloDeteccion: 0.2
-  saludMaxima: 0
-  salud: 0
-  colliderDeteccion: {fileID: 0}
-  agente: {fileID: 0}
-  AlCambiarObjetivo:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!195 &3703943428713328689
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -821,8 +768,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dc39787817a98b408379878b0da4d94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  "CantidadDeDa\xF1o": 20
   vidaMaxima: 250
-  vidaActual: 0
+  vidaActual: 100
   "da\xF1oNormal": 20
   "da\xF1oEspecial": 50
   velocidadMovimiento: 3.5
@@ -875,7 +823,7 @@ GameObject:
   - component: {fileID: 1885194348030595534}
   - component: {fileID: 2059034463062189949}
   - component: {fileID: 3951569444618515474}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Mano Izq
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -958,7 +906,7 @@ GameObject:
   - component: {fileID: 4382807006483260325}
   - component: {fileID: 2967335550837683791}
   - component: {fileID: 8099408490058446812}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ojo Izq
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1041,7 +989,7 @@ GameObject:
   - component: {fileID: 8155614093202113888}
   - component: {fileID: 3116971610430621420}
   - component: {fileID: 4620128385883919875}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Camara TPS
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -1133,7 +1081,7 @@ GameObject:
   - component: {fileID: 3413143112138903801}
   - component: {fileID: 9174018377938625269}
   - component: {fileID: 6538466393711671695}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Brazo Der
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1216,7 +1164,7 @@ GameObject:
   - component: {fileID: 8219656422309817665}
   - component: {fileID: 2682567972422577074}
   - component: {fileID: 1172361047218853684}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Brazo Izq
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1299,7 +1247,7 @@ GameObject:
   - component: {fileID: 5723194606456577439}
   - component: {fileID: 2676372844391217432}
   - component: {fileID: 10392296888486150}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Mano Der
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1382,7 +1330,7 @@ GameObject:
   - component: {fileID: 7260448712937351455}
   - component: {fileID: 6758028233360154006}
   - component: {fileID: 1343445424965164199}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ojo Der (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1465,7 +1413,7 @@ GameObject:
   - component: {fileID: 9077532825353701770}
   - component: {fileID: 6672894404311055533}
   - component: {fileID: 4019196457284334854}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Gorra borde
   m_TagString: Untagged
   m_Icon: {fileID: 0}

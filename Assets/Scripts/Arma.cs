@@ -4,19 +4,20 @@ using UnityEngine;
 public class Arma
 {
     public string id;
-    public string nombre;
     public string tipo;
-    public string clase;
+    public string nombre;
+    //public string clase;
     public Texture2D icono;
     public GameObject Proyectil;
     public GameObject PrefabDeArma;
     public GameObject OrigenDeDisparos;
-    [TextArea] public string descripcion;
+    //public string descripcion;
 
-    public string municionTipo;
-    public int capacidadCartucho;
-    public int balasEnCartucho;
-    public int municionTotal;
+    public string TipoDeMunicion;
+    public int Consumo; // Cantidad de balas o mana o lo q sea q consuma su cantidad
+    public int CapacidadDelCargador; // Balas por cargador, Cantidad de usos maximos como granadas o flechas
+    public bool UsaCargadores;
+    //public int municionTotal;
     public float dañoBase;
 
     public float cadencia;
@@ -26,28 +27,30 @@ public class Arma
     public AudioClip sonidoCargadorVacio;
 
     public float SOLOMELEE_alcanceMelee;
-    public float SOLOMELEE_dañoCriticoMelee;
+    //public float SOLOMELEE_dañoCriticoMelee;
     public float tiempoRecarga;
     public float velocidadBala;
 
-    public Jugador DueñoDelArma;
+    public DATA_Jugador DueñoDelArma;
 
     public void TirarDelGatillo()
     {
-        Debug.Log("Se disparo");
-        if (balasEnCartucho <= 0)
+        
+        if (CapacidadDelCargador <= 0 && UsaCargadores)
         {
             DueñoDelArma.Recargar();
             AudioSource.PlayClipAtPoint(sonidoCargadorVacio, DueñoDelArma.transform.position);
             return;
         }
-
+        //Debug.Log(2);
         CrearBala();
         if (sonidoDisparo)
         {
             AudioSource.PlayClipAtPoint(sonidoDisparo, DueñoDelArma.transform.position);
         }
     }
+
+
 
     void CrearBala()
     {
@@ -56,9 +59,27 @@ public class Arma
             Debug.Log("Falta asociar los gameobjects de proyectil o Origen del disparo");
             return;
         }
-        balasEnCartucho--;
-        GameObject bala = Object.Instantiate(Proyectil, OrigenDeDisparos.transform.position, Quaternion.LookRotation(OrigenDeDisparos.transform.forward));
+        if (UsaCargadores) // Si, es un arma. Consume cargadores
+            CapacidadDelCargador--;
+        if (!UsaCargadores)
+        {
+            if (DueñoDelArma.ObtenerMunicionEnCargador(TipoDeMunicion) < Consumo)
+            {
+                Debug.Log($"Falta {TipoDeMunicion} para hacer la accion");
+                return;
+            }
+            DueñoDelArma.AgregarMunicion(TipoDeMunicion, -Consumo);
+        }
+
+
+        GameObject bala = Object.Instantiate(
+        Proyectil,
+        OrigenDeDisparos.transform.position,
+        Quaternion.LookRotation
+        (OrigenDeDisparos.transform.forward));
+        bala.GetComponent<Bala>().CapaAOmitir = DueñoDelArma.gameObject.layer;
         Rigidbody rb = bala.GetComponent<Rigidbody>();
+        Debug.Log("Se disparo 1 " + Proyectil.name + " Que consume " + Consumo + " de " + TipoDeMunicion);
         if (rb)
         {
             rb.velocity = OrigenDeDisparos.transform.forward * velocidadBala;
@@ -67,9 +88,17 @@ public class Arma
 
     public void Recargar()
     {
-        int balasNecesarias = capacidadCartucho - balasEnCartucho;
-        int balasARecargar = Mathf.Min(balasNecesarias, municionTotal);
-        balasEnCartucho += balasARecargar;
-        municionTotal -= balasARecargar;
+        if (UsaCargadores) // Si, es un arma. Consume cargadores
+        {
+            int balasNecesarias = Consumo - CapacidadDelCargador;
+            int balasARecargar = Mathf.Min(balasNecesarias, DueñoDelArma.ObtenerMunicionEnCargador(TipoDeMunicion));
+            CapacidadDelCargador += balasARecargar;
+            DueñoDelArma.AgregarMunicion(TipoDeMunicion, -balasARecargar);
+        }
+        if (!UsaCargadores) // Si, es un hechizo. Consume mana
+        {
+            Debug.Log($"El {nombre} no recarga por q no usa cargadores. Usa {TipoDeMunicion}");
+            //DueñoDelArma.AgregarMunicion(TipoDeMunicion, -Consumo);
+        }
     }
 }

@@ -5,15 +5,17 @@ using UnityEngine;
 public class Bala : MonoBehaviour
 {
     public string objetoAExcluir = "Jugador"; // Tag o nombre
+    public LayerMask CapaAOmitir;
     private float timer = 0f;
     private bool impacto = false;
+    public float CoeficienteDeExpansion;
     private Vector3 escalaInicial;
     private Vector3 escalaMaxima;
 
     void Start()
     {
         escalaInicial = transform.localScale;
-        escalaMaxima = escalaInicial * 4f; // Se expande al doble
+        escalaMaxima = escalaInicial * CoeficienteDeExpansion; // Se expande al doble
     }
 
     void Update()
@@ -34,8 +36,10 @@ public class Bala : MonoBehaviour
 
     void OnCollisionEnter(Collision col)
     {
-        Debug.Log(col.gameObject.name);
+        Debug.Log(1);
+        if (col.gameObject.layer == CapaAOmitir) return;
         if (col.gameObject.name == objetoAExcluir || col.gameObject.CompareTag(objetoAExcluir)) return;
+        Debug.Log($"La {gameObject.name} impacto contra : " + col.gameObject.name);
 
         impacto = true;
         timer = 0f;

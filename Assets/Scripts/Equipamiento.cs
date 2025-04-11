@@ -46,7 +46,7 @@ public class Equipamiento
     public float durabilidadMaxima;
 
     // === MÉTODOS ===
-    public void Usar(Jugador jugador)
+    public void Usar(DATA_Jugador jugador)
     {
         if (usosActuales <= 0)
         {
