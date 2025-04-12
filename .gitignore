@@ -1,6 +1,16 @@
 Library/
 Logs/
 obj/
+Temp/
 Packages/
 ProjectSettings/
 UserSettings/
+/Logs
+/ProjectSettings
+/ProjectSettings
+/ProjectSettings
+/ProjectSettings/Packages/com.unity.testtools.codecoverage
+*.json
+/Logs
+/UserSettings
+/UserSettings/Layouts
