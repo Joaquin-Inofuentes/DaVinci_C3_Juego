@@ -14,3 +14,7 @@ UserSettings/
 /Logs
 /UserSettings
 /UserSettings/Layouts
+*.cache
+/.vs
+/.vs
+*.cache
