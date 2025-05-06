@@ -4,7 +4,7 @@ using UnityEngine.UI;
 using System.Collections.Generic;
 using CustomInspector;
 
-public class Enemigo : MonoBehaviour
+public class Enemigo_Viejo : MonoBehaviour
 {
     [Button(nameof(Pruebas_RecibirDano), true)] // Se usa el plugin CustomInspector
     public float CantidadDeDaño = 20; // Es lo q se le asigna al metodo para probar

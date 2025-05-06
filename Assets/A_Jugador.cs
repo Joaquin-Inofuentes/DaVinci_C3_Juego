@@ -174,7 +174,7 @@ public class A_Jugador : MonoBehaviour
         RaycastHit[] hits = Physics.SphereCastAll(transform.position, arma.SOLOMELEE_alcanceMelee, transform.forward, arma.SOLOMELEE_alcanceMelee);
         foreach (RaycastHit hit in hits)
         {
-            Enemigo enemigo = hit.collider.GetComponent<Enemigo>();
+            Enemigo_Viejo enemigo = hit.collider.GetComponent<Enemigo_Viejo>();
             if (enemigo != null)
             {
                 enemigo.RecibirDanio(arma.dañoBase, transform);

@@ -4,6 +4,19 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
+
+    /*
+     + Audios : Dictionary<String,AudioClip>
++ AudiosReproduciendose : List<AudioClip>
+
+
+    +LeerAudiosDeCarpetaResource() : void
++ReproducirAudio1SolaVez(string, Vector3) : void
++ReproducirAudioVariasVeces(string, Vector3) : void
++DetenerAudio(string,Vector3) : void
+     */
+
+
     // Start is called before the first frame update
     void Start()
     {
