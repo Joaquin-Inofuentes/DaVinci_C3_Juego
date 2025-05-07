@@ -1,12 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-
-
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{256EE45B-F4AC-8F64-4535-6896FBED3E36}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MerryYellow.CodeAssist.Editor", "MerryYellow.CodeAssist.Editor.csproj", "{213A13B9-4BBF-B7E2-FAE9-42DAA8A71A81}"
-ecc4cfd2f70f60fc0c777aeb3205ffc222b46e40
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomInspector.Editor", "CustomInspector.Editor.csproj", "{F944CE50-7CAF-5008-CB66-8E65029FDD0E}"
 EndProject
@@ -20,8 +15,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomInspector.Helpers", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomInspector.Demo", "CustomInspector.Demo.csproj", "{B3329E12-4E4F-166A-B648-2F3B5A2B6F6F}"
 EndProject
-
-ecc4cfd2f70f60fc0c777aeb3205ffc222b46e40
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,10 +25,6 @@ Global
 		{256EE45B-F4AC-8F64-4535-6896FBED3E36}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{256EE45B-F4AC-8F64-4535-6896FBED3E36}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{256EE45B-F4AC-8F64-4535-6896FBED3E36}.Release|Any CPU.Build.0 = Release|Any CPU
-		{213A13B9-4BBF-B7E2-FAE9-42DAA8A71A81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{213A13B9-4BBF-B7E2-FAE9-42DAA8A71A81}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{213A13B9-4BBF-B7E2-FAE9-42DAA8A71A81}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{213A13B9-4BBF-B7E2-FAE9-42DAA8A71A81}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F944CE50-7CAF-5008-CB66-8E65029FDD0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F944CE50-7CAF-5008-CB66-8E65029FDD0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F944CE50-7CAF-5008-CB66-8E65029FDD0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
