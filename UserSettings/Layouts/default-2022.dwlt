@@ -21,7 +21,11 @@ MonoBehaviour:
   m_ShowMode: 4
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_Title: Console
+=======
+  m_Title: Animator
+>>>>>>> parent of 7b567d2 (cambios part 2)
 =======
   m_Title: Animator
 >>>>>>> parent of 7b567d2 (cambios part 2)
@@ -50,9 +54,15 @@ MonoBehaviour:
     x: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     y: 383.2
     width: 480
     height: 364.39996
+=======
+    y: 246
+    width: 375
+    height: 381
+>>>>>>> parent of 7b567d2 (cambios part 2)
 =======
     y: 246
     width: 375
@@ -90,6 +100,7 @@ MonoBehaviour:
     y: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 480
     height: 383.2
   m_MinSize: {x: 201, y: 221}
@@ -97,11 +108,16 @@ MonoBehaviour:
 =======
 =======
 >>>>>>> parent of 7b567d2 (cambios part 2)
+=======
+>>>>>>> parent of 7b567d2 (cambios part 2)
     width: 375
     height: 246
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 7b567d2 (cambios part 2)
+=======
 >>>>>>> parent of 7b567d2 (cambios part 2)
 =======
 >>>>>>> parent of 7b567d2 (cambios part 2)
@@ -129,6 +145,7 @@ MonoBehaviour:
     serializedVersion: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 1056
     y: 0
     width: 480
@@ -144,6 +161,10 @@ MonoBehaviour:
     x: 985
     y: 0
 >>>>>>> parent of 7b567d2 (cambios part 2)
+=======
+    x: 985
+    y: 0
+>>>>>>> parent of 7b567d2 (cambios part 2)
     width: 375
     height: 627
   m_MinSize: {x: 100, y: 100}
@@ -151,6 +172,9 @@ MonoBehaviour:
   vertical: 1
   controlID: 104
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 7b567d2 (cambios part 2)
+=======
 >>>>>>> parent of 7b567d2 (cambios part 2)
 =======
 >>>>>>> parent of 7b567d2 (cambios part 2)
@@ -270,6 +294,7 @@ MonoBehaviour:
     x: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     y: 30
     width: 1536
     height: 747.6
@@ -280,6 +305,8 @@ MonoBehaviour:
 =======
 =======
 >>>>>>> parent of 7b567d2 (cambios part 2)
+=======
+>>>>>>> parent of 7b567d2 (cambios part 2)
     y: 0
     width: 1196
     height: 747.6
@@ -288,6 +315,9 @@ MonoBehaviour:
   vertical: 1
   controlID: 53
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 7b567d2 (cambios part 2)
+=======
 >>>>>>> parent of 7b567d2 (cambios part 2)
 =======
 >>>>>>> parent of 7b567d2 (cambios part 2)
@@ -310,6 +340,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     width: 1056
@@ -344,14 +375,22 @@ MonoBehaviour:
 =======
     width: 1196
 >>>>>>> parent of 7b567d2 (cambios part 2)
+=======
+    width: 1196
+>>>>>>> parent of 7b567d2 (cambios part 2)
     height: 491.2
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 159
 --- !u!114 &11
+=======
+  controlID: 54
+--- !u!114 &10
+>>>>>>> parent of 7b567d2 (cambios part 2)
 =======
   controlID: 54
 --- !u!114 &10
@@ -378,12 +417,15 @@ MonoBehaviour:
     y: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 286.4
     height: 491.2
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 17}
 =======
+=======
+>>>>>>> parent of 7b567d2 (cambios part 2)
 =======
 >>>>>>> parent of 7b567d2 (cambios part 2)
     width: 325.6
@@ -418,6 +460,9 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 18}
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 7b567d2 (cambios part 2)
+=======
 >>>>>>> parent of 7b567d2 (cambios part 2)
 =======
 >>>>>>> parent of 7b567d2 (cambios part 2)
@@ -442,6 +487,7 @@ MonoBehaviour:
     serializedVersion: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 286.4
     y: 0
     width: 769.6
@@ -452,6 +498,8 @@ MonoBehaviour:
 =======
 =======
 >>>>>>> parent of 7b567d2 (cambios part 2)
+=======
+>>>>>>> parent of 7b567d2 (cambios part 2)
     x: 0
     y: 491.2
     width: 1196
@@ -460,6 +508,9 @@ MonoBehaviour:
   m_MaxSize: {x: 10001, y: 10021}
   m_ActualView: {fileID: 15}
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 7b567d2 (cambios part 2)
+=======
 >>>>>>> parent of 7b567d2 (cambios part 2)
 =======
 >>>>>>> parent of 7b567d2 (cambios part 2)
@@ -487,6 +538,7 @@ MonoBehaviour:
     x: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     y: 491.2
     width: 1056
     height: 256.39996
@@ -496,6 +548,8 @@ MonoBehaviour:
 =======
 =======
 >>>>>>> parent of 7b567d2 (cambios part 2)
+=======
+>>>>>>> parent of 7b567d2 (cambios part 2)
     y: 227.2
     width: 340
     height: 520.39996
@@ -503,6 +557,9 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 21}
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 7b567d2 (cambios part 2)
+=======
 >>>>>>> parent of 7b567d2 (cambios part 2)
 =======
 >>>>>>> parent of 7b567d2 (cambios part 2)
@@ -533,11 +590,14 @@ MonoBehaviour:
     serializedVersion: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 286.4
     y: 64.8
     width: 767.6
     height: 470.2
 =======
+=======
+>>>>>>> parent of 7b567d2 (cambios part 2)
 =======
 >>>>>>> parent of 7b567d2 (cambios part 2)
     x: 270
@@ -649,7 +709,11 @@ MonoBehaviour:
     y: 556
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 1055
+=======
+    width: 1195
+>>>>>>> parent of 7b567d2 (cambios part 2)
 =======
     width: 1195
 >>>>>>> parent of 7b567d2 (cambios part 2)
@@ -680,7 +744,11 @@ MonoBehaviour:
     m_Folders:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     - Assets
+=======
+    - Assets/Scenes
+>>>>>>> parent of 7b567d2 (cambios part 2)
 =======
     - Assets/Scenes
 >>>>>>> parent of 7b567d2 (cambios part 2)
@@ -696,7 +764,11 @@ MonoBehaviour:
   m_LastFolders:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   - Assets
+=======
+  - Assets/Scenes
+>>>>>>> parent of 7b567d2 (cambios part 2)
 =======
   - Assets/Scenes
 >>>>>>> parent of 7b567d2 (cambios part 2)
@@ -711,9 +783,15 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_SelectedIDs: fafa0000
     m_LastClickedID: 64250
     m_ExpandedIDs: 00000000c8640000
+=======
+    m_SelectedIDs: 6e070100
+    m_LastClickedID: 67438
+    m_ExpandedIDs: 0000000046070100480701004a0701004c0701004e07010050070100
+>>>>>>> parent of 7b567d2 (cambios part 2)
 =======
     m_SelectedIDs: 6e070100
     m_LastClickedID: 67438
@@ -753,7 +831,11 @@ MonoBehaviour:
     m_LastClickedID: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000c8640000
+=======
+    m_ExpandedIDs: 0000000046070100480701004a0701004c0701004e07010050070100
+>>>>>>> parent of 7b567d2 (cambios part 2)
 =======
     m_ExpandedIDs: 0000000046070100480701004a0701004c0701004e07010050070100
 >>>>>>> parent of 7b567d2 (cambios part 2)
@@ -839,7 +921,11 @@ MonoBehaviour:
     y: 64.8
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 285.4
+=======
+    width: 324.6
+>>>>>>> parent of 7b567d2 (cambios part 2)
 =======
     width: 324.6
 >>>>>>> parent of 7b567d2 (cambios part 2)
@@ -862,9 +948,15 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       m_SelectedIDs: 
       m_LastClickedID: 0
       m_ExpandedIDs: fe83feff
+=======
+      m_SelectedIDs: aa070100
+      m_LastClickedID: 0
+      m_ExpandedIDs: da8afeff080affff2e71ffffdeddffff
+>>>>>>> parent of 7b567d2 (cambios part 2)
 =======
       m_SelectedIDs: aa070100
       m_LastClickedID: 0
@@ -976,9 +1068,15 @@ MonoBehaviour:
     serializedVersion: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 286.4
     y: 64.8
     width: 767.6
+=======
+    x: 325.6
+    y: 64.8
+    width: 868.4
+>>>>>>> parent of 7b567d2 (cambios part 2)
 =======
     x: 325.6
     y: 64.8
@@ -1350,9 +1448,15 @@ MonoBehaviour:
   m_Position:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: {x: 0, y: 0, z: 0}
     speed: 2
     m_Value: {x: 0, y: 0, z: 0}
+=======
+    m_Target: {x: -447.2994, y: -450.4089, z: 717.5016}
+    speed: 2
+    m_Value: {x: -447.2994, y: -450.4089, z: 717.5016}
+>>>>>>> parent of 7b567d2 (cambios part 2)
 =======
     m_Target: {x: -447.2994, y: -450.4089, z: 717.5016}
     speed: 2
@@ -1410,6 +1514,7 @@ MonoBehaviour:
   m_Rotation:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
     speed: 2
     m_Value: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
@@ -1417,6 +1522,15 @@ MonoBehaviour:
     m_Target: 10
     speed: 2
     m_Value: 58.16364
+=======
+    m_Target: {x: -0.23508638, y: 0.26897466, z: -0.06787659, w: -0.93155146}
+    speed: 2
+    m_Value: {x: -0.2350854, y: 0.26897353, z: -0.06787631, w: -0.9315476}
+  m_Size:
+    m_Target: 487.9138
+    speed: 2
+    m_Value: 487.9138
+>>>>>>> parent of 7b567d2 (cambios part 2)
 =======
     m_Target: {x: -0.23508638, y: 0.26897466, z: -0.06787659, w: -0.93155146}
     speed: 2
@@ -1515,6 +1629,7 @@ MonoBehaviour:
     serializedVersion: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 1056
     y: 64.8
     width: 479
@@ -1522,11 +1637,16 @@ MonoBehaviour:
 =======
 =======
 >>>>>>> parent of 7b567d2 (cambios part 2)
+=======
+>>>>>>> parent of 7b567d2 (cambios part 2)
     x: 1196
     y: 64.8
     width: 339
     height: 206.2
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 7b567d2 (cambios part 2)
+=======
 >>>>>>> parent of 7b567d2 (cambios part 2)
 =======
 >>>>>>> parent of 7b567d2 (cambios part 2)
@@ -1584,6 +1704,7 @@ MonoBehaviour:
       y: 21
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       width: 479
       height: 341.2
     m_Scale: {x: 0.15592448, y: 0.15592448}
@@ -1591,11 +1712,16 @@ MonoBehaviour:
 =======
 =======
 >>>>>>> parent of 7b567d2 (cambios part 2)
+=======
+>>>>>>> parent of 7b567d2 (cambios part 2)
       width: 339
       height: 185.2
     m_Scale: {x: 0.107175924, y: 0.107175924}
     m_Translation: {x: 169.5, y: 92.6}
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 7b567d2 (cambios part 2)
+=======
 >>>>>>> parent of 7b567d2 (cambios part 2)
 =======
 >>>>>>> parent of 7b567d2 (cambios part 2)
@@ -1607,6 +1733,7 @@ MonoBehaviour:
       serializedVersion: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       x: -1536
       y: -1094.1194
       width: 3072
@@ -1614,6 +1741,15 @@ MonoBehaviour:
     m_MinimalGUI: 1
   m_defaultScale: 0.15592448
   m_LastWindowPixelSize: {x: 598.75, y: 452.75}
+=======
+      x: -1581.512
+      y: -864
+      width: 3163.024
+      height: 1728
+    m_MinimalGUI: 1
+  m_defaultScale: 0.107175924
+  m_LastWindowPixelSize: {x: 423.75, y: 257.75}
+>>>>>>> parent of 7b567d2 (cambios part 2)
 =======
       x: -1581.512
       y: -864
@@ -1659,6 +1795,7 @@ MonoBehaviour:
     serializedVersion: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 1056
     y: 448
     width: 479
@@ -1666,11 +1803,16 @@ MonoBehaviour:
 =======
 =======
 >>>>>>> parent of 7b567d2 (cambios part 2)
+=======
+>>>>>>> parent of 7b567d2 (cambios part 2)
     x: 1196
     y: 292
     width: 339
     height: 499.39996
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 7b567d2 (cambios part 2)
+=======
 >>>>>>> parent of 7b567d2 (cambios part 2)
 =======
 >>>>>>> parent of 7b567d2 (cambios part 2)

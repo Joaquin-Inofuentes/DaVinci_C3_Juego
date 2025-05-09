@@ -72,6 +72,7 @@ public class AccionesJugador : A1_Entidad
 =======
 >>>>>>> parent of 7b567d2 (cambios part 2)
 =======
+=======
 >>>>>>> parent of 7b567d2 (cambios part 2)
     }
 
