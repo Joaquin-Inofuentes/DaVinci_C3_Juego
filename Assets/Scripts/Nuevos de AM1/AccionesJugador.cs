@@ -59,7 +59,7 @@ public class AccionesJugador : A1_Entidad
     public override void IrAlDestino(Vector3 destino)
     {
         transform.LookAt(destino);
-        Debug.Log(destino);
+        //Debug.Log(destino);
         //Debug.Log(Agente);
         Agente.SetDestination(destino);
         animacion.SetFloat("velocidad", 1f);
@@ -102,5 +102,10 @@ public class AccionesJugador : A1_Entidad
         {
             Detenerse();
         }
+    }
+
+    public override void Colisiono(GameObject Colision, string TipoDeColision)
+    {
+        Debug.Log(Colision + " | " + TipoDeColision, gameObject);
     }
 }

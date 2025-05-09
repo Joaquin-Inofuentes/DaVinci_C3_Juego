@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Joaquin-CASA\\Documents\\DaVinci_C3_Juego\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{256EE45B-F4AC-8F64-4535-6896FBED3E36}|Assembly-CSharp.csproj|c:\\users\\joaquin-casa\\documents\\davinci_c3_juego\\assets\\scripts\\nuevos de am1\\reportarcollision.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{256EE45B-F4AC-8F64-4535-6896FBED3E36}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\nuevos de am1\\reportarcollision.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{256EE45B-F4AC-8F64-4535-6896FBED3E36}|Assembly-CSharp.csproj|C:\\Users\\Joaquin-CASA\\Documents\\DaVinci_C3_Juego\\assets\\scripts\\nuevos de am1\\accionesjugador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{256EE45B-F4AC-8F64-4535-6896FBED3E36}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\nuevos de am1\\accionesjugador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{256EE45B-F4AC-8F64-4535-6896FBED3E36}|Assembly-CSharp.csproj|C:\\Users\\Joaquin-CASA\\Documents\\DaVinci_C3_Juego\\assets\\scripts\\nuevos de am1\\a1_a1_h1_moustrodelaverno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{256EE45B-F4AC-8F64-4535-6896FBED3E36}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\nuevos de am1\\a1_a1_h1_moustrodelaverno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{256EE45B-F4AC-8F64-4535-6896FBED3E36}|Assembly-CSharp.csproj|c:\\users\\joaquin-casa\\documents\\davinci_c3_juego\\assets\\scripts\\nuevos de am1\\proyectil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{256EE45B-F4AC-8F64-4535-6896FBED3E36}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\nuevos de am1\\proyectil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{256EE45B-F4AC-8F64-4535-6896FBED3E36}|Assembly-CSharp.csproj|C:\\Users\\Joaquin-CASA\\Documents\\DaVinci_C3_Juego\\assets\\scripts\\nuevos de am1\\a1_entidad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{256EE45B-F4AC-8F64-4535-6896FBED3E36}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\nuevos de am1\\a1_entidad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{256EE45B-F4AC-8F64-4535-6896FBED3E36}|Assembly-CSharp.csproj|C:\\Users\\Joaquin-CASA\\Documents\\DaVinci_C3_Juego\\assets\\scripts\\nuevos de am1\\a1_a1_h3_duende.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -23,8 +31,12 @@
       "RelativeMoniker": "D:0:0:{256EE45B-F4AC-8F64-4535-6896FBED3E36}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\nuevos de am1\\a1_a1_enemigo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{256EE45B-F4AC-8F64-4535-6896FBED3E36}|Assembly-CSharp.csproj|c:\\users\\joaquin-casa\\documents\\davinci_c3_juego\\assets\\scripts\\nuevos de am1\\accionesjugador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{256EE45B-F4AC-8F64-4535-6896FBED3E36}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\nuevos de am1\\accionesjugador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|c:\\users\\joaquin-casa\\documents\\davinci_c3_juego\\assets\\reportarcollision.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\reportarcollision.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{256EE45B-F4AC-8F64-4535-6896FBED3E36}|Assembly-CSharp.csproj|C:\\Users\\Joaquin-CASA\\Documents\\DaVinci_C3_Juego\\assets\\scripts\\nuevos de am1\\proyectil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{256EE45B-F4AC-8F64-4535-6896FBED3E36}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\nuevos de am1\\proyectil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{256EE45B-F4AC-8F64-4535-6896FBED3E36}|Assembly-CSharp.csproj|C:\\Users\\Joaquin-CASA\\Documents\\DaVinci_C3_Juego\\assets\\scripts\\nuevos de am1\\inputs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -33,10 +45,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{256EE45B-F4AC-8F64-4535-6896FBED3E36}|Assembly-CSharp.csproj|C:\\Users\\Joaquin-CASA\\Documents\\DaVinci_C3_Juego\\assets\\scripts\\nuevos de am1\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{256EE45B-F4AC-8F64-4535-6896FBED3E36}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\nuevos de am1\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{256EE45B-F4AC-8F64-4535-6896FBED3E36}|Assembly-CSharp.csproj|C:\\Users\\Joaquin-CASA\\Documents\\DaVinci_C3_Juego\\assets\\scripts\\nuevos de am1\\a1_entidad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{256EE45B-F4AC-8F64-4535-6896FBED3E36}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\nuevos de am1\\a1_entidad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{256EE45B-F4AC-8F64-4535-6896FBED3E36}|Assembly-CSharp.csproj|C:\\Users\\Joaquin-CASA\\Documents\\DaVinci_C3_Juego\\assets\\scripts\\nuevos de am1\\feedbacks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -90,19 +98,57 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 18,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "ReportarCollision.cs",
+              "DocumentMoniker": "C:\\Users\\Joaquin-CASA\\Documents\\DaVinci_C3_Juego\\Assets\\Scripts\\Nuevos de AM1\\ReportarCollision.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Nuevos de AM1\\ReportarCollision.cs",
+              "ToolTip": "C:\\Users\\Joaquin-CASA\\Documents\\DaVinci_C3_Juego\\Assets\\Scripts\\Nuevos de AM1\\ReportarCollision.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Nuevos de AM1\\ReportarCollision.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T20:25:03.221Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ReportarCollision.cs",
+              "DocumentMoniker": "C:\\Users\\Joaquin-CASA\\Documents\\DaVinci_C3_Juego\\Assets\\ReportarCollision.cs",
+              "RelativeDocumentMoniker": "Assets\\ReportarCollision.cs",
+              "ToolTip": "C:\\Users\\Joaquin-CASA\\Documents\\DaVinci_C3_Juego\\Assets\\ReportarCollision.cs",
+              "RelativeToolTip": "Assets\\ReportarCollision.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T20:24:28.158Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "Proyectil.cs",
               "DocumentMoniker": "C:\\Users\\Joaquin-CASA\\Documents\\DaVinci_C3_Juego\\Assets\\Scripts\\Nuevos de AM1\\Proyectil.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Nuevos de AM1\\Proyectil.cs",
               "ToolTip": "C:\\Users\\Joaquin-CASA\\Documents\\DaVinci_C3_Juego\\Assets\\Scripts\\Nuevos de AM1\\Proyectil.cs",
               "RelativeToolTip": "Assets\\Scripts\\Nuevos de AM1\\Proyectil.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAA3wDwAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T13:48:36.054Z",
+              "WhenOpened": "2025-05-09T13:48:36.054Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AccionesJugador.cs",
+              "DocumentMoniker": "C:\\Users\\Joaquin-CASA\\Documents\\DaVinci_C3_Juego\\Assets\\Scripts\\Nuevos de AM1\\AccionesJugador.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Nuevos de AM1\\AccionesJugador.cs",
+              "ToolTip": "C:\\Users\\Joaquin-CASA\\Documents\\DaVinci_C3_Juego\\Assets\\Scripts\\Nuevos de AM1\\AccionesJugador.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Nuevos de AM1\\AccionesJugador.cs",
+              "ViewState": "AgIAAEMAAAAAAAAAAADgv2oAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-05T18:04:58.916Z",
               "EditorCaption": ""
             },
             {
@@ -111,7 +157,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "Inputs.cs",
               "DocumentMoniker": "C:\\Users\\Joaquin-CASA\\Documents\\DaVinci_C3_Juego\\Assets\\Scripts\\Nuevos de AM1\\Inputs.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Nuevos de AM1\\Inputs.cs",
@@ -123,7 +169,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "A2_H1_RunaTrampa.cs",
               "DocumentMoniker": "C:\\Users\\Joaquin-CASA\\Documents\\DaVinci_C3_Juego\\Assets\\Scripts\\Nuevos de AM1\\A2_H1_RunaTrampa.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Nuevos de AM1\\A2_H1_RunaTrampa.cs",
@@ -135,20 +181,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "A1_A1_Enemigo.cs",
               "DocumentMoniker": "C:\\Users\\Joaquin-CASA\\Documents\\DaVinci_C3_Juego\\Assets\\Scripts\\Nuevos de AM1\\A1_A1_Enemigo.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Nuevos de AM1\\A1_A1_Enemigo.cs",
               "ToolTip": "C:\\Users\\Joaquin-CASA\\Documents\\DaVinci_C3_Juego\\Assets\\Scripts\\Nuevos de AM1\\A1_A1_Enemigo.cs",
               "RelativeToolTip": "Assets\\Scripts\\Nuevos de AM1\\A1_A1_Enemigo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAACwAAAAAAAAAAAAQwAUAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-05T17:31:22.633Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "GameManager.cs",
               "DocumentMoniker": "C:\\Users\\Joaquin-CASA\\Documents\\DaVinci_C3_Juego\\Assets\\Scripts\\Nuevos de AM1\\GameManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Nuevos de AM1\\GameManager.cs",
@@ -160,7 +206,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "Feedbacks.cs",
               "DocumentMoniker": "C:\\Users\\Joaquin-CASA\\Documents\\DaVinci_C3_Juego\\Assets\\Scripts\\Nuevos de AM1\\Feedbacks.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Nuevos de AM1\\Feedbacks.cs",
@@ -172,7 +218,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "CreacionDeProyectil.cs",
               "DocumentMoniker": "C:\\Users\\Joaquin-CASA\\Documents\\DaVinci_C3_Juego\\Assets\\Scripts\\Nuevos de AM1\\CreacionDeProyectil.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Nuevos de AM1\\CreacionDeProyectil.cs",
@@ -184,7 +230,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "CombosDePelea.cs",
               "DocumentMoniker": "C:\\Users\\Joaquin-CASA\\Documents\\DaVinci_C3_Juego\\Assets\\Scripts\\Nuevos de AM1\\CombosDePelea.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Nuevos de AM1\\CombosDePelea.cs",
@@ -196,20 +242,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AccionesJugador.cs",
-              "DocumentMoniker": "C:\\Users\\Joaquin-CASA\\Documents\\DaVinci_C3_Juego\\Assets\\Scripts\\Nuevos de AM1\\AccionesJugador.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Nuevos de AM1\\AccionesJugador.cs",
-              "ToolTip": "C:\\Users\\Joaquin-CASA\\Documents\\DaVinci_C3_Juego\\Assets\\Scripts\\Nuevos de AM1\\AccionesJugador.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Nuevos de AM1\\AccionesJugador.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAA9wCsAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T18:04:58.916Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "A3_H3_Monedas.cs",
               "DocumentMoniker": "C:\\Users\\Joaquin-CASA\\Documents\\DaVinci_C3_Juego\\Assets\\Scripts\\Nuevos de AM1\\A3_H3_Monedas.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Nuevos de AM1\\A3_H3_Monedas.cs",
@@ -221,7 +254,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "A3_H2_ObjetoDestruible.cs",
               "DocumentMoniker": "C:\\Users\\Joaquin-CASA\\Documents\\DaVinci_C3_Juego\\Assets\\Scripts\\Nuevos de AM1\\A3_H2_ObjetoDestruible.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Nuevos de AM1\\A3_H2_ObjetoDestruible.cs",
@@ -233,7 +266,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "A3_H1_CongelarRio.cs",
               "DocumentMoniker": "C:\\Users\\Joaquin-CASA\\Documents\\DaVinci_C3_Juego\\Assets\\Scripts\\Nuevos de AM1\\A3_H1_CongelarRio.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Nuevos de AM1\\A3_H1_CongelarRio.cs",
@@ -245,7 +278,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "A2_Trampa.cs",
               "DocumentMoniker": "C:\\Users\\Joaquin-CASA\\Documents\\DaVinci_C3_Juego\\Assets\\Scripts\\Nuevos de AM1\\A2_Trampa.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Nuevos de AM1\\A2_Trampa.cs",
@@ -257,7 +290,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "A3_Interactuable.cs",
               "DocumentMoniker": "C:\\Users\\Joaquin-CASA\\Documents\\DaVinci_C3_Juego\\Assets\\Scripts\\Nuevos de AM1\\A3_Interactuable.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Nuevos de AM1\\A3_Interactuable.cs",
@@ -269,7 +302,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "A2_H2_Explosiva.cs",
               "DocumentMoniker": "C:\\Users\\Joaquin-CASA\\Documents\\DaVinci_C3_Juego\\Assets\\Scripts\\Nuevos de AM1\\A2_H2_Explosiva.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Nuevos de AM1\\A2_H2_Explosiva.cs",
@@ -281,46 +314,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "A1_A1_H3_Duende.cs",
               "DocumentMoniker": "C:\\Users\\Joaquin-CASA\\Documents\\DaVinci_C3_Juego\\Assets\\Scripts\\Nuevos de AM1\\A1_A1_H3_Duende.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Nuevos de AM1\\A1_A1_H3_Duende.cs",
               "ToolTip": "C:\\Users\\Joaquin-CASA\\Documents\\DaVinci_C3_Juego\\Assets\\Scripts\\Nuevos de AM1\\A1_A1_H3_Duende.cs",
               "RelativeToolTip": "Assets\\Scripts\\Nuevos de AM1\\A1_A1_H3_Duende.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-05T18:04:55.321Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "A1_A1_H2_ArquerasElfas.cs",
               "DocumentMoniker": "C:\\Users\\Joaquin-CASA\\Documents\\DaVinci_C3_Juego\\Assets\\Scripts\\Nuevos de AM1\\A1_A1_H2_ArquerasElfas.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Nuevos de AM1\\A1_A1_H2_ArquerasElfas.cs",
               "ToolTip": "C:\\Users\\Joaquin-CASA\\Documents\\DaVinci_C3_Juego\\Assets\\Scripts\\Nuevos de AM1\\A1_A1_H2_ArquerasElfas.cs",
               "RelativeToolTip": "Assets\\Scripts\\Nuevos de AM1\\A1_A1_H2_ArquerasElfas.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-05T18:04:54.854Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "A1_A1_H1_MoustroDelAverno.cs",
               "DocumentMoniker": "C:\\Users\\Joaquin-CASA\\Documents\\DaVinci_C3_Juego\\Assets\\Scripts\\Nuevos de AM1\\A1_A1_H1_MoustroDelAverno.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Nuevos de AM1\\A1_A1_H1_MoustroDelAverno.cs",
               "ToolTip": "C:\\Users\\Joaquin-CASA\\Documents\\DaVinci_C3_Juego\\Assets\\Scripts\\Nuevos de AM1\\A1_A1_H1_MoustroDelAverno.cs",
               "RelativeToolTip": "Assets\\Scripts\\Nuevos de AM1\\A1_A1_H1_MoustroDelAverno.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAA5wDAAAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAsAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-05T18:04:54.412Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "AudioManager.cs",
               "DocumentMoniker": "C:\\Users\\Joaquin-CASA\\Documents\\DaVinci_C3_Juego\\Assets\\Scripts\\Nuevos de AM1\\AudioManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Nuevos de AM1\\AudioManager.cs",
@@ -332,15 +365,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 3,
               "Title": "A1_Entidad.cs",
               "DocumentMoniker": "C:\\Users\\Joaquin-CASA\\Documents\\DaVinci_C3_Juego\\Assets\\Scripts\\Nuevos de AM1\\A1_Entidad.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Nuevos de AM1\\A1_Entidad.cs",
               "ToolTip": "C:\\Users\\Joaquin-CASA\\Documents\\DaVinci_C3_Juego\\Assets\\Scripts\\Nuevos de AM1\\A1_Entidad.cs",
               "RelativeToolTip": "Assets\\Scripts\\Nuevos de AM1\\A1_Entidad.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBMAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAiwBYAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T17:48:29.615Z"
+              "WhenOpened": "2025-05-05T17:48:29.615Z",
+              "EditorCaption": ""
             }
           ]
         }

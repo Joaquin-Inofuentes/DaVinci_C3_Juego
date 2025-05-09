@@ -1,19 +1,27 @@
-/Library
-/obj
-/Temp
-/Packages
-/Logs
+# Carpetas de Unity a ignorar
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Ll]ogs/
+[Uu]serSettings/
+[Pp]ackages/
+.vs/
+ProjectSettings/
 /ProjectSettings
-/UserSettings
-/.vs
+
+# Archivos generados automáticamente
+*.csproj
+*.sln
+*.user
+*.log
 *.cache
-/obj
-/Logs
-/obj
-/UserSettings
-/Logs
-/Logs
-/UserSettings
-/UserSettings
-/UserSettings
-/Logs
+*.md
+
+# Layouts específicos de VS o Rider
+.vs/DaVinci_C3_Juego/
+
+# Archivos individuales innecesarios
+Logs/shadercompiler-UnityShaderCompiler.exe0.log
+.vs/DaVinci_C3_Juego/v17/DocumentLayout.json
+

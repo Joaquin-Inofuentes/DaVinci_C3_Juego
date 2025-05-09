@@ -20,6 +20,7 @@ public abstract class A1_Entidad : MonoBehaviour
     public abstract void RecibirDanio(int cantidad);
     public abstract void Atacar(Vector3 Destino, string Nombre = "");
     public abstract void OnCollision(Collision collider);
+    public abstract void Colisiono(GameObject Colision, string TipoDeColision);
     public abstract void Morir();
 
 
