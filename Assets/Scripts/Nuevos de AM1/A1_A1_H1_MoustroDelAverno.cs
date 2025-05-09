@@ -9,6 +9,11 @@ public class A1_A1_H1_MoustroDelAverno : A1_A1_Enemigo
         throw new System.NotImplementedException();
     }
 
+    public override void Colisiono(GameObject Colision, string TipoDeColision)
+    {
+        Debug.Log(Colision + " | " + TipoDeColision,gameObject);
+    }
+
     public override void Detenerse()
     {
         throw new System.NotImplementedException();
