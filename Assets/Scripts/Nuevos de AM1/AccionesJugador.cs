@@ -63,6 +63,7 @@ public class AccionesJugador : A1_Entidad
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         float velocidad = new Vector3(GetComponent<Rigidbody>().velocity.x, 0, GetComponent<Rigidbody>().velocity.z).magnitude;
         animacion.SetFloat("velocidad", velocidad);
 =======
@@ -72,6 +73,7 @@ public class AccionesJugador : A1_Entidad
 =======
 >>>>>>> parent of 7b567d2 (cambios part 2)
 =======
+>>>>>>> parent of 7b567d2 (cambios part 2)
 =======
 >>>>>>> parent of 7b567d2 (cambios part 2)
     }
