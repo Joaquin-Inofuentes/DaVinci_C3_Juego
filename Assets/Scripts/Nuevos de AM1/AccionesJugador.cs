@@ -63,22 +63,22 @@ public class AccionesJugador : A1_Entidad
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+        StartCoroutine(EsperarLlegada());
+=======
+>>>>>>> parent of 7b567d2 (cambios part 2)
+=======
         float velocidad = new Vector3(GetComponent<Rigidbody>().velocity.x, 0, GetComponent<Rigidbody>().velocity.z).magnitude;
-        animacion.SetFloat("velocidad", velocidad);
+        animator.SetFloat("velocidad", velocidad);
+>>>>>>> parent of f9429c8 (animaciones part 3)
 =======
->>>>>>> parent of 7b567d2 (cambios part 2)
+        float velocidad = new Vector3(GetComponent<Rigidbody>().velocity.x, 0, GetComponent<Rigidbody>().velocity.z).magnitude;
+        animator.SetFloat("velocidad", velocidad);
+>>>>>>> parent of f9429c8 (animaciones part 3)
 =======
->>>>>>> parent of 7b567d2 (cambios part 2)
-=======
->>>>>>> parent of 7b567d2 (cambios part 2)
-=======
->>>>>>> parent of 7b567d2 (cambios part 2)
-=======
->>>>>>> parent of 7b567d2 (cambios part 2)
-=======
->>>>>>> parent of 7b567d2 (cambios part 2)
+        float velocidad = new Vector3(GetComponent<Rigidbody>().velocity.x, 0, GetComponent<Rigidbody>().velocity.z).magnitude;
+        animator.SetFloat("velocidad", velocidad);
+>>>>>>> parent of f9429c8 (animaciones part 3)
     }
 
     public override void Morir()
