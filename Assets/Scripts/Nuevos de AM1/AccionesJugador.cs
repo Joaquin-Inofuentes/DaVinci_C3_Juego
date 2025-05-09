@@ -60,14 +60,25 @@ public class AccionesJugador : A1_Entidad
     {
         transform.LookAt(destino);
         Debug.Log(destino);
-        //Debug.Log(Agente);
         Agente.SetDestination(destino);
+        animacion.SetFloat("velocidad", 1f); // activar correr
         Destino = destino;
         Particulas.gameObject.transform.position = destino;
         Particulas.Play();
-        float velocidad = new Vector3(GetComponent<Rigidbody>().velocity.x, 0, GetComponent<Rigidbody>().velocity.z).magnitude;
-        animator.SetFloat("velocidad", velocidad);
+
+        StartCoroutine(EsperarLlegada());
     }
+
+    IEnumerator EsperarLlegada()
+{
+    while (Agente.pathPending || Agente.remainingDistance > Agente.stoppingDistance || Agente.velocity.sqrMagnitude > 0.01f)
+    {
+        yield return null;
+    }
+
+    // Justo cuando se detiene, vuelve al idle
+    animacion.SetFloat("Velocidad", 0f);
+}
 
     public override void Morir()
     {
