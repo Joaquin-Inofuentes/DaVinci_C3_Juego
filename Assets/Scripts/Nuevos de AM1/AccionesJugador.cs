@@ -66,7 +66,7 @@ public class AccionesJugador : A1_Entidad
         Particulas.gameObject.transform.position = destino;
         Particulas.Play();
         float velocidad = new Vector3(GetComponent<Rigidbody>().velocity.x, 0, GetComponent<Rigidbody>().velocity.z).magnitude;
-        animator.SetFloat("velocidad", velocidad);
+        animacion.SetFloat("velocidad", velocidad);
     }
 
     public override void Morir()
