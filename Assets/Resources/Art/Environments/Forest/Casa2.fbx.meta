@@ -1,4 +1,5 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream
 guid: 0365aedf778d0454e87c842fc8287bc6
 ModelImporter:
   serializedVersion: 22200
@@ -9,6 +10,13 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: material_planks
     second: {fileID: 2100000, guid: 4482db99db3d53d4eb1dc7a349d5f27a, type: 2}
+=======
+guid: 956508640a83f0f42b1e4201b2e7b2f0
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects: {}
+>>>>>>> Stashed changes
   materials:
     materialImportMode: 2
     materialName: 0
