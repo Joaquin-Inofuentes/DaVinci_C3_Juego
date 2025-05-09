@@ -17,3 +17,14 @@
 /UserSettings
 /UserSettings
 /Logs
+*.log
+*.sln
+Logs/shadercompiler-UnityShaderCompiler.exe0.log
+DaVinci_C3_Juego.sln
+CustomInspector.Helpers.Editor.csproj
+CustomInspector.Helpers.csproj
+CustomInspector.Editor.csproj
+CustomInspector.Documentation.Editor.csproj
+CustomInspector.Demo.csproj
+CustomInspector.csproj
+Assembly-CSharp.csproj
