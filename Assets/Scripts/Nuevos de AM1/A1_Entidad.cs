@@ -12,6 +12,7 @@ public abstract class A1_Entidad : MonoBehaviour
     public int DañoDeAtaque;
     public float VelocidadDeAtaque;
     public NavMeshAgent Agente;
+    public Animator animacion;
 
     // Métodos abstractos (requieren implementación en clases hijas)
     public abstract void IrAlDestino(Vector3 destino);
