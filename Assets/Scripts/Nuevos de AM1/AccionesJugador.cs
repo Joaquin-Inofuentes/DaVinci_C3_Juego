@@ -21,18 +21,12 @@ public class AccionesJugador : A1_Entidad
         if(Nombre == "BolaDeFuego")
         {
             ProyectilUsado = BolaDeFuego;
-            animacion.SetTrigger("magic1");
+            animacion.SetBool("atacando", true);
         }
-        if( Nombre == "BolaDeHielo") 
+        else if( Nombre == "BolaDeHielo") 
         {
             ProyectilUsado = BolaDeHielo;
-            animacion.SetTrigger("magic2");
             ProyectilUsado.GetComponent<Proyectil>().danio = 15; 
-        }
-        if(Nombre == "Rayo") 
-        {
-            ProyectilUsado = Rayo;
-            animacion.SetTrigger("magic3");
         }
         transform.LookAt(Destino);
         Vector3 direccion = 
@@ -65,8 +59,11 @@ public class AccionesJugador : A1_Entidad
         Destino = destino;
         Particulas.gameObject.transform.position = destino;
         Particulas.Play();
+<<<<<<< HEAD
         float velocidad = new Vector3(GetComponent<Rigidbody>().velocity.x, 0, GetComponent<Rigidbody>().velocity.z).magnitude;
         animacion.SetFloat("velocidad", velocidad);
+=======
+>>>>>>> parent of 7b567d2 (cambios part 2)
     }
 
     public override void Morir()
