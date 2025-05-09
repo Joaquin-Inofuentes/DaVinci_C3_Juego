@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44402242, g: 0.49316543, b: 0.5722324, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6671,7 +6671,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: f33db338ba70d57488b9709463eabf87, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -30189,7 +30189,7 @@ Transform:
   m_GameObject: {fileID: 825378662}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.24, y: 1.25, z: 10.42}
+  m_LocalPosition: {x: 7.97, y: 1.25, z: 10.42}
   m_LocalScale: {x: 1, y: 2.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -30257,17 +30257,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f4f48329cf30ec4bb4da8ac92e8bb34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Vida: 0
-  VidaMax: 0
-  Velocidad: 0
-  "Da\xF1oDeAtaque": 0
-  VelocidadDeAtaque: 0
-  Agente: {fileID: 0}
+  Vida: 100
+  VidaMax: 100
+  Velocidad: 4
+  "Da\xF1oDeAtaque": 10
+  VelocidadDeAtaque: 10
+  Agente: {fileID: 825378668}
   animacion: {fileID: 0}
+  ModoAtaqueMelee: 1
+  DistanciaParaAtaqueMelee: 3
+  DistanciaParaAtaqueLargo: 8
+  DistanciaParaPerseguir: 13
+  TimerDeAtaque: 0
   rangoDeteccion: 6
   rangoAtaque: 4
-  agente: {fileID: 825378668}
   animator: {fileID: 0}
+  BolaDeAtaque: {fileID: 0}
+  AtaqueActual: {fileID: 0}
 --- !u!1 &825389038
 GameObject:
   m_ObjectHideFlags: 0
@@ -42279,6 +42285,11 @@ MonoBehaviour:
   VelocidadDeAtaque: 3
   Agente: {fileID: 1124246439}
   animacion: {fileID: 599671349}
+  ModoAtaqueMelee: 0
+  DistanciaParaAtaqueMelee: 0
+  DistanciaParaAtaqueLargo: 0
+  DistanciaParaPerseguir: 0
+  TimerDeAtaque: 0
   BolaDeFuego: {fileID: 2897738269638305032, guid: 77166f4552886be47bbd124f6edb94de, type: 3}
   BolaDeHielo: {fileID: 2897738269638305032, guid: 77166f4552886be47bbd124f6edb94de, type: 3}
   Rayo: {fileID: 0}
@@ -62817,7 +62828,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1552882203}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -62870,7 +62881,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 27.0612, y: 0.022551, z: 27.0612}
+  m_LocalScale: {x: 27, y: 0.022551, z: 27}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 825378666}
@@ -62887,7 +62898,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6581c2e3bcd1cc8449081e7e1c7c44f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Emisor: {fileID: 0}
+  Emisor: {fileID: 825378662}
 --- !u!1 &1554193192
 GameObject:
   m_ObjectHideFlags: 0
@@ -70595,6 +70606,10 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: fe2c20f9ba002174d915d6c6738c80d2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -5047368470670671337, guid: fe2c20f9ba002174d915d6c6738c80d2, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: fe2c20f9ba002174d915d6c6738c80d2, type: 3}
       propertyPath: m_Name

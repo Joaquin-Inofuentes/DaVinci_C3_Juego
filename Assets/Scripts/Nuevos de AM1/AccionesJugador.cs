@@ -58,6 +58,7 @@ public class AccionesJugador : A1_Entidad
     public ParticleSystem Particulas;
     public override void IrAlDestino(Vector3 destino)
     {
+        Agente.isStopped = false;
         transform.LookAt(destino);
         //Debug.Log(destino);
         //Debug.Log(Agente);

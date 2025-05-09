@@ -4,24 +4,41 @@ using UnityEngine;
 
 public class A1_A1_H1_MoustroDelAverno : A1_A1_Enemigo
 {
+    public GameObject BolaDeAtaque;
+    public GameObject AtaqueActual;
     public override void Atacar(Vector3 Destino, string Nombre = "")
     {
-        throw new System.NotImplementedException();
+        if (AtaqueActual == null)
+        {
+            Debug.Log("Atacando");
+            // Crea un efecto de daño
+            GameObject Ataque = Instantiate(BolaDeAtaque, Destino, Quaternion.identity);
+            AtaqueActual = Ataque;
+            Ataque.transform.localScale = new Vector3(50,50,50);
+            // Destruye ese efecto
+            Destroy(Ataque, 1f);
+        }
+        if (AtaqueActual != null)
+        {
+            Debug.Log("Esta atacando " + gameObject, gameObject);
+        }
+        Debug.Log(Nombre, gameObject);
     }
 
     public override void Colisiono(GameObject Colision, string TipoDeColision)
     {
-        Debug.Log(Colision + " | " + TipoDeColision,gameObject);
+        Debug.Log(Colision + " | " + TipoDeColision, gameObject);
     }
 
     public override void Detenerse()
     {
-        throw new System.NotImplementedException();
+        Agente.isStopped = true;
     }
 
     public override void IrAlDestino(Vector3 destino)
     {
-        throw new System.NotImplementedException();
+        Agente.isStopped = false;
+        Agente.SetDestination(destino);
     }
 
     public override void Morir()
@@ -51,7 +68,7 @@ public class A1_A1_H1_MoustroDelAverno : A1_A1_Enemigo
 
     public override void RecibirDanio(int cantidad)
     {
-        Vida-=cantidad;
+        Vida -= cantidad;
     }
 
     protected override void Start()
