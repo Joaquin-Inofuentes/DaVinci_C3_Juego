@@ -201,6 +201,7 @@ AnimatorStateTransition:
   m_Conditions:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   - m_ConditionMode: 2
     m_ConditionEvent: corriendo
     m_EventTreshold: 0
@@ -212,12 +213,17 @@ AnimatorStateTransition:
 =======
 =======
 >>>>>>> parent of f9429c8 (animaciones part 3)
+=======
+>>>>>>> parent of f9429c8 (animaciones part 3)
   - m_ConditionMode: 3
     m_ConditionEvent: Movimento
     m_EventTreshold: -0.001
   - m_ConditionMode: 4
     m_ConditionEvent: Movimento
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of f9429c8 (animaciones part 3)
+=======
 >>>>>>> parent of f9429c8 (animaciones part 3)
 =======
 >>>>>>> parent of f9429c8 (animaciones part 3)
@@ -233,8 +239,11 @@ AnimatorStateTransition:
   m_ExitTime: 0.68421054
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_HasExitTime: 0
 =======
+=======
+>>>>>>> parent of f9429c8 (animaciones part 3)
 =======
 >>>>>>> parent of f9429c8 (animaciones part 3)
   m_HasExitTime: 1
@@ -557,7 +566,11 @@ AnimatorStateTransition:
   - m_ConditionMode: 3
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_ConditionEvent: movimiento
+=======
+    m_ConditionEvent: Movimento
+>>>>>>> parent of f9429c8 (animaciones part 3)
 =======
     m_ConditionEvent: Movimento
 >>>>>>> parent of f9429c8 (animaciones part 3)
@@ -1026,6 +1039,7 @@ AnimatorController:
     m_Controller: {fileID: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   - m_Name: life
     m_Type: 4
 =======
@@ -1037,6 +1051,8 @@ AnimatorController:
   - m_Name: atacando
     m_Type: 4
 =======
+=======
+>>>>>>> parent of f9429c8 (animaciones part 3)
 =======
 >>>>>>> parent of f9429c8 (animaciones part 3)
   - m_Name: Movimento
