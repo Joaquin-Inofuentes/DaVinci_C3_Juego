@@ -54,7 +54,7 @@ public class Inputs : MonoBehaviour
 
         if (Input.GetKeyDown(TeclaAtaque3))
         {
-            C_AccionesJugador.Atacar(GameManager.PosicionDelMouseEnElEspacio, "Rayo");
+            C_AccionesJugador.Atacar(GameManager.PosicionDelMouseEnElEspacio, "BolaDeHielo");
             // Lógica para Ataque 3
             Debug.Log("Ataque 3 ejecutado");
         }
