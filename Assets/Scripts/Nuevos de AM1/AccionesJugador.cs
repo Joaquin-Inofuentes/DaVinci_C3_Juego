@@ -8,8 +8,8 @@ public class AccionesJugador : A1_Entidad
 
     public GameObject BolaDeFuego;
     public GameObject BolaDeHielo;
-    public GameObject BolaDeTierra;
-    public GameObject Espadazo;
+    public GameObject Rayo;
+    public GameObject ataqueRapido;
     public GameObject Flechazo;
     
     public float fuerzaDisparo = 500f;
@@ -17,8 +17,17 @@ public class AccionesJugador : A1_Entidad
 
     public override void Atacar(Vector3 Destino, string Nombre)
     {
-        GameObject ProyectilUsado = BolaDeFuego;
-
+        GameObject ProyectilUsado = null;
+        if(Nombre == "BolaDeFuego")
+        {
+            ProyectilUsado = BolaDeFuego;
+            animacion.SetBool("atacando", true);
+        }
+        else if( Nombre == "BolaDeHielo") 
+        {
+            ProyectilUsado = BolaDeHielo;
+            ProyectilUsado.GetComponent<Proyectil>().danio = 15; 
+        }
         transform.LookAt(Destino);
         Vector3 direccion = 
             (Destino - Origen.transform.position)
