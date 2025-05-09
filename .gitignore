@@ -8,6 +8,7 @@
 [Pp]ackages/
 .vs/
 ProjectSettings/
+/ProjectSettings
 
 # Archivos generados automáticamente
 *.csproj
@@ -23,3 +24,4 @@ ProjectSettings/
 # Archivos individuales innecesarios
 Logs/shadercompiler-UnityShaderCompiler.exe0.log
 .vs/DaVinci_C3_Juego/v17/DocumentLayout.json
+
