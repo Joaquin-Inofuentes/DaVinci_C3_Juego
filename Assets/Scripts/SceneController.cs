@@ -1,18 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
+{    
+    public void EmpezarPartida()
     {
-        
+        SceneManager.LoadScene("EscenaPrincipal v3");
+    }
+    public void Menu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
+    public void Creditos()
+    {
+        SceneManager.LoadScene("Creditos");
+    }
+    public void LoadVictoryScene()
+    {
+        SceneManager.LoadScene("Victoria");
     }
 
-    // Update is called once per frame
-    void Update()
+    public void LoadDefeatScene()
     {
-        
+        SceneManager.LoadScene("Derrota");
+    }
+    public void Salir()
+    {
+        Application.Quit(); 
     }
 }
