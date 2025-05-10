@@ -16,6 +16,10 @@ public class ReportadorDeLasColisiones : MonoBehaviour
 
     private void ProcesarColision(GameObject obj, string tipo)
     {
+        if (obj.name == Emisor.name) 
+        { 
+            return;
+        }
         if (Emisor == null)
         {
             Debug.LogWarning("[WARNING] Emisor no asignado en CollisionInvoker.");
@@ -66,6 +70,8 @@ public class ReportadorDeLasColisiones : MonoBehaviour
         if (Jugador != null)
             Jugador.Colisiono(Emisor, tipo);
         else
-            Debug.Log($"[DEBUG] Objeto sin A1_A1_Enemigo: {obj.name} ({tipo})");
+        {
+            //Debug.Log($"Objeto sin A1_Entidad: {obj.name} ({tipo})");
+        }
     }
 }
