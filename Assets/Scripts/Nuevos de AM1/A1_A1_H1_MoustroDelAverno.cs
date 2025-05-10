@@ -98,7 +98,7 @@ public class A1_A1_H1_MoustroDelAverno : A1_A1_Enemigo
     {
         base.Update(); // Llama al Update del padre
         float velocidad = Agente.velocity.magnitude;
-        Debug.Log("Velocidad agente: " + velocidad);
+        //Debug.Log("Velocidad agente: " + velocidad);
         animacion.SetFloat("velocidad", velocidad);
 
 

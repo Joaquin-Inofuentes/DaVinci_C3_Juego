@@ -20,15 +20,27 @@ public class Feedbacks : MonoBehaviour
     public AccionesJugador S_AccionesJugador;
     private Animator animator;
     public string TipoDeAtaque; // Ejemplo: "Físico" o "Mágico"
-
+    public RawImage BarraDeVida;
+    public float Vida_TamanoMaximo;
     void Start()
     {
         animator = GetComponent<Animator>(); // Obtiene el Animator del GameObject
+        Vida_TamanoMaximo = BarraDeVida.rectTransform.sizeDelta.y;
     }
 
     void Update()
     {
         // Aquí podrías manejar lógica de actualización, como el movimiento
+        ActualizarBarra();
+    }
+
+
+    private void ActualizarBarra()
+    {
+        float AlturaActualDeLaBarraDeVida = (S_AccionesJugador.Vida / 100f) * Vida_TamanoMaximo;
+
+        RectTransform rt = BarraDeVida.rectTransform;
+        rt.sizeDelta = new Vector2(rt.sizeDelta.x, AlturaActualDeLaBarraDeVida);
     }
 
     public void AnimacionAtaque()

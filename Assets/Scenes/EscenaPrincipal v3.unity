@@ -224,8 +224,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 041e98103a15e1e45b10696a0d2f7a7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  S_AccionesJugador: {fileID: 0}
+  S_AccionesJugador: {fileID: 1124246440}
   TipoDeAtaque: 
+  BarraDeVida: {fileID: 277083622}
+  Vida_TamanoMaximo: 0
   feedbackImage: {fileID: 481135987}
 --- !u!1 &11483582
 GameObject:
@@ -8878,6 +8880,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 274521275}
   m_Mesh: {fileID: -2348241470463114423, guid: 20e59512e2d491843b19f436ee00356e, type: 3}
+--- !u!114 &277083622 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5416425497890990145, guid: 493fe3dc00b0ca949bf13904567079cc, type: 3}
+  m_PrefabInstance: {fileID: 6528671191732673792}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &277397645
 GameObject:
   m_ObjectHideFlags: 0
@@ -39672,7 +39685,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &1067462593
 AudioSource:
   m_ObjectHideFlags: 0
@@ -42519,11 +42532,6 @@ MonoBehaviour:
   fuerzaDisparo: 2000
   Origen: {fileID: 294749043}
   Particulas: {fileID: 1521204201}
-  Feedbacks: {fileID: 5770832}
-  ColorDeRecibirDano: {r: 1, g: 0.107547104, b: 0.107547104, a: 0.5019608}
-  ColorDeCurarse: {r: 0.7522747, g: 0.7830189, b: 0.14330718, a: 0.39215687}
-  ColorDeObtenerMonedas: {r: 0.9874805, g: 1, b: 0, a: 0.5529412}
-  ColorDeMorir: {r: 0, g: 0, b: 0, a: 0.45490196}
   Destino: {x: -17.433197, y: -0.00000047683716, z: 1.024231}
 --- !u!1 &1126863508
 GameObject:

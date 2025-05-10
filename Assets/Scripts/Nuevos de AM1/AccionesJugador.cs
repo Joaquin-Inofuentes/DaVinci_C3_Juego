@@ -93,6 +93,7 @@ public class AccionesJugador : A1_Entidad
     {
         Vida -= cantidad;
         Debug.Log(gameObject.name + " Recibio daño de " + cantidad + " le queda " + Vida, gameObject);
+        
         if (Vida <= 0) 
         {
             Morir();
