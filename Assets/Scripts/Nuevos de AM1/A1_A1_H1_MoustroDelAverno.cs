@@ -11,8 +11,13 @@ public class A1_A1_H1_MoustroDelAverno : A1_A1_Enemigo
         //ModoAtaqueMelee = false;
         if (AtaqueActual == null)
         {
+<<<<<<< Updated upstream
             Debug.Log("Atacando");
             // Crea un efecto de daï¿½o
+=======
+            //Debug.Log("Atacando");
+            // Crea un efecto de daño
+>>>>>>> Stashed changes
             GameObject Ataque = Instantiate(BolaDeAtaque, Destino, Quaternion.identity);
             AtaqueActual = Ataque;
             Ataque.transform.localScale = new Vector3(50,50,50);
@@ -25,10 +30,10 @@ public class A1_A1_H1_MoustroDelAverno : A1_A1_Enemigo
         }
         if (AtaqueActual != null)
         {
-            Debug.Log("Esta atacando " + gameObject, gameObject);
+            //Debug.Log("Esta atacando " + gameObject, gameObject);
         }
       
-        Debug.Log(Nombre, gameObject);
+        //Debug.Log(Nombre, gameObject);
     }
 
     public override void Colisiono(GameObject Colision, string TipoDeColision)
@@ -49,7 +54,8 @@ public class A1_A1_H1_MoustroDelAverno : A1_A1_Enemigo
 
     public override void Morir()
     {
-        throw new System.NotImplementedException();
+        Debug.Log("Falta animacion de morir");
+        Destroy(gameObject, 1f);
     }
 
     public override void MoverseAlDestino()
@@ -75,6 +81,10 @@ public class A1_A1_H1_MoustroDelAverno : A1_A1_Enemigo
     public override void RecibirDanio(int cantidad)
     {
         Vida -= cantidad;
+        if(Vida <= 0) 
+        {
+            Morir();
+        }
     }
 
     protected override void Start()

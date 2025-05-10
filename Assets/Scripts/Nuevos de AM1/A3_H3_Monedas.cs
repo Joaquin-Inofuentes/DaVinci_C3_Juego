@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class A3_H3_Monedas : A3_Interactuable
 {
+    public int CantidadDeMonedas = 5;
+    public override void Interactuar()
+    {
+        GameManager.SumarMonedas(CantidadDeMonedas);
+    }
+
     public override void OnCollisionEnter(Collision collider)
     {
         throw new System.NotImplementedException();

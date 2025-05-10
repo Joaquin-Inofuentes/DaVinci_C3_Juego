@@ -2,7 +2,7 @@
 - Project name: DaVinci_C3_Juego
 - Unity version: Unity 2022.3.5f1
 - Active game object:
-  - Name: Bola de fuego v2
+  - Name: Enemigo
   - Tag: Untagged
   - Layer: Default
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->
