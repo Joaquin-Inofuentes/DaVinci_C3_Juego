@@ -64,28 +64,13 @@ public class AccionesJugador : A1_Entidad
         transform.LookAt(destino);
      
         Agente.SetDestination(destino);
-        animacion.SetFloat("velocidad", 1f);
         Destino = destino;
         Particulas.gameObject.transform.position = destino;
         Particulas.Play();
         Debug.Log(2);
 
     }
-    IEnumerator EsperarLlegada()
-    {
-        Debug.Log(3);
-        while (Agente.pathPending || Agente.remainingDistance > Agente.stoppingDistance + 0.1f || Agente.velocity.sqrMagnitude > 0.01f)
-        {
-            yield return null;
-        }
-        Debug.Log(4);
-
-        // Esperar medio segundo antes de volver a idle
-        yield return new WaitForSeconds(0.3f);
-
-        Debug.Log(5);
-        animacion.SetFloat("velocidad", 0f);
-    }
+   
 
     public override void Morir()
     {
@@ -117,10 +102,12 @@ public class AccionesJugador : A1_Entidad
     // Update is called once per frame
     void Update()
     {
+        float velocidadActual = Agente.velocity.magnitude;
+        animacion.SetFloat("velocidad", velocidadActual);
         if (Vector3.Distance(gameObject.transform.position, Destino) < 1)
         {
             Detenerse();
-            animacion.SetFloat("velocidad", 0f);
+           
         }
     }
 
