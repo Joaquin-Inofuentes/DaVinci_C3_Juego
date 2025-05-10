@@ -58,14 +58,11 @@ public class AccionesJugador : A1_Entidad
     public ParticleSystem Particulas;
     public override void IrAlDestino(Vector3 destino)
     {
-<<<<<<< HEAD
         Agente.isStopped = false;
-=======
         Debug.Log(1);
->>>>>>> c3c84d125f5fcaf64683d1a47c3610ad592bcb3c
+
         transform.LookAt(destino);
-        //Debug.Log(destino);
-        //Debug.Log(Agente);
+     
         Agente.SetDestination(destino);
         animacion.SetFloat("velocidad", 1f);
         Destino = destino;

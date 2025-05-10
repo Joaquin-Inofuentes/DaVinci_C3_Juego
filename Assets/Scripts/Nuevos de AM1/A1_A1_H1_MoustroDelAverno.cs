@@ -8,6 +8,7 @@ public class A1_A1_H1_MoustroDelAverno : A1_A1_Enemigo
     public GameObject AtaqueActual;
     public override void Atacar(Vector3 Destino, string Nombre = "")
     {
+        ModoAtaqueMelee = false;
         if (AtaqueActual == null)
         {
             Debug.Log("Atacando");
@@ -17,11 +18,16 @@ public class A1_A1_H1_MoustroDelAverno : A1_A1_Enemigo
             Ataque.transform.localScale = new Vector3(50,50,50);
             // Destruye ese efecto
             Destroy(Ataque, 1f);
+            if (ModoAtaqueMelee == true) 
+            {
+                animacion.SetTrigger("boss_ataque1");
+            }
         }
         if (AtaqueActual != null)
         {
             Debug.Log("Esta atacando " + gameObject, gameObject);
         }
+      
         Debug.Log(Nombre, gameObject);
     }
 
