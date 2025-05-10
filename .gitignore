@@ -25,3 +25,6 @@ ProjectSettings/
 Logs/shadercompiler-UnityShaderCompiler.exe0.log
 .vs/DaVinci_C3_Juego/v17/DocumentLayout.json
 
+UserSettings/Layouts/default-2022.dwlt
+Packages/packages-lock.json
+obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
