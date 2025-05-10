@@ -63,15 +63,8 @@ public class AccionesJugador : A1_Entidad
     public override void IrAlDestino(Vector3 destino)
     {
         Agente.isStopped = false;
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
         Debug.Log(1);
-=======
-=======
->>>>>>> Stashed changes
         //Debug.Log(1);
-
->>>>>>> Stashed changes
         transform.LookAt(destino);
         Agente.SetDestination(destino);
         Destino = destino;
@@ -93,13 +86,21 @@ public class AccionesJugador : A1_Entidad
         throw new System.NotImplementedException();
     }
 
+    public Feedbacks Feedbacks;
+    public Color ColorDeRecibirDano;
+    public Color ColorDeCurarse;
+    public Color ColorDeObtenerMonedas;
+    public Color ColorDeMorir;
+    public Color ColorAlSerAvistado;
     public override void RecibirDanio(int cantidad)
     {
         Vida -= cantidad;
         Debug.Log(gameObject.name + " Recibio daño de " + cantidad + " le queda " + Vida, gameObject);
+        Feedbacks.FeedbackRadialVisual(ColorDeRecibirDano, 1);
         if (Vida <= 0) 
         {
             Morir();
+            Feedbacks.FeedbackRadialVisual(ColorDeMorir, 1);
         }
     }
 

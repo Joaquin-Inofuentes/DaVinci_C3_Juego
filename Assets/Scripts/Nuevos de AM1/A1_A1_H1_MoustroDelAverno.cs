@@ -11,16 +11,10 @@ public class A1_A1_H1_MoustroDelAverno : A1_A1_Enemigo
         //ModoAtaqueMelee = false;
         if (AtaqueActual == null)
         {
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
             Debug.Log("Atacando");
             // Crea un efecto de daï¿½o
-=======
-=======
->>>>>>> Stashed changes
             //Debug.Log("Atacando");
             // Crea un efecto de daño
->>>>>>> Stashed changes
             GameObject Ataque = Instantiate(BolaDeAtaque, Destino, Quaternion.identity);
             AtaqueActual = Ataque;
             Ataque.transform.localScale = new Vector3(50,50,50);
