@@ -6,6 +6,26 @@ public class A1_A1_H1_MoustroDelAverno : A1_A1_Enemigo
 {
     public GameObject BolaDeAtaque;
     public GameObject AtaqueActual;
+
+    public GameObject PadreDebarraDevida; // padre de la barra
+    public GameObject BarraDeVida;        // barra visual
+
+    void ActualizarBarraDeVida()
+    {
+        // 1. Rotar solo en eje Y hacia la cámara
+        Vector3 camPos = Camera.main.transform.position;
+        Vector3 dir = camPos - PadreDebarraDevida.transform.position;
+        dir.y = 0; // solo rota en Y
+        if (dir != Vector3.zero)
+            PadreDebarraDevida.transform.rotation = Quaternion.LookRotation(dir);
+
+        // 2. Ajustar ancho según vida (asume escala X máxima = 1)
+        float porcentaje = Mathf.Clamp01(Vida / VidaMax);
+        Vector3 escala = BarraDeVida.transform.localScale;
+        BarraDeVida.transform.localScale = new Vector3(porcentaje, escala.y, escala.z);
+    }
+
+
     public override void Atacar(Vector3 Destino, string Nombre = "")
     {
         //ModoAtaqueMelee = false;
@@ -100,7 +120,7 @@ public class A1_A1_H1_MoustroDelAverno : A1_A1_Enemigo
         float velocidad = Agente.velocity.magnitude;
         //Debug.Log("Velocidad agente: " + velocidad);
         animacion.SetFloat("velocidad", velocidad);
-
+        ActualizarBarraDeVida();
 
     }
 }

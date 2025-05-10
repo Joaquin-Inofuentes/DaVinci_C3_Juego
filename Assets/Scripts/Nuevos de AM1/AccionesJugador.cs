@@ -88,12 +88,17 @@ public class AccionesJugador : A1_Entidad
     {
         throw new System.NotImplementedException();
     }
-
+    public Feedbacks Feedbacks;
+    public Color Color_RecibeDano;
+    public Color Color_ObtieneMonedas;
+    public Color Color_FueAvistado;
+    public Color Color_Muere;
+    public Color Color_SeCura;
     public override void RecibirDanio(int cantidad)
     {
         Vida -= cantidad;
         Debug.Log(gameObject.name + " Recibio daño de " + cantidad + " le queda " + Vida, gameObject);
-        
+        Feedbacks.FeedbackRadialVisual(Color_RecibeDano, 1);
         if (Vida <= 0) 
         {
             Morir();
