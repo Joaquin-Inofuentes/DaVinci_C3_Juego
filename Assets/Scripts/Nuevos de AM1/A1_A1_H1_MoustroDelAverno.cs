@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,24 +7,33 @@ public class A1_A1_H1_MoustroDelAverno : A1_A1_Enemigo
     public GameObject BolaDeAtaque;
     public GameObject AtaqueActual;
 
-    public GameObject PadreDebarraDevida; // padre de la barra
-    public GameObject BarraDeVida;        // barra visual
+    public GameObject PadreDebarraDevida;
+    public GameObject BarraDeVida;
 
-    void ActualizarBarraDeVida()
+    private float anchoOriginal;
+
+    void ActualizarBarraDevida()
     {
-        // 1. Rotar solo en eje Y hacia la cámara
+        // 1. Rotar solo en eje Y hacia la cÃ¡mara
         Vector3 camPos = Camera.main.transform.position;
         Vector3 dir = camPos - PadreDebarraDevida.transform.position;
-        dir.y = 0; // solo rota en Y
+        dir.y = 0;
         if (dir != Vector3.zero)
             PadreDebarraDevida.transform.rotation = Quaternion.LookRotation(dir);
 
-        // 2. Ajustar ancho según vida (asume escala X máxima = 1)
-        float porcentaje = Mathf.Clamp01(Vida / VidaMax);
-        Vector3 escala = BarraDeVida.transform.localScale;
-        BarraDeVida.transform.localScale = new Vector3(porcentaje, escala.y, escala.z);
-    }
+        // 2. Calcular porcentaje real
+        float porcentajeSinClamp = Vida / (float)VidaMax;
+        float porcentaje = Mathf.Clamp01(porcentajeSinClamp);
+        Debug.Log($"[DEBUG] Vida: {Vida}, VidaMax: {VidaMax}, SinClamp: {porcentajeSinClamp}, Clamp01: {porcentaje}");
 
+        // 3. Escalar ancho de la barra
+        Vector3 escala = BarraDeVida.transform.localScale;
+        BarraDeVida.transform.localScale = new Vector3(anchoOriginal * porcentaje, escala.y, escala.z);
+
+        // 4. Mover localmente a la izquierda
+        float offset = (anchoOriginal - (anchoOriginal * porcentaje)) / 2f;
+        BarraDeVida.transform.localPosition = new Vector3(-offset, BarraDeVida.transform.localPosition.y, BarraDeVida.transform.localPosition.z);
+    }
 
     public override void Atacar(Vector3 Destino, string Nombre = "")
     {
@@ -35,7 +44,7 @@ public class A1_A1_H1_MoustroDelAverno : A1_A1_Enemigo
             Debug.Log("Atacando");
             // Crea un efecto de danio
             //Debug.Log("Atacando");
-            // Crea un efecto de daño
+            // Crea un efecto de daÃ±o
             GameObject Ataque = Instantiate(BolaDeAtaque, Destino, Quaternion.identity);
             AtaqueActual = Ataque;
             Ataque.transform.localScale = new Vector3(50,50,50);
@@ -111,7 +120,9 @@ public class A1_A1_H1_MoustroDelAverno : A1_A1_Enemigo
     protected override void Start()
     {
         base.Start(); // Llama al Start del padre
-        // Cï¿½digo propio de ArquerasElfas
+                      // CÃ¯Â¿Â½digo propio de ArquerasElfas
+        anchoOriginal = BarraDeVida.transform.localScale.x;
+
     }
 
     protected override void Update()
@@ -120,7 +131,7 @@ public class A1_A1_H1_MoustroDelAverno : A1_A1_Enemigo
         float velocidad = Agente.velocity.magnitude;
         //Debug.Log("Velocidad agente: " + velocidad);
         animacion.SetFloat("velocidad", velocidad);
-        ActualizarBarraDeVida();
+        ActualizarBarraDevida();
 
     }
 }

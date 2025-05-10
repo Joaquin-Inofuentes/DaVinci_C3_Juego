@@ -71848,7 +71848,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 0.79684, z: 0.85849}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2038079564}
@@ -71894,7 +71894,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 396e54d9ff587d74d81cded3ed238db3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -84291,7 +84291,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1.7, z: 0}
-  m_LocalScale: {x: 4.5381, y: 0.075635, z: 0.15127}
+  m_LocalScale: {x: -5, y: 0.075635, z: 0.15127}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1737316310}
@@ -84338,7 +84338,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: d5f6bf95bef0fc74b82c02b658e0119d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -88374,6 +88374,7 @@ GameObject:
   - component: {fileID: 3939737376102147982}
   - component: {fileID: 607606874668896743}
   - component: {fileID: 7521623597890947749}
+  - component: {fileID: 7521623597890947750}
   m_Layer: 0
   m_Name: Coins
   m_TagString: Untagged
@@ -88510,7 +88511,7 @@ Transform:
   m_GameObject: {fileID: 4098486798050509619}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.9851, y: -0.117, z: 8.4652}
+  m_LocalPosition: {x: -5.9851, y: 0.04, z: 8.4652}
   m_LocalScale: {x: 2.9092, y: 2.9092, z: 2.9092}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -88529,6 +88530,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CantidadDeMonedas: 10
+--- !u!65 &7521623597890947750
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4098486798050509619}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.6726999, y: 1.94, z: 1.6375}
+  m_Center: {x: -0.037149996, y: 0.8, z: -0.010350019}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
