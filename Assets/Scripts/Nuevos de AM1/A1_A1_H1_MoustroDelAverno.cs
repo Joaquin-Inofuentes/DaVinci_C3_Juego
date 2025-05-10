@@ -8,7 +8,7 @@ public class A1_A1_H1_MoustroDelAverno : A1_A1_Enemigo
     public GameObject AtaqueActual;
     public override void Atacar(Vector3 Destino, string Nombre = "")
     {
-        ModoAtaqueMelee = false;
+        //ModoAtaqueMelee = false;
         if (AtaqueActual == null)
         {
             Debug.Log("Atacando");

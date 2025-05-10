@@ -7,20 +7,21 @@ public class Proyectil : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Destroy(gameObject,1);
+        Destroy(gameObject, 1);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
 
     public int danio = 10;
 
-    private void OnCollisionEnter(Collision collision)
+    private void ColisionoCon (Collision collision)
     {
+        Debug.Log("___" + collision.ToString());
         // 1. Verifica si es enemigo
         A1_A1_Enemigo enemigo = collision.gameObject.GetComponent<A1_A1_Enemigo>();
         if (enemigo != null)
