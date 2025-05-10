@@ -8,7 +8,7 @@ public class A1_A1_H1_MoustroDelAverno : A1_A1_Enemigo
     public GameObject AtaqueActual;
     public override void Atacar(Vector3 Destino, string Nombre = "")
     {
-        ModoAtaqueMelee = false;
+       
         if (AtaqueActual == null)
         {
             Debug.Log("Atacando");
@@ -86,6 +86,8 @@ public class A1_A1_H1_MoustroDelAverno : A1_A1_Enemigo
     protected override void Update()
     {
         base.Update(); // Llama al Update del padre
+        float velocidad = Agente.velocity.magnitude;
+        animacion.SetFloat("velocidad", velocidad);
         // Código propio de ArquerasElfas
     }
 }

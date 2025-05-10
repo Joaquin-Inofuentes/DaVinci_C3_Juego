@@ -27,12 +27,16 @@ public class AccionesJugador : A1_Entidad
         {
             ProyectilUsado = BolaDeHielo;
             animacion.SetTrigger("magic2");
+            animacion.SetFloat("velocidad", 0);
+            Agente.isStopped = true;
             ProyectilUsado.GetComponent<Proyectil>().danio = 15; 
         }
         if(Nombre == "Rayo") 
         {
             ProyectilUsado = Rayo;
             animacion.SetTrigger("magic3");
+            animacion.SetFloat("velocidad", 0);
+            Agente.isStopped = true;
         }
         transform.LookAt(Destino);
         Vector3 direccion = 
@@ -60,9 +64,7 @@ public class AccionesJugador : A1_Entidad
     {
         Agente.isStopped = false;
         Debug.Log(1);
-
         transform.LookAt(destino);
-     
         Agente.SetDestination(destino);
         Destino = destino;
         Particulas.gameObject.transform.position = destino;
