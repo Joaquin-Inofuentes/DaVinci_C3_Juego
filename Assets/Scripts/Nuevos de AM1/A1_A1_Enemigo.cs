@@ -60,7 +60,7 @@ public abstract class A1_A1_Enemigo : A1_Entidad
     }
 
     // Métodos públicos
-    public abstract void MoverseAlDestino();
+   
     public abstract void OnEnabled();
     public abstract void OnDisabled();
 }
