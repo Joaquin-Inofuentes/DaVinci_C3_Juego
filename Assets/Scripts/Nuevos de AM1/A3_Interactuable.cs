@@ -21,4 +21,6 @@ public abstract class A3_Interactuable : MonoBehaviour
     public abstract void OnCollisionEnter(Collision collider);
     public abstract void OnDestroy();
 
+    public abstract void Interactuar();
+
 }

@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class A3_H2_ObjetoDestruible : A3_Interactuable
 {
+    public override void Interactuar()
+    {
+        throw new System.NotImplementedException();
+    }
+
     public override void OnCollisionEnter(Collision collider)
     {
         throw new System.NotImplementedException();

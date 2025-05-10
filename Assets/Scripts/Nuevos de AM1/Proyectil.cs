@@ -17,16 +17,32 @@ public class Proyectil : MonoBehaviour
     }
 
 
+
+    private void OnCollisionEnter(Collision c) => ColisionoCon(c.gameObject, "CollisionEnter");
+    private void OnCollisionStay(Collision c) => ColisionoCon(c.gameObject, "CollisionStay");
+    private void OnCollisionExit(Collision c) => ColisionoCon(c.gameObject, "CollisionExit");
+
+    private void OnTriggerEnter(Collider other) => ColisionoCon(other.gameObject, "TriggerEnter");
+    private void OnTriggerStay(Collider other) => ColisionoCon(other.gameObject, "TriggerStay");
+    private void OnTriggerExit(Collider other) => ColisionoCon(other.gameObject, "TriggerExit");
+
+
+
+
     public int danio = 10;
 
-    private void ColisionoCon (Collision collision)
+    private void ColisionoCon (GameObject collision, string TipoDeColision)
     {
-        Debug.Log("___" + collision.ToString());
+        //Debug.Log("___" + collision.ToString() + " _ " + TipoDeColision);
         // 1. Verifica si es enemigo
-        A1_A1_Enemigo enemigo = collision.gameObject.GetComponent<A1_A1_Enemigo>();
+        A1_Entidad enemigo = collision.gameObject.GetComponent<A1_Entidad>();
         if (enemigo != null)
         {
             enemigo.RecibirDanio(danio);
+        }
+        if (enemigo == null) 
+        { 
+            return;
         }
 
         // 2. Desactiva collider y arranca animación
