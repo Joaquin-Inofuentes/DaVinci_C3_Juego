@@ -84,8 +84,15 @@ public class A1_A1_H1_MoustroDelAverno : A1_A1_Enemigo
     {
         animacion.SetBool("life", false);
         Debug.Log("Falta animacion de morir");
-        Destroy(gameObject, 1f);
+        StartCoroutine(DesaparecerDespuesDeSegundos(12f)); // espera 3 segundos
     }
+
+    private IEnumerator DesaparecerDespuesDeSegundos(float segundos)
+    {
+        yield return new WaitForSeconds(segundos);
+        Destroy(gameObject);
+    }
+
 
     public override void MoverseAlDestino()
     {
