@@ -11,8 +11,9 @@ public class A1_A1_H1_MoustroDelAverno : A1_A1_Enemigo
         //ModoAtaqueMelee = false;
         if (AtaqueActual == null)
         {
+
             Debug.Log("Atacando");
-            // Crea un efecto de daï¿½o
+            // Crea un efecto de danio
             //Debug.Log("Atacando");
             // Crea un efecto de daño
             GameObject Ataque = Instantiate(BolaDeAtaque, Destino, Quaternion.identity);
@@ -41,6 +42,7 @@ public class A1_A1_H1_MoustroDelAverno : A1_A1_Enemigo
     public override void Detenerse()
     {
         Agente.isStopped = true;
+       
     }
 
     public override void IrAlDestino(Vector3 destino)
@@ -51,6 +53,7 @@ public class A1_A1_H1_MoustroDelAverno : A1_A1_Enemigo
 
     public override void Morir()
     {
+        animacion.SetBool("life", false);
         Debug.Log("Falta animacion de morir");
         Destroy(gameObject, 1f);
     }
@@ -81,6 +84,7 @@ public class A1_A1_H1_MoustroDelAverno : A1_A1_Enemigo
         if(Vida <= 0) 
         {
             Morir();
+            animacion.SetBool("life", false);
         }
     }
 
@@ -94,7 +98,9 @@ public class A1_A1_H1_MoustroDelAverno : A1_A1_Enemigo
     {
         base.Update(); // Llama al Update del padre
         float velocidad = Agente.velocity.magnitude;
+        Debug.Log("Velocidad agente: " + velocidad);
         animacion.SetFloat("velocidad", velocidad);
-        // Cï¿½digo propio de ArquerasElfas
+
+
     }
 }

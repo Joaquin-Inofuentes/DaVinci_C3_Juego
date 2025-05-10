@@ -14,9 +14,11 @@ public class AccionesJugador : A1_Entidad
     
     public float fuerzaDisparo = 500f;
     public Transform Origen;
+    private bool estaMuerto= false;
 
     public override void Atacar(Vector3 Destino, string Nombre)
     {
+        if (estaMuerto) return;
         GameObject ProyectilUsado = null;
         if(Nombre == "BolaDeFuego")
         {
@@ -62,9 +64,9 @@ public class AccionesJugador : A1_Entidad
     public ParticleSystem Particulas;
     public override void IrAlDestino(Vector3 destino)
     {
+        if (estaMuerto) return;
         Agente.isStopped = false;
         Debug.Log(1);
-        //Debug.Log(1);
         transform.LookAt(destino);
         Agente.SetDestination(destino);
         Destino = destino;
@@ -77,8 +79,9 @@ public class AccionesJugador : A1_Entidad
 
     public override void Morir()
     {
-        animacion.SetBool("live", false);
-        GameManager.Componente.Reiniciar();
+        if (estaMuerto) return;
+        estaMuerto = true;
+        animacion.SetBool("life", false);
     }
 
     public override void OnCollision(Collision collider)
@@ -86,21 +89,14 @@ public class AccionesJugador : A1_Entidad
         throw new System.NotImplementedException();
     }
 
-    public Feedbacks Feedbacks;
-    public Color ColorDeRecibirDano;
-    public Color ColorDeCurarse;
-    public Color ColorDeObtenerMonedas;
-    public Color ColorDeMorir;
-    public Color ColorAlSerAvistado;
     public override void RecibirDanio(int cantidad)
     {
         Vida -= cantidad;
         Debug.Log(gameObject.name + " Recibio daño de " + cantidad + " le queda " + Vida, gameObject);
-        Feedbacks.FeedbackRadialVisual(ColorDeRecibirDano, 1);
         if (Vida <= 0) 
         {
             Morir();
-            Feedbacks.FeedbackRadialVisual(ColorDeMorir, 1);
+            GameManager.Componente.Reiniciar();
         }
     }
 
