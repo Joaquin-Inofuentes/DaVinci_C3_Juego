@@ -12,9 +12,12 @@ public class A1_A1_H1_MoustroDelAverno : A1_A1_Enemigo
         if (AtaqueActual == null)
         {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             Debug.Log("Atacando");
             // Crea un efecto de daï¿½o
 =======
+=======
+>>>>>>> Stashed changes
             //Debug.Log("Atacando");
             // Crea un efecto de daño
 >>>>>>> Stashed changes

@@ -64,8 +64,11 @@ public class AccionesJugador : A1_Entidad
     {
         Agente.isStopped = false;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         Debug.Log(1);
 =======
+=======
+>>>>>>> Stashed changes
         //Debug.Log(1);
 
 >>>>>>> Stashed changes
