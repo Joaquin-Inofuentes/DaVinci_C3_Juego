@@ -11,6 +11,7 @@ public class A1_A1_H1_MoustroDelAverno : A1_A1_Enemigo
     public GameObject BarraDeVida;
 
     private float anchoOriginal;
+    private bool estaMuerto = false;
 
     void ActualizarBarraDevida()
     {
@@ -37,6 +38,7 @@ public class A1_A1_H1_MoustroDelAverno : A1_A1_Enemigo
 
     public override void Atacar(Vector3 Destino, string Nombre = "")
     {
+        if (estaMuerto) return;
         //ModoAtaqueMelee = false;
         if (AtaqueActual == null)
         {
@@ -76,6 +78,7 @@ public class A1_A1_H1_MoustroDelAverno : A1_A1_Enemigo
 
     public override void IrAlDestino(Vector3 destino)
     {
+        if (estaMuerto) return;
         Agente.isStopped = false;
         Agente.SetDestination(destino);
     }
@@ -84,7 +87,9 @@ public class A1_A1_H1_MoustroDelAverno : A1_A1_Enemigo
     {
         animacion.SetBool("life", false);
         Debug.Log("Falta animacion de morir");
-        StartCoroutine(DesaparecerDespuesDeSegundos(12f)); // espera 3 segundos
+        StartCoroutine(DesaparecerDespuesDeSegundos(10f)); // espera 3 segundos
+        if (estaMuerto) return;
+        estaMuerto = true;
     }
 
     private IEnumerator DesaparecerDespuesDeSegundos(float segundos)
@@ -94,10 +99,6 @@ public class A1_A1_H1_MoustroDelAverno : A1_A1_Enemigo
     }
 
 
-    public override void MoverseAlDestino()
-    {
-        throw new System.NotImplementedException();
-    }
 
     public override void OnCollision(Collision collider)
     {

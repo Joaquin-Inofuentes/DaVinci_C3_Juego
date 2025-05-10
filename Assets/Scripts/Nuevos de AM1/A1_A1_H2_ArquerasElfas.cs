@@ -29,11 +29,6 @@ public class A1_A1_H2_ArquerasElfas : A1_A1_Enemigo
         throw new System.NotImplementedException();
     }
 
-    public override void MoverseAlDestino()
-    {
-        throw new System.NotImplementedException();
-    }
-
     public override void OnCollision(Collision collider)
     {
         throw new System.NotImplementedException();
