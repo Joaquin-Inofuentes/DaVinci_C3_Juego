@@ -12,7 +12,7 @@ public class A1_A1_H1_MoustroDelAverno : A1_A1_Enemigo
         if (AtaqueActual == null)
         {
             Debug.Log("Atacando");
-            // Crea un efecto de daño
+            // Crea un efecto de daï¿½o
             GameObject Ataque = Instantiate(BolaDeAtaque, Destino, Quaternion.identity);
             AtaqueActual = Ataque;
             Ataque.transform.localScale = new Vector3(50,50,50);
@@ -80,12 +80,14 @@ public class A1_A1_H1_MoustroDelAverno : A1_A1_Enemigo
     protected override void Start()
     {
         base.Start(); // Llama al Start del padre
-        // Código propio de ArquerasElfas
+        // Cï¿½digo propio de ArquerasElfas
     }
 
     protected override void Update()
     {
         base.Update(); // Llama al Update del padre
-        // Código propio de ArquerasElfas
+        float velocidad = Agente.velocity.magnitude;
+        animacion.SetFloat("velocidad", velocidad);
+        // Cï¿½digo propio de ArquerasElfas
     }
 }
