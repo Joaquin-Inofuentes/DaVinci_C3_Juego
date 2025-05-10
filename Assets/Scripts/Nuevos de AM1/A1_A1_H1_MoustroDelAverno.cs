@@ -24,7 +24,7 @@ public class A1_A1_H1_MoustroDelAverno : A1_A1_Enemigo
         // 2. Calcular porcentaje real
         float porcentajeSinClamp = Vida / (float)VidaMax;
         float porcentaje = Mathf.Clamp01(porcentajeSinClamp);
-        Debug.Log($"[DEBUG] Vida: {Vida}, VidaMax: {VidaMax}, SinClamp: {porcentajeSinClamp}, Clamp01: {porcentaje}");
+        //Debug.Log($"[DEBUG] Vida: {Vida}, VidaMax: {VidaMax}, SinClamp: {porcentajeSinClamp}, Clamp01: {porcentaje}");
 
         // 3. Escalar ancho de la barra
         Vector3 escala = BarraDeVida.transform.localScale;
