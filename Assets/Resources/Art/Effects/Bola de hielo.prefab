@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3428317961875029811}
   - component: {fileID: 7774280137606358539}
   - component: {fileID: 6236424372644472815}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: flame14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 609366423072623062}
   - component: {fileID: 2424835745833654663}
   - component: {fileID: 4887626479369368479}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: flame01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 5801556629526659946}
   - component: {fileID: 5231900486306550724}
   - component: {fileID: 5439202375510126311}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: flame10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -260,7 +260,7 @@ GameObject:
   - component: {fileID: 7638619982694238626}
   - component: {fileID: 7481318817551966541}
   - component: {fileID: 7137778314996866463}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: flame06
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -344,7 +344,7 @@ GameObject:
   - component: {fileID: 6104120505884546023}
   - component: {fileID: 7342949865089916581}
   - component: {fileID: -8478183398296487819}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bola de hielo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -411,7 +411,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 512
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -455,7 +455,7 @@ GameObject:
   - component: {fileID: 6257790921790764143}
   - component: {fileID: 4153362320084170364}
   - component: {fileID: 2596954601568247100}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: flame03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -538,7 +538,7 @@ GameObject:
   - component: {fileID: 8295609033565470213}
   - component: {fileID: 1044088009720575331}
   - component: {fileID: 1448072746543692743}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: flame02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -621,7 +621,7 @@ GameObject:
   - component: {fileID: 3404687602801133138}
   - component: {fileID: 2647731257734766140}
   - component: {fileID: 6045281507818610192}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: flame07
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -704,7 +704,7 @@ GameObject:
   - component: {fileID: 5567308154770877528}
   - component: {fileID: 5800226963192252842}
   - component: {fileID: 4849609259950243148}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: flame16
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -787,7 +787,7 @@ GameObject:
   - component: {fileID: 2586654081233796058}
   - component: {fileID: 8376770112522583478}
   - component: {fileID: 1025910059516737964}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: flame04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -870,7 +870,7 @@ GameObject:
   - component: {fileID: 9089943315068284195}
   - component: {fileID: 8033958891676887846}
   - component: {fileID: 5961941497306399057}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: flame13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -953,7 +953,7 @@ GameObject:
   - component: {fileID: 8498622795878924966}
   - component: {fileID: 5142021371147689507}
   - component: {fileID: 680067837172779599}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: flame11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1036,7 +1036,7 @@ GameObject:
   - component: {fileID: 4405136688173429149}
   - component: {fileID: 838008453932929464}
   - component: {fileID: 5511608090518132170}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: flame15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1119,7 +1119,7 @@ GameObject:
   - component: {fileID: 984002747168517242}
   - component: {fileID: 3775242278000999793}
   - component: {fileID: 2035664325802874657}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: flame08
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1202,7 +1202,7 @@ GameObject:
   - component: {fileID: 1349819123924962097}
   - component: {fileID: 8385968428084259482}
   - component: {fileID: 1163025229837100930}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: flame12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1285,7 +1285,7 @@ GameObject:
   - component: {fileID: 3408587725030235927}
   - component: {fileID: 2574792298936563191}
   - component: {fileID: 2084256442115112684}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: flame17
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1368,7 +1368,7 @@ GameObject:
   - component: {fileID: 7508726695956194182}
   - component: {fileID: 1944932347381119532}
   - component: {fileID: 3839403253713559987}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: flame09
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1451,7 +1451,7 @@ GameObject:
   - component: {fileID: 7765934740327108885}
   - component: {fileID: 3572907524285118015}
   - component: {fileID: 7195900615690686906}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: flame05
   m_TagString: Untagged
   m_Icon: {fileID: 0}

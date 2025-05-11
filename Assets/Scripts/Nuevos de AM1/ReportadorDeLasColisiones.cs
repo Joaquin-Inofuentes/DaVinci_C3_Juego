@@ -14,8 +14,10 @@ public class ReportadorDeLasColisiones : MonoBehaviour
     private void OnTriggerStay(Collider other) => ProcesarColision(other.gameObject, "TriggerStay");
     private void OnTriggerExit(Collider other) => ProcesarColision(other.gameObject, "TriggerExit");
 
+    public bool Persiguiendo =  true;
     private void ProcesarColision(GameObject obj, string tipo)
     {
+        
         if (obj.layer != 7) return;
 
         if (obj.name == Emisor.name) 
@@ -70,7 +72,19 @@ public class ReportadorDeLasColisiones : MonoBehaviour
         }
         var Jugador = obj.GetComponent<A1_Entidad>();
         if (Jugador != null)
+        {
             Jugador.Colisiono(Emisor, tipo);
+
+            if (obj.GetComponent<AccionesJugador>() != null && Persiguiendo)
+            {
+                obj.GetComponent<AccionesJugador>().Feedbacks.FeedbackRadialVisual
+                    (
+                    obj.GetComponent<AccionesJugador>().Color_FueAvistado
+                    , 2f
+                    );
+                Persiguiendo = false;
+            }
+        }
         else
         {
             //Debug.Log($"Objeto sin A1_Entidad: {obj.name} ({tipo})");

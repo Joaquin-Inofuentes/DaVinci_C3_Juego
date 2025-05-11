@@ -86,6 +86,9 @@ public class A1_A1_H3_Duende : A1_A1_Enemigo
 
     public override void Morir()
     {
+        Agente.enabled = false;
+        // -0.591
+        transform.Translate(0, -0.591f, 0);
         animacion.SetBool("life", false);
         Debug.Log("Falta animacion de morir");
         StartCoroutine(DesaparecerDespuesDeSegundos(10f)); // espera 3 segundos
