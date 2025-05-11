@@ -44,7 +44,7 @@ public class A1_A1_H1_MoustroDelAverno : A1_A1_Enemigo
         {
 
             Debug.Log("Atacando");
-            // Crea un efecto de danio
+           // Crea un efecto de danio
             //Debug.Log("Atacando");
             // Crea un efecto de daño
             GameObject Ataque = Instantiate(BolaDeAtaque, Destino, Quaternion.identity);
@@ -52,10 +52,18 @@ public class A1_A1_H1_MoustroDelAverno : A1_A1_Enemigo
             Ataque.transform.localScale = new Vector3(50,50,50);
             // Destruye ese efecto
             Destroy(Ataque, 1f);
-            if (ModoAtaqueMelee == true) 
+            int ataqueIndex = Random.Range(0, 2); // 0 o 1
+            Debug.Log(1);
+            if (ataqueIndex == 0)
             {
-                animacion.SetTrigger("boss_ataque1");
+                animacion.SetTrigger("ataque1");
             }
+            else
+            Debug.Log(2);
+            {
+                animacion.SetTrigger("ataque2");
+            }
+            Debug.Log(3);
         }
         if (AtaqueActual != null)
         {
