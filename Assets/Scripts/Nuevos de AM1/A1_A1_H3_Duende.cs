@@ -115,6 +115,7 @@ public class A1_A1_H3_Duende : A1_A1_Enemigo
 
     public override void RecibirDanio(int cantidad)
     {
+        animacion.SetTrigger("danio");
         Vida -= cantidad;
         if(Vida <= 0) 
         {
