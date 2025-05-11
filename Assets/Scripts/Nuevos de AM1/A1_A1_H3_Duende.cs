@@ -78,6 +78,7 @@ public class A1_A1_H3_Duende : A1_A1_Enemigo
 
     public override void IrAlDestino(Vector3 destino)
     {
+        Debug.DrawLine(destino,transform.position);
         if (estaMuerto) return;
         Agente.isStopped = false;
         Agente.SetDestination(destino);

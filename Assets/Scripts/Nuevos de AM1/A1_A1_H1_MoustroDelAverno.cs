@@ -43,6 +43,7 @@ public class A1_A1_H1_MoustroDelAverno : A1_A1_Enemigo
         if (AtaqueActual == null)
         {
 
+        Debug.Log(1);
             Debug.Log("Atacando");
             // Crea un efecto de danio
             //Debug.Log("Atacando");
@@ -51,7 +52,7 @@ public class A1_A1_H1_MoustroDelAverno : A1_A1_Enemigo
             AtaqueActual = Ataque;
             Ataque.transform.localScale = new Vector3(50,50,50);
             // Destruye ese efecto
-            Destroy(Ataque, 1f);
+            Destroy(Ataque, 2f);
             if (ModoAtaqueMelee == true) 
             {
                 animacion.SetTrigger("boss_ataque1");
@@ -85,6 +86,8 @@ public class A1_A1_H1_MoustroDelAverno : A1_A1_Enemigo
 
     public override void Morir()
     {
+        Agente.enabled = false;
+        transform.Translate(0, -0.7f, 0);
         animacion.SetBool("life", false);
         Debug.Log("Falta animacion de morir");
         StartCoroutine(DesaparecerDespuesDeSegundos(10f)); // espera 3 segundos

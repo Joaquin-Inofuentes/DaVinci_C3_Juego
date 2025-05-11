@@ -7,7 +7,7 @@ public class Proyectil : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Destroy(gameObject, 1);
+        Destroy(gameObject, 2);
     }
 
     // Update is called once per frame
@@ -62,19 +62,19 @@ public class Proyectil : MonoBehaviour
 
         // 3. Escalar a 2x en 0.5s
         float t = 0;
-        while (t < 0.5f)
+        while (t < 1f)
         {
             t += Time.deltaTime;
-            transform.localScale = Vector3.Lerp(Vector3.one, Vector3.one * 2f, t / 0.5f);
+            transform.localScale = Vector3.Lerp(Vector3.one, Vector3.one * 2f, t / 1f);
             yield return null;
         }
 
         // 4. Escalar a 0 en 1s
         t = 0;
-        while (t < 1f)
+        while (t < 2f)
         {
             t += Time.deltaTime;
-            transform.localScale = Vector3.Lerp(Vector3.one * 2f, Vector3.zero, t / 1f);
+            transform.localScale = Vector3.Lerp(Vector3.one * 2f, Vector3.zero, t / 2f);
             yield return null;
         }
 

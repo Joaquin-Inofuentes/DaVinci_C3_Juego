@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -22,6 +23,7 @@ public class Feedbacks : MonoBehaviour
     public string TipoDeAtaque; // Ejemplo: "Físico" o "Mágico"
     public RawImage BarraDeVida;
     public float Vida_TamanoMaximo;
+    public TextMeshProUGUI Text_CantidadDeMonedas;
     void Start()
     {
         animator = GetComponent<Animator>(); // Obtiene el Animator del GameObject
@@ -32,6 +34,7 @@ public class Feedbacks : MonoBehaviour
     {
         // Aquí podrías manejar lógica de actualización, como el movimiento
         ActualizarBarra();
+        Text_CantidadDeMonedas.text = "$ " + GameManager.Componente.ContadorDeMonedas.ToString();
     }
 
 

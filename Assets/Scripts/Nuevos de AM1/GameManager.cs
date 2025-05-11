@@ -104,6 +104,6 @@ public class GameManager : MonoBehaviour
 
     public static void SumarMonedas(int Cantidad)
     {
-        Componente.ContadorDeMonedas += 1;
+        Componente.ContadorDeMonedas += Cantidad;
     }
 }
