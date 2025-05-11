@@ -1,7 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
-<<<<<<< HEAD
-=======
 --- !u!1101 &-9121226713050386627
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -68,7 +66,6 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
->>>>>>> parent of 7b567d2 (cambios part 2)
 --- !u!1102 &-7878576377707461970
 AnimatorState:
   serializedVersion: 6
@@ -79,9 +76,6 @@ AnimatorState:
   m_Name: ataque_rapidoPersonaje
   m_Speed: 1
   m_CycleOffset: 0
-<<<<<<< HEAD
-  m_Transitions: []
-=======
   m_Transitions:
   - {fileID: 4199316451618638375}
   - {fileID: 2912847884310412507}
@@ -91,7 +85,6 @@ AnimatorState:
   - {fileID: -2433565909141408577}
   - {fileID: 2601424121797554441}
   - {fileID: 795297224405699270}
->>>>>>> parent of 7b567d2 (cambios part 2)
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
@@ -129,7 +122,12 @@ AnimatorState:
   - {fileID: 4510363290750203099}
   - {fileID: -2836530591924749772}
   - {fileID: -4488628370673085174}
+<<<<<<< HEAD
 >>>>>>> parent of 7b567d2 (cambios part 2)
+=======
+  - {fileID: -7967144135954287486}
+  - {fileID: -3386674182186449187}
+>>>>>>> damian_prueba1
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
@@ -202,6 +200,7 @@ AnimatorStateTransition:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   - m_ConditionMode: 2
     m_ConditionEvent: corriendo
     m_EventTreshold: 0
@@ -228,6 +227,11 @@ AnimatorStateTransition:
 =======
 >>>>>>> parent of f9429c8 (animaciones part 3)
     m_EventTreshold: 0.001
+=======
+  - m_ConditionMode: 4
+    m_ConditionEvent: velocidad
+    m_EventTreshold: 0.01
+>>>>>>> damian_prueba1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -3495326788487235609}
   m_Solo: 0
@@ -332,7 +336,12 @@ AnimatorState:
   m_Name: DeathPersonaje
   m_Speed: 1
   m_CycleOffset: 0
+<<<<<<< HEAD
   m_Transitions: []
+=======
+  m_Transitions:
+  - {fileID: -5199295840741061439}
+>>>>>>> damian_prueba1
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
@@ -349,8 +358,12 @@ AnimatorState:
   m_CycleOffsetParameter: 
   m_TimeParameter: 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 --- !u!1101 &-5087564257131087183
+=======
+--- !u!1101 &-5199295840741061439
+>>>>>>> damian_prueba1
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -359,6 +372,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions: []
   m_DstStateMachine: {fileID: 0}
+<<<<<<< HEAD
   m_DstState: {fileID: 5946230153558066808}
   m_Solo: 0
   m_Mute: 0
@@ -389,6 +403,16 @@ AnimatorStateTransition:
   m_TransitionDuration: 0.25
   m_TransitionOffset: 0
   m_ExitTime: 0.94174755
+=======
+  m_DstState: {fileID: 0}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 1
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+  m_ExitTime: 0.9310345
+>>>>>>> damian_prueba1
   m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -533,8 +557,11 @@ AnimatorState:
   - {fileID: -7079260173175822954}
   - {fileID: -3282694407384899264}
   - {fileID: 3923488640258158952}
+<<<<<<< HEAD
   - {fileID: 7830485399112963873}
 >>>>>>> parent of 7b567d2 (cambios part 2)
+=======
+>>>>>>> damian_prueba1
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
@@ -567,6 +594,7 @@ AnimatorStateTransition:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_ConditionEvent: movimiento
 =======
     m_ConditionEvent: Movimento
@@ -578,6 +606,10 @@ AnimatorStateTransition:
     m_ConditionEvent: Movimento
 >>>>>>> parent of f9429c8 (animaciones part 3)
     m_EventTreshold: 0
+=======
+    m_ConditionEvent: velocidad
+    m_EventTreshold: 0.01
+>>>>>>> damian_prueba1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -260847075570200488}
   m_Solo: 0
@@ -770,8 +802,11 @@ AnimatorState:
   m_Transitions: []
 =======
   m_Transitions:
+<<<<<<< HEAD
   - {fileID: -52992398074712751}
   - {fileID: 3948088438715494810}
+=======
+>>>>>>> damian_prueba1
   - {fileID: 4008723355201482598}
   - {fileID: 2908064293671444368}
   - {fileID: -1514409888322257302}
@@ -794,6 +829,7 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 --- !u!1101 &-1514409888322257302
@@ -818,6 +854,8 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+=======
+>>>>>>> damian_prueba1
 --- !u!1101 &-1129064938802100034
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -914,7 +952,7 @@ AnimatorStateMachine:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Base Layer
+  m_Name: personaje
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: -260847075570200488}
@@ -927,27 +965,40 @@ AnimatorStateMachine:
     m_Position: {x: -340, y: 1130, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -5339038441192420897}
+<<<<<<< HEAD
     m_Position: {x: 70, y: 750, z: 0}
+=======
+    m_Position: {x: 180, y: 740, z: 0}
+>>>>>>> damian_prueba1
   - serializedVersion: 1
     m_State: {fileID: 5946230153558066808}
     m_Position: {x: 380, y: 1170, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -7674659974065944226}
+<<<<<<< HEAD
     m_Position: {x: -670, y: 790, z: 0}
+=======
+    m_Position: {x: -80, y: 400, z: 0}
+>>>>>>> damian_prueba1
   - serializedVersion: 1
     m_State: {fileID: -1715044998573031432}
     m_Position: {x: 740, y: 470, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 8024372057592245549}
+<<<<<<< HEAD
     m_Position: {x: -640, y: 440, z: 0}
+=======
+    m_Position: {x: -620, y: 310, z: 0}
+>>>>>>> damian_prueba1
   - serializedVersion: 1
     m_State: {fileID: -3495326788487235609}
-    m_Position: {x: -50, y: 170, z: 0}
+    m_Position: {x: -60, y: 160, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
+<<<<<<< HEAD
   m_AnyStatePosition: {x: 50, y: 20, z: 0}
   m_EntryPosition: {x: 50, y: 120, z: 0}
   m_ExitPosition: {x: 420, y: -10, z: 0}
@@ -1003,6 +1054,13 @@ AnimatorStateTransition:
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
 >>>>>>> parent of 7b567d2 (cambios part 2)
+=======
+  m_AnyStatePosition: {x: 670, y: 260, z: 0}
+  m_EntryPosition: {x: -60, y: 0, z: 0}
+  m_ExitPosition: {x: 1110, y: 710, z: 0}
+  m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
+  m_DefaultState: {fileID: -3495326788487235609}
+>>>>>>> damian_prueba1
 --- !u!91 &9100000
 AnimatorController:
   m_ObjectHideFlags: 0
@@ -1040,6 +1098,7 @@ AnimatorController:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   - m_Name: life
     m_Type: 4
 =======
@@ -1056,6 +1115,9 @@ AnimatorController:
 =======
 >>>>>>> parent of f9429c8 (animaciones part 3)
   - m_Name: Movimento
+=======
+  - m_Name: velocidad
+>>>>>>> damian_prueba1
     m_Type: 1
 >>>>>>> parent of f9429c8 (animaciones part 3)
     m_DefaultFloat: 0
@@ -1064,7 +1126,7 @@ AnimatorController:
     m_Controller: {fileID: 0}
   m_AnimatorLayers:
   - serializedVersion: 5
-    m_Name: Base Layer
+    m_Name: personaje
     m_StateMachine: {fileID: -185938824531815919}
     m_Mask: {fileID: 0}
     m_Motions: []
@@ -1152,15 +1214,15 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: atacando
-    m_EventTreshold: 0
+    m_ConditionEvent: magic3
+    m_EventTreshold: 0.01
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -1715044998573031432}
   m_Solo: 0
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0
+  m_TransitionDuration: 0.25
   m_TransitionOffset: 0
   m_ExitTime: 0.68421054
   m_HasExitTime: 0
@@ -1494,6 +1556,7 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+<<<<<<< HEAD
 --- !u!1101 &4199316451618638375
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -1566,6 +1629,8 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+=======
+>>>>>>> damian_prueba1
 --- !u!1101 &4600892720873051242
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -1600,8 +1665,8 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: atacando
-    m_EventTreshold: 0
+    m_ConditionEvent: magic2
+    m_EventTreshold: 0.01
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 8024372057592245549}
   m_Solo: 0
@@ -1609,8 +1674,8 @@ AnimatorStateTransition:
   m_IsExit: 0
   serializedVersion: 3
   m_TransitionDuration: 0
-  m_TransitionOffset: 0
-  m_ExitTime: 0.68421054
+  m_TransitionOffset: 0.00000014305122
+  m_ExitTime: 0.58287597
   m_HasExitTime: 0
   m_HasFixedDuration: 0
   m_InterruptionSource: 0
@@ -1924,7 +1989,11 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+<<<<<<< HEAD
 --- !u!1101 &7830485399112963873
+=======
+--- !u!1101 &7846008139150026224
+>>>>>>> damian_prueba1
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1932,15 +2001,24 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
+<<<<<<< HEAD
   - m_ConditionMode: 4
     m_ConditionEvent: movimiento
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -260847075570200488}
+=======
+  - m_ConditionMode: 1
+    m_ConditionEvent: magic1
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: -7674659974065944226}
+>>>>>>> damian_prueba1
   m_Solo: 0
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
+<<<<<<< HEAD
   m_TransitionDuration: 0
   m_TransitionOffset: 0
   m_ExitTime: 0.98245615
@@ -1950,6 +2028,16 @@ AnimatorStateTransition:
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
 >>>>>>> parent of 7b567d2 (cambios part 2)
+=======
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+  m_ExitTime: 0.925
+  m_HasExitTime: 0
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
+>>>>>>> damian_prueba1
 --- !u!1102 &8024372057592245549
 AnimatorState:
   serializedVersion: 6
@@ -1964,7 +2052,6 @@ AnimatorState:
   m_Transitions: []
 =======
   m_Transitions:
-  - {fileID: 8788019011819431671}
   - {fileID: 3493350514494174922}
   - {fileID: 6624442596891997423}
   - {fileID: -3253288120338307421}
@@ -1988,6 +2075,7 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 --- !u!1101 &8788019011819431671
@@ -2041,3 +2129,5 @@ AnimatorStateTransition:
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
 >>>>>>> parent of 7b567d2 (cambios part 2)
+=======
+>>>>>>> damian_prueba1

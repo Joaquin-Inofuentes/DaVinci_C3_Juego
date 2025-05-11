@@ -4,6 +4,7 @@ using UnityEngine;
 
 public abstract class A3_Interactuable : MonoBehaviour
 {
+    public AudioSource SonidoDeInteraccion;
     /*
      <abstract> OnCollisionEnter(Coll Collider): void 
 <abstract> OnDestroy(): void 
@@ -20,5 +21,7 @@ public abstract class A3_Interactuable : MonoBehaviour
 
     public abstract void OnCollisionEnter(Collision collider);
     public abstract void OnDestroy();
+
+    public abstract void Interactuar();
 
 }

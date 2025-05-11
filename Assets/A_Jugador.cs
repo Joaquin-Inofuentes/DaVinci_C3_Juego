@@ -24,7 +24,7 @@ public class A_Jugador : MonoBehaviour
         TimerDeRecarga();
         if (Input.GetKeyDown(KeyCode.F4))
         {
-            GameManager.COMP.ReiniciarEscena();
+            GameManager.Componente.Reiniciar();
         }
     }
 
@@ -131,7 +131,7 @@ public class A_Jugador : MonoBehaviour
 
             if (timerMuerte >= tiempoFade)
             {
-                GameManager.COMP.ReiniciarEscena();
+                GameManager.Componente.Reiniciar();
                 pantallaMuerte.gameObject.SetActive(false);
                 activandoMuerte = false;
             }

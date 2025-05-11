@@ -4,9 +4,18 @@ using UnityEngine;
 
 public class A3_H2_ObjetoDestruible : A3_Interactuable
 {
+    public GameObject Monedas;
+    public override void Interactuar()
+    {
+        Monedas.SetActive(true);
+        gameObject.SetActive(false);
+    }
+
     public override void OnCollisionEnter(Collision collider)
     {
-        throw new System.NotImplementedException();
+        Debug.Log(collider);
+        if (collider.gameObject.layer == 9)
+            Interactuar();
     }
 
     public override void OnDestroy()

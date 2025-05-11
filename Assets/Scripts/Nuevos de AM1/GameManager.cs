@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -21,7 +22,7 @@ public class GameManager : MonoBehaviour
 
 
 
-    public static GameManager COMP;
+    public static GameManager Componente;
 
 
 
@@ -34,6 +35,21 @@ public class GameManager : MonoBehaviour
         // Inicialización si es necesario
     }
 
+    void Update()
+    {
+        if (Componente == null)
+        {
+            Componente = this;
+        }
+
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+
+        if (Physics.Raycast(ray, out hit))
+        {
+            PosicionDelMouseEnElEspacio = hit.point;
+        }
+    }
 
     // Método para iniciar la partida
     public void IniciarPartida()
@@ -67,33 +83,27 @@ public class GameManager : MonoBehaviour
     // Método para reiniciar la partida
     public void Reiniciar()
     {
-        // Lógica para reiniciar la partida, por ejemplo, recargar la escena actual
         Debug.Log("Partida Reiniciada");
-        // Podrías usar: SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+
+    public void CambiarDeEscena(string NombreDeLaEscena)
+    {
+        Debug.Log("Partida Reiniciada");
+
+        if (string.IsNullOrEmpty(NombreDeLaEscena))
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        else
+            SceneManager.LoadScene(NombreDeLaEscena);
     }
 
 
     public static Vector3 PosicionDelMouseEnElEspacio;
 
-    // Update is called once per frame
-    void Update()
+
+    public static void SumarMonedas(int Cantidad)
     {
-        if(COMP == null)
-        {
-            COMP = this;
-        }
-
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit;
-
-        if (Physics.Raycast(ray, out hit))
-        {
-            PosicionDelMouseEnElEspacio = hit.point;
-        }
-    }
-
-    public void ReiniciarEscena()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Componente.ContadorDeMonedas += Cantidad;
     }
 }
