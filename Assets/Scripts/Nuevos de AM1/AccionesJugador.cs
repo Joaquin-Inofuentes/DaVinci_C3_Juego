@@ -25,13 +25,10 @@ public class AccionesJugador : A1_Entidad
             ProyectilUsado = BolaDeFuego;
             animacion.SetBool("atacando", true);
         }
-        else if( Nombre == "BolaDeHielo") 
+        if( Nombre == "BolaDeHielo") 
         {
             ProyectilUsado = BolaDeHielo;
-<<<<<<< HEAD
             ProyectilUsado.GetComponent<Proyectil>().danio = 15; 
-        }
-=======
             animacion.SetTrigger("magic2");
             animacion.SetFloat("velocidad", 0);
             Agente.isStopped = true;
@@ -44,7 +41,7 @@ public class AccionesJugador : A1_Entidad
             animacion.SetFloat("velocidad", 0);
             Agente.isStopped = true;
         }
->>>>>>> damian_prueba1
+
         transform.LookAt(Destino);
         Vector3 direccion = 
             (Destino - Origen.transform.position)
@@ -77,31 +74,10 @@ public class AccionesJugador : A1_Entidad
         Destino = destino;
         Particulas.gameObject.transform.position = destino;
         Particulas.Play();
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-        StartCoroutine(EsperarLlegada());
-=======
->>>>>>> parent of 7b567d2 (cambios part 2)
-=======
-        float velocidad = new Vector3(GetComponent<Rigidbody>().velocity.x, 0, GetComponent<Rigidbody>().velocity.z).magnitude;
-        animator.SetFloat("velocidad", velocidad);
->>>>>>> parent of f9429c8 (animaciones part 3)
-=======
-        float velocidad = new Vector3(GetComponent<Rigidbody>().velocity.x, 0, GetComponent<Rigidbody>().velocity.z).magnitude;
-        animator.SetFloat("velocidad", velocidad);
->>>>>>> parent of f9429c8 (animaciones part 3)
-=======
-        float velocidad = new Vector3(GetComponent<Rigidbody>().velocity.x, 0, GetComponent<Rigidbody>().velocity.z).magnitude;
-        animator.SetFloat("velocidad", velocidad);
->>>>>>> parent of f9429c8 (animaciones part 3)
-=======
         //Debug.Log(2);
 
->>>>>>> damian_prueba1
+
     }
    
 
