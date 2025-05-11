@@ -53,10 +53,17 @@ public class A1_A1_H1_MoustroDelAverno : A1_A1_Enemigo
             Ataque.transform.localScale = new Vector3(50,50,50);
             // Destruye ese efecto
             Destroy(Ataque, 2f);
-            if (ModoAtaqueMelee == true) 
+            int ataqueIndex = Random.Range(0, 2); // 0 o 1
+
+            if (ataqueIndex == 0)
             {
-                animacion.SetTrigger("boss_ataque1");
+                animacion.SetTrigger("ataque1");
             }
+            else
+            {
+                animacion.SetTrigger("ataque2");
+            }
+
         }
         if (AtaqueActual != null)
         {
