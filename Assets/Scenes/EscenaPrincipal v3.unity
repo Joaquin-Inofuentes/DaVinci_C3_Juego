@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44402242, g: 0.49316543, b: 0.5722324, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -30257,6 +30257,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: elfa_ataque
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 2c8b35b4c9225d048a7e00109acdac3f, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 1c54b588cb9c0ce49a66d4e7ea81ef7e, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 2c8b35b4c9225d048a7e00109acdac3f, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -54552,6 +54560,11 @@ Transform:
   - {fileID: 1252053980}
   m_Father: {fileID: 1933000757}
   m_LocalEulerAnglesHint: {x: 0, y: 94.859, z: 0}
+--- !u!95 &1460946544 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 2c8b35b4c9225d048a7e00109acdac3f, type: 3}
+  m_PrefabInstance: {fileID: 824891467}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1462607113
 GameObject:
   m_ObjectHideFlags: 0
@@ -87886,7 +87899,7 @@ GameObject:
   - component: {fileID: 58727179847738489}
   - component: {fileID: 6561132736024438026}
   m_Layer: 0
-  m_Name: Enemigo (2)
+  m_Name: Elfa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -88383,23 +88396,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 2407984408790199599}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8606e15f83e0ba540869a589000a0a16, type: 3}
+  m_Script: {fileID: 11500000, guid: 37c694a77a7aa6b488c1501b67076302, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Vida: 0
-  VidaMax: 0
-  Velocidad: 0
-  "Da\xF1oDeAtaque": 0
-  VelocidadDeAtaque: 0
-  Agente: {fileID: 0}
-  animacion: {fileID: 0}
+  Vida: 100
+  VidaMax: 200
+  Velocidad: 5
+  "Da\xF1oDeAtaque": 10
+  VelocidadDeAtaque: 6
+  Agente: {fileID: 6409752431835472727}
+  animacion: {fileID: 1460946544}
   ModoAtaqueMelee: 0
   DistanciaParaAtaqueMelee: 0
-  DistanciaParaAtaqueLargo: 0
-  DistanciaParaPerseguir: 0
-  TimerDeAtaque: 0
-  rangoDeteccion: 0
-  rangoAtaque: 0
+  DistanciaParaAtaqueLargo: 12
+  DistanciaParaPerseguir: 12
+  TimerDeAtaque: 13
+  rangoDeteccion: 6
+  rangoAtaque: 10
   BolaDeAtaque: {fileID: 0}
   AtaqueActual: {fileID: 0}
   PadreDebarraDevida: {fileID: 0}
@@ -88561,7 +88574,7 @@ Transform:
   m_GameObject: {fileID: 3962281043467090406}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.7, z: 0}
+  m_LocalPosition: {x: 0, y: 0.828, z: 0}
   m_LocalScale: {x: -5, y: 0.075635, z: 0.15127}
   m_ConstrainProportionsScale: 0
   m_Children:
