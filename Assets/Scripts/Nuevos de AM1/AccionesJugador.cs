@@ -66,7 +66,7 @@ public class AccionesJugador : A1_Entidad
     {
         if (estaMuerto) return;
         Agente.isStopped = false;
-        Debug.Log(1);
+        //Debug.Log(1);
         transform.LookAt(destino);
         Agente.SetDestination(destino);
         Destino = destino;

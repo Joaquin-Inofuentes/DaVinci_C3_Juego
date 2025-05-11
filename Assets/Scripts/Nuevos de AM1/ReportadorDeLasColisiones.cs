@@ -16,6 +16,8 @@ public class ReportadorDeLasColisiones : MonoBehaviour
 
     private void ProcesarColision(GameObject obj, string tipo)
     {
+        if (obj.layer != 7) return;
+
         if (obj.name == Emisor.name) 
         { 
             return;
