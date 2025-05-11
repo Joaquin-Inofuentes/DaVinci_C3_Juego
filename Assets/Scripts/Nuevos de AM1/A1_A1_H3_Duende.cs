@@ -40,9 +40,9 @@ public class A1_A1_H3_Duende : A1_A1_Enemigo
     {
         if (estaMuerto) return;
         //ModoAtaqueMelee = false;
-       /* if (AtaqueActual == null)
+        if (AtaqueActual == null)
         {
-
+            
             Debug.Log("Atacando");
             // Crea un efecto de danio
             //Debug.Log("Atacando");
@@ -61,7 +61,7 @@ public class A1_A1_H3_Duende : A1_A1_Enemigo
         {
             //Debug.Log("Esta atacando " + gameObject, gameObject);
         }
-    */      
+         
         //Debug.Log(Nombre, gameObject);
     }
 
