@@ -11,7 +11,7 @@ public class Bala : MonoBehaviour
     public float CoeficienteDeExpansion;
     private Vector3 escalaInicial;
     private Vector3 escalaMaxima;
-
+    // Joaco, Comentario de prueba de github. Borrarlo si, se lo ve
     void Start()
     {
         escalaInicial = transform.localScale;
