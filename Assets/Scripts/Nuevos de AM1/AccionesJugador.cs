@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AccionesJugador : A1_Entidad
 {
@@ -82,6 +83,7 @@ public class AccionesJugador : A1_Entidad
         if (estaMuerto) return;
         estaMuerto = true;
         animacion.SetBool("life", false);
+        SceneManager.LoadScene("Derrota");
     }
 
     public override void OnCollision(Collision collider)

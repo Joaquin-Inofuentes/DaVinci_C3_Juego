@@ -8,7 +8,7 @@
   - Layers:
     - Default, TransparentFX, Ignore Raycast, Terreno, Water, UI, Enemigos, Jugador, DetectorDeEnemigos, Proyectil, Objetos
 - Active game object:
-  - Name: Coins (2)
+  - Name: Jugador v2
   - Tag: Untagged
-  - Layer: Default
+  - Layer: Jugador
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->
