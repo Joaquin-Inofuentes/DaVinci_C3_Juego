@@ -24,12 +24,11 @@ public class AccionesJugador : A1_Entidad
         if(Nombre == "BolaDeFuego")
         {
             ProyectilUsado = BolaDeFuego;
-            animacion.SetBool("atacando", true);
+            animacion.SetTrigger("magic1");
         }
         if( Nombre == "BolaDeHielo") 
         {
             ProyectilUsado = BolaDeHielo;
-            ProyectilUsado.GetComponent<Proyectil>().danio = 15; 
             animacion.SetTrigger("magic2");
             animacion.SetFloat("velocidad", 0);
             Agente.isStopped = true;
@@ -42,7 +41,6 @@ public class AccionesJugador : A1_Entidad
             animacion.SetFloat("velocidad", 0);
             Agente.isStopped = true;
         }
-
         transform.LookAt(Destino);
         Vector3 direccion = 
             (Destino - Origen.transform.position)
@@ -75,9 +73,7 @@ public class AccionesJugador : A1_Entidad
         Destino = destino;
         Particulas.gameObject.transform.position = destino;
         Particulas.Play();
-
         //Debug.Log(2);
-
 
     }
    
