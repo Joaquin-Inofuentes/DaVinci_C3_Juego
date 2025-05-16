@@ -9,3 +9,5 @@
 !ProjectSettings/
 !Assets/**/*
 *.meta
+
+/Assets/TextMesh Pro

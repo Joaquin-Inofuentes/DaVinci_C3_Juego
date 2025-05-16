@@ -91,6 +91,7 @@ public class AccionesJugador : A1_Entidad
     public override void Morir()
     {
         if (estaMuerto) return;
+        Feedbacks.FeedbackRadialVisual(Color_Muere, 4);
         estaMuerto = true;
         animacion.SetTrigger("life"); //nuevo
     }
