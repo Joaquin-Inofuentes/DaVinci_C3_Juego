@@ -1,5 +1,6 @@
 Escuela Da Vinci
 Carrera de "Diseño y programacion de videojuegos y simuladores virtuales"
+---
 Nombre del juego : > 🧙‍♂️ **"Bippity Boppity... ¡BOOM!"**  
 Cuatrimestre 3
 ---
