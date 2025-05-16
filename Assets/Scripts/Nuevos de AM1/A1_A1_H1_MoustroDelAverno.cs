@@ -49,6 +49,10 @@ public class A1_A1_H1_MoustroDelAverno : A1_A1_Enemigo
             //Debug.Log("Atacando");
             // Crea un efecto de daño
             GameObject Ataque = Instantiate(BolaDeAtaque, Destino, Quaternion.identity);
+            if (Ataque.GetComponent<Proyectil>() != null) 
+            {
+                Ataque.GetComponent<Proyectil>().Creador = gameObject;
+            }
             AtaqueActual = Ataque;
             Ataque.transform.localScale = new Vector3(50,50,50);
             // Destruye ese efecto
@@ -80,20 +84,20 @@ public class A1_A1_H1_MoustroDelAverno : A1_A1_Enemigo
 
     public override void Detenerse()
     {
-        Agente.isStopped = true;
+        agent.isStopped = true;
        
     }
 
     public override void IrAlDestino(Vector3 destino)
     {
         if (estaMuerto) return;
-        Agente.isStopped = false;
-        Agente.SetDestination(destino);
+        agent.isStopped = false;
+        agent.SetDestination(destino);
     }
 
     public override void Morir()
     {
-        Agente.enabled = false;
+        agent.enabled = false;
         PadreDebarraDevida.SetActive(false);
         // transform.Translate(0, -0.7f, 0); Correcion del bug de eliminar al boss
         animacion.SetBool("life", false);
@@ -147,7 +151,7 @@ public class A1_A1_H1_MoustroDelAverno : A1_A1_Enemigo
     protected override void Update()
     {
         base.Update(); // Llama al Update del padre
-        float velocidad = Agente.velocity.magnitude;
+        float velocidad = agent.velocity.magnitude;
         //Debug.Log("Velocidad agente: " + velocidad);
         animacion.SetFloat("velocidad", velocidad);
         ActualizarBarraDevida();

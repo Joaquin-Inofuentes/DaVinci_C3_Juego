@@ -42,26 +42,31 @@ public class AccionesJugador : A1_Entidad
                 ProyectilUsado.GetComponent<Proyectil>().danio = 15; 
             }
             animacion.SetFloat("velocidad", 0);
-            Agente.isStopped = true;
+            agent.isStopped = true;
         }
         if(Nombre == "Rayo") 
         {
             ProyectilUsado = Rayo;
             animacion.SetTrigger(modoMelee ? "melee3" : "magic3"); //nuevo
             animacion.SetFloat("velocidad", 0);
-            Agente.isStopped = true;
+            agent.isStopped = true;
         }
         transform.LookAt(Destino);
         Vector3 direccion = 
             (Destino - Origen.transform.position)
             .normalized;
 
-        GameObject proyectil = Instantiate(
+        GameObject Ataque = Instantiate(
             ProyectilUsado, 
             Origen.transform.position, 
             Quaternion.LookRotation(direccion));
 
-        Rigidbody rb = proyectil.GetComponent<Rigidbody>();
+        if (Ataque.GetComponent<Proyectil>() != null)
+        {
+            Ataque.GetComponent<Proyectil>().Creador = gameObject;
+        }
+
+        Rigidbody rb = Ataque.GetComponent<Rigidbody>();
         if (rb != null)
         {
             rb.AddForce(direccion * fuerzaDisparo);
@@ -70,16 +75,16 @@ public class AccionesJugador : A1_Entidad
 
     public override void Detenerse()
     {
-        Agente.isStopped = true;
+        agent.isStopped = true;
     }
     public ParticleSystem Particulas;
     public override void IrAlDestino(Vector3 destino)
     {
         if (estaMuerto) return;
-        Agente.isStopped = false;
+        agent.isStopped = false;
         //Debug.Log(1);
         transform.LookAt(destino);
-        Agente.SetDestination(destino);
+        agent.SetDestination(destino);
         Destino = destino;
         Particulas.gameObject.transform.position = destino;
         Particulas.Play();
@@ -137,7 +142,7 @@ public class AccionesJugador : A1_Entidad
     // Update is called once per frame
     void Update()
     {
-        float velocidadActual = Agente.velocity.magnitude;
+        float velocidadActual = agent.velocity.magnitude;
         animacion.SetFloat("velocidad", velocidadActual);
         if (Vector3.Distance(gameObject.transform.position, Destino) < 1)
         {

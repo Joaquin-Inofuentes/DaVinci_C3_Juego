@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Services.Analytics.Internal;
+using UnityEditor;
 using UnityEngine;
 
 public class A1_A1_H3_Duende : A1_A1_Enemigo
@@ -42,17 +44,21 @@ public class A1_A1_H3_Duende : A1_A1_Enemigo
         //ModoAtaqueMelee = false;
         if (AtaqueActual == null)
         {
-            
+
             Debug.Log("Atacando");
             // Crea un efecto de danio
             //Debug.Log("Atacando");
             // Crea un efecto de daño
             GameObject Ataque = Instantiate(BolaDeAtaque, Destino, Quaternion.identity);
+            if (Ataque.GetComponent<Proyectil>() != null)
+            {
+                Ataque.GetComponent<Proyectil>().Creador = gameObject;
+            }
             AtaqueActual = Ataque;
-            Ataque.transform.localScale = new Vector3(50,50,50);
+            Ataque.transform.localScale = new Vector3(50, 50, 50);
             // Destruye ese efecto
             Destroy(Ataque, 1f);
-            if (ModoAtaqueMelee == true) 
+            if (ModoAtaqueMelee == true)
             {
                 animacion.SetTrigger("boss_ataque1");
             }
@@ -61,7 +67,7 @@ public class A1_A1_H3_Duende : A1_A1_Enemigo
         {
             //Debug.Log("Esta atacando " + gameObject, gameObject);
         }
-         
+
         //Debug.Log(Nombre, gameObject);
     }
 
@@ -72,21 +78,21 @@ public class A1_A1_H3_Duende : A1_A1_Enemigo
 
     public override void Detenerse()
     {
-        Agente.isStopped = true;
-       
+        agent.isStopped = true;
+
     }
 
     public override void IrAlDestino(Vector3 destino)
     {
-        Debug.DrawLine(destino,transform.position);
+        Debug.DrawLine(destino, transform.position);
         if (estaMuerto) return;
-        Agente.isStopped = false;
-        Agente.SetDestination(destino);
+        agent.isStopped = false;
+        agent.SetDestination(destino);
     }
 
     public override void Morir()
     {
-        Agente.enabled = false;
+        agent.enabled = false;
         // -0.591
         transform.Translate(0, -0.591f, 0);
         animacion.SetBool("life", false);
@@ -121,7 +127,7 @@ public class A1_A1_H3_Duende : A1_A1_Enemigo
     {
         animacion.SetTrigger("danio");
         Vida -= cantidad;
-        if(Vida <= 0) 
+        if (Vida <= 0)
         {
             Morir();
             animacion.SetBool("life", false);
@@ -139,10 +145,28 @@ public class A1_A1_H3_Duende : A1_A1_Enemigo
     protected override void Update()
     {
         base.Update(); // Llama al Update del padre
-        float velocidad = Agente.velocity.magnitude;
+        float velocidad = agent.velocity.magnitude;
         //Debug.Log("Velocidad agente: " + velocidad);
         animacion.SetFloat("velocidad", velocidad);
         ActualizarBarraDevida();
+        if (Objetivo)
+        {
+            if (agent.velocity.magnitude >= 0 &&
+                Vector3.Distance(Objetivo.transform.position, transform.position)
+                < DistanciaParaAtaqueLargo)
+            {
+                agent.isStopped = true; // Detiene el agente
+            }
+        }
+    }
 
+    public void OnDrawGizmos()
+    {
+
+        UtilidadesDeGizmos.DibujarCirculoPlano(transform.position, DistanciaParaAtaqueMelee, 10, Color.yellow);
+
+        UtilidadesDeGizmos.DibujarCirculoPlano(transform.position, DistanciaParaAtaqueLargo, 20, Color.red);
+
+        UtilidadesDeGizmos.DibujarCirculoPlano(transform.position, DistanciaParaPerseguir, 32, Color.blue);
     }
 }

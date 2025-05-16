@@ -72,15 +72,15 @@ public class A1_A1_H2_ArquerasElfas : A1_A1_Enemigo
 
     public override void Detenerse()
     {
-        Agente.isStopped = true;
+        agent.isStopped = true;
 
     }
 
     public override void IrAlDestino(Vector3 destino)
     {
         if (estaMuerto) return;
-        Agente.isStopped = false;
-        Agente.SetDestination(destino);
+        agent.isStopped = false;
+        agent.SetDestination(destino);
     }
 
     public override void Morir()
@@ -135,7 +135,7 @@ public class A1_A1_H2_ArquerasElfas : A1_A1_Enemigo
     protected override void Update()
     {
         base.Update(); // Llama al Update del padre
-        float velocidad = Agente.velocity.magnitude;
+        float velocidad = agent.velocity.magnitude;
         //Debug.Log("Velocidad agente: " + velocidad);
         animacion.SetFloat("velocidad", velocidad);
         ActualizarBarraDevida();

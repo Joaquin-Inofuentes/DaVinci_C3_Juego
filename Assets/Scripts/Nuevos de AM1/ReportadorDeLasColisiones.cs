@@ -40,13 +40,13 @@ public class ReportadorDeLasColisiones : MonoBehaviour
                 // Si esta cerca para ataque melee
                 if (DistanciaAlEnemigo < Enemigo.DistanciaParaAtaqueMelee && Enemigo.ModoAtaqueMelee == true)
                 {
-                    Enemigo.Agente.isStopped = true;
+                    Enemigo.agent.isStopped = true;
                     Enemigo.Atacar(obj.transform.position, "Melee");
                 }
 
                 if (DistanciaAlEnemigo < Enemigo.DistanciaParaAtaqueMelee && Enemigo.ModoAtaqueMelee == true)
                 {
-                    Enemigo.Agente.isStopped = true;
+                    Enemigo.agent.isStopped = true;
                     Enemigo.Atacar(obj.transform.position, "Melee");
                 }
 
@@ -61,13 +61,14 @@ public class ReportadorDeLasColisiones : MonoBehaviour
                     DistanciaAlEnemigo <= Enemigo.DistanciaParaPerseguir
                     )
                 {
-                    Enemigo.Agente.isStopped = false;
+                    Enemigo.agent.isStopped = false;
+                    Enemigo.Objetivo = obj.gameObject;
                     Enemigo.IrAlDestino(obj.transform.position);
                 }
             }
             else
             {
-                Enemigo.Agente.isStopped = true;
+                Enemigo.agent.isStopped = true;
             }
             var Jugador = obj.GetComponent<A1_Entidad>();
             if (Jugador != null)

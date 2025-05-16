@@ -84,11 +84,13 @@ public class Feedbacks : MonoBehaviour
         feedbackImage.gameObject.SetActive(true);
 
         float elapsed = 0f;
+        float startAlpha = color.a; // Guardamos el alpha original
 
         while (elapsed < duration)
         {
             elapsed += Time.deltaTime;
-            float alpha = Mathf.Lerp(1f, 0f, elapsed / duration);
+            // El alpha va de startAlpha a 0
+            float alpha = Mathf.Lerp(startAlpha, 0f, elapsed / duration);
 
             Color c = color;
             c.a = alpha;
@@ -100,5 +102,6 @@ public class Feedbacks : MonoBehaviour
         feedbackImage.gameObject.SetActive(false);
         currentRoutine = null;
     }
+
 
 }

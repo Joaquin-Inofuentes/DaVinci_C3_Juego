@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Proyectil : MonoBehaviour
 {
+    public GameObject Creador;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,12 +34,24 @@ public class Proyectil : MonoBehaviour
 
     private void ColisionoCon (GameObject collision, string TipoDeColision)
     {
+        //Debug.Log(collision.ToString() + TipoDeColision);
+        if (collision == Creador) return;
+        if (collision.tag == "Monedas") return;
         //Debug.Log("___" + collision.ToString() + " _ " + TipoDeColision);
         // 1. Verifica si es enemigo
         A1_Entidad enemigo = collision.gameObject.GetComponent<A1_Entidad>();
         if (enemigo != null)
         {
             enemigo.RecibirDanio(danio);
+            float DistanciaParaAtacar = 
+                enemigo.ModoAtaqueMelee ? 
+                enemigo.DistanciaParaAtaqueMelee : enemigo.DistanciaParaAtaqueLargo;
+            if (Vector3.Distance(
+                enemigo.transform.position
+                , Creador.transform.position) > DistanciaParaAtacar)
+            {
+                enemigo.IrAlDestino(Creador.transform.position);
+            }
         }
         if (enemigo == null) 
         { 
