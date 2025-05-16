@@ -46179,6 +46179,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Emisor: {fileID: 1052676926}
+  Persiguiendo: 1
 --- !u!65 &1178331039
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -73721,6 +73722,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 9100000, guid: 570e47eefebdc9f4ebff989ddadbd6fc, type: 2}
     - target: {fileID: 5866666021909216657, guid: fe2c20f9ba002174d915d6c6738c80d2, type: 3}
+      propertyPath: m_UpdateMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: fe2c20f9ba002174d915d6c6738c80d2, type: 3}
       propertyPath: m_WarningMessage
       value: 
       objectReference: {fileID: 0}
@@ -81071,6 +81076,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Emisor: {fileID: 1981789051}
+  Persiguiendo: 1
 --- !u!65 &1898606278
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -92469,7 +92475,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8114489143778775076, guid: 69322e8bc557fcf40bcc2ef43be7120b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.25
+      value: 1.32
       objectReference: {fileID: 0}
     - target: {fileID: 8114489143778775076, guid: 69322e8bc557fcf40bcc2ef43be7120b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -93078,3 +93084,5 @@ SceneRoots:
   - {fileID: 1932672953}
   - {fileID: 1031581710}
   - {fileID: 1120088587}
+  - {fileID: 1052676933}
+  - {fileID: 1981789058}

@@ -16,28 +16,38 @@ public class AccionesJugador : A1_Entidad
     public float fuerzaDisparo = 500f;
     public Transform Origen;
     private bool estaMuerto= false;
+    private bool modoMelee =false;
 
     public override void Atacar(Vector3 Destino, string Nombre)
     {
         if (estaMuerto) return;
         GameObject ProyectilUsado = null;
+       //if nuevo agregado por damian
         if(Nombre == "BolaDeFuego")
         {
-            ProyectilUsado = BolaDeFuego;
-            animacion.SetTrigger("magic1");
+            animacion.SetTrigger(modoMelee ? "melee1" : "magic1");
+            if (!modoMelee)
+            {
+                ProyectilUsado = BolaDeFuego; 
+            }
+            
         }
+        //if nuevo agregado por damian
         if( Nombre == "BolaDeHielo") 
         {
-            ProyectilUsado = BolaDeHielo;
-            animacion.SetTrigger("magic2");
+            animacion.SetTrigger(modoMelee ? "melee2" : "magic2");
+            if (!modoMelee)
+            {
+                ProyectilUsado = BolaDeHielo;
+                ProyectilUsado.GetComponent<Proyectil>().danio = 15; 
+            }
             animacion.SetFloat("velocidad", 0);
             Agente.isStopped = true;
-            ProyectilUsado.GetComponent<Proyectil>().danio = 15; 
         }
         if(Nombre == "Rayo") 
         {
             ProyectilUsado = Rayo;
-            animacion.SetTrigger("magic3");
+            animacion.SetTrigger(modoMelee ? "melee3" : "magic3"); //nuevo
             animacion.SetFloat("velocidad", 0);
             Agente.isStopped = true;
         }
@@ -82,8 +92,7 @@ public class AccionesJugador : A1_Entidad
     {
         if (estaMuerto) return;
         estaMuerto = true;
-        animacion.SetBool("life", false);
-        SceneManager.LoadScene("Derrota");
+        animacion.SetTrigger("life"); //nuevo
     }
 
     public override void OnCollision(Collision collider)
@@ -96,6 +105,7 @@ public class AccionesJugador : A1_Entidad
     public Color Color_FueAvistado;
     public Color Color_Muere;
     public Color Color_SeCura;
+
     public override void RecibirDanio(int cantidad)
     {
         Vida -= cantidad;
@@ -104,8 +114,12 @@ public class AccionesJugador : A1_Entidad
         if (Vida <= 0) 
         {
             Morir();
-            GameManager.Componente.Reiniciar();
+            Invoke("CargaEscenaDerrota", 3f);
         }
+    }
+    void CargaEscenaDerrota()
+    {
+        SceneManager.LoadScene("Derrota");
     }
 
     // + Agente: Navmeshagent
@@ -128,6 +142,25 @@ public class AccionesJugador : A1_Entidad
         {
             Detenerse();
            
+        }
+        //if nuevo
+        if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            modoMelee = !modoMelee; // alterna entre melee y rango
+
+            if (modoMelee)
+            {
+                Debug.Log("Modo cambiado a MELEE");
+                animacion.SetLayerWeight(0, 0f); // capa 0 = Rango
+                animacion.SetLayerWeight(1, 1f); // capa 1 = Melee
+            }
+            else
+            {
+                Debug.Log("Modo cambiado a rango");
+                animacion.SetLayerWeight(0, 1f); // capa 0 = Rango
+                animacion.SetLayerWeight(1, 0f); // capa 1 = Melee
+            }
+            //fin el if nuevo
         }
     }
 
