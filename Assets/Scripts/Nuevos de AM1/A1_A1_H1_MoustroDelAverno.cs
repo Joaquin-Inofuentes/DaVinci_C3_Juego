@@ -94,7 +94,8 @@ public class A1_A1_H1_MoustroDelAverno : A1_A1_Enemigo
     public override void Morir()
     {
         Agente.enabled = false;
-        transform.Translate(0, -0.7f, 0);
+        PadreDebarraDevida.SetActive(false);
+        // transform.Translate(0, -0.7f, 0); Correcion del bug de eliminar al boss
         animacion.SetBool("life", false);
         Debug.Log("Falta animacion de morir");
         StartCoroutine(DesaparecerDespuesDeSegundos(10f)); // espera 3 segundos

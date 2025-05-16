@@ -6,5 +6,6 @@
 
 # PERMITIR carpeta y contenido de Assets
 !Assets/
+!ProjectSettings/
 !Assets/**/*
 *.meta

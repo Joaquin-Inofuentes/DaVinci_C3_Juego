@@ -6,17 +6,6 @@ using UnityEngine.UI;
 
 public class Feedbacks : MonoBehaviour
 {
-    /*
-     AccionesJugador
-     -Animator: animator
-+TipoDeAtaque: string
-
-    +AnimacionAtaque(): void
-+AnimacioMovimiento(): void
-+AnimacionMuerte(): void
-+CreacionDeProyectiles(): void
-    */
-
     // Propiedades
     public AccionesJugador S_AccionesJugador;
     private Animator animator;
@@ -27,7 +16,7 @@ public class Feedbacks : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>(); // Obtiene el Animator del GameObject
-        Vida_TamanoMaximo = BarraDeVida.rectTransform.sizeDelta.y;
+        Vida_TamanoMaximo = BarraDeVida.rectTransform.rect.width;
     }
 
     void Update()
@@ -40,10 +29,9 @@ public class Feedbacks : MonoBehaviour
 
     private void ActualizarBarra()
     {
-        float AlturaActualDeLaBarraDeVida = (S_AccionesJugador.Vida / 100f) * Vida_TamanoMaximo;
+        float nuevoValor = (S_AccionesJugador.Vida/ Vida_TamanoMaximo) * Vida_TamanoMaximo;
+        BarraDeVida.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, nuevoValor);
 
-        RectTransform rt = BarraDeVida.rectTransform;
-        rt.sizeDelta = new Vector2(rt.sizeDelta.x, AlturaActualDeLaBarraDeVida);
     }
 
     public void AnimacionAtaque()

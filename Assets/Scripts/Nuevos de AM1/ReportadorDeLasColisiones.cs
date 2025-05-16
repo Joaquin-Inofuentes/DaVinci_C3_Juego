@@ -14,14 +14,14 @@ public class ReportadorDeLasColisiones : MonoBehaviour
     private void OnTriggerStay(Collider other) => ProcesarColision(other.gameObject, "TriggerStay");
     private void OnTriggerExit(Collider other) => ProcesarColision(other.gameObject, "TriggerExit");
 
-    public bool Persiguiendo =  true;
+    public bool Persiguiendo = true;
     private void ProcesarColision(GameObject obj, string tipo)
     {
-        
+
         if (obj.layer != 7) return;
 
-        if (obj.name == Emisor.name) 
-        { 
+        if (obj.name == Emisor.name)
+        {
             return;
         }
         if (Emisor == null)
@@ -32,11 +32,11 @@ public class ReportadorDeLasColisiones : MonoBehaviour
         var Enemigo = Emisor.GetComponent<A1_Entidad>();
         if (Enemigo != null)
         {
+            // Distancia hasta el enemigo
+            float DistanciaAlEnemigo = Vector3.Distance(Enemigo.transform.position, obj.transform.position);
             // Si, Esta colisionando con el rango de ataque
             if (!tipo.Contains("Exit"))
             {
-                // Distancia hasta el enemigo
-                float DistanciaAlEnemigo = Vector3.Distance(Enemigo.transform.position, obj.transform.position);
                 // Si esta cerca para ataque melee
                 if (DistanciaAlEnemigo < Enemigo.DistanciaParaAtaqueMelee && Enemigo.ModoAtaqueMelee == true)
                 {
@@ -57,7 +57,7 @@ public class ReportadorDeLasColisiones : MonoBehaviour
                     ||
                     (DistanciaAlEnemigo >= Enemigo.DistanciaParaAtaqueLargo && Enemigo.ModoAtaqueMelee == false)
                     )
-                    && 
+                    &&
                     DistanciaAlEnemigo <= Enemigo.DistanciaParaPerseguir
                     )
                 {
@@ -69,25 +69,27 @@ public class ReportadorDeLasColisiones : MonoBehaviour
             {
                 Enemigo.Agente.isStopped = true;
             }
-        }
-        var Jugador = obj.GetComponent<A1_Entidad>();
-        if (Jugador != null)
-        {
-            Jugador.Colisiono(Emisor, tipo);
-
-            if (obj.GetComponent<AccionesJugador>() != null && Persiguiendo)
+            var Jugador = obj.GetComponent<A1_Entidad>();
+            if (Jugador != null)
             {
-                obj.GetComponent<AccionesJugador>().Feedbacks.FeedbackRadialVisual
-                    (
-                    obj.GetComponent<AccionesJugador>().Color_FueAvistado
-                    , 2f
-                    );
-                Persiguiendo = false;
+                Jugador.Colisiono(Emisor, tipo);
+
+                if (obj.GetComponent<AccionesJugador>() != null && Persiguiendo
+                    &&
+                    DistanciaAlEnemigo <= Enemigo.DistanciaParaPerseguir)
+                {
+                    obj.GetComponent<AccionesJugador>().Feedbacks.FeedbackRadialVisual
+                        (
+                        obj.GetComponent<AccionesJugador>().Color_FueAvistado
+                        , 2f
+                        );
+                    Persiguiendo = false;
+                }
             }
-        }
-        else
-        {
-            //Debug.Log($"Objeto sin A1_Entidad: {obj.name} ({tipo})");
+            else
+            {
+                //Debug.Log($"Objeto sin A1_Entidad: {obj.name} ({tipo})");
+            }
         }
     }
 }
