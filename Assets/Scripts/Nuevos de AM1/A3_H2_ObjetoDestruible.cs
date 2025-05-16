@@ -20,7 +20,7 @@ public class A3_H2_ObjetoDestruible : A3_Interactuable
 
     public override void OnDestroy()
     {
-        throw new System.NotImplementedException();
+        Debug.LogWarning("Falta accion tras conseguir esto " + gameObject.name);
     }
 
     /*

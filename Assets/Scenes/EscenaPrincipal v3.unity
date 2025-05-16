@@ -9647,7 +9647,7 @@ Transform:
   m_GameObject: {fileID: 294749042}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.37, y: 0.17919998, z: 1.32}
+  m_LocalPosition: {x: -0.05, y: 0, z: 0.3}
   m_LocalScale: {x: 0.26638, y: 0.106552005, z: 0.26638}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -18207,7 +18207,6 @@ GameObject:
   - component: {fileID: 535026398}
   - component: {fileID: 535026401}
   - component: {fileID: 535026400}
-  - component: {fileID: 535026399}
   m_Layer: 6
   m_Name: PadreDeBarraDeVida
   m_TagString: Untagged
@@ -18231,27 +18230,6 @@ Transform:
   - {fileID: 700857757}
   m_Father: {fileID: 1052676933}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &535026399
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 535026397}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &535026400
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -21898,6 +21876,7 @@ GameObject:
   - component: {fileID: 609712280}
   - component: {fileID: 609712279}
   - component: {fileID: 609712278}
+  - component: {fileID: 609712282}
   m_Layer: 0
   m_Name: Camera
   m_TagString: MainCamera
@@ -21962,7 +21941,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 0
-  orthographic size: 5
+  orthographic size: 12.59
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -21987,12 +21966,26 @@ Transform:
   m_GameObject: {fileID: 609712277}
   serializedVersion: 2
   m_LocalRotation: {x: 0.38268343, y: 0, z: 0, w: 0.92387956}
-  m_LocalPosition: {x: -0.09735141, y: 15.122772, z: -12.773478}
+  m_LocalPosition: {x: -1.1700001, y: 15.333333, z: -13}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
+--- !u!114 &609712282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 609712277}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62a77f78ef4dfd640b94b816c2f42fab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Pos_Jugador: {fileID: 1124246436}
+  Diferencia: {x: 5.7, y: -11.12, z: 6.8}
 --- !u!1 &610775036
 GameObject:
   m_ObjectHideFlags: 0
@@ -26206,7 +26199,6 @@ GameObject:
   - component: {fileID: 700857757}
   - component: {fileID: 700857756}
   - component: {fileID: 700857755}
-  - component: {fileID: 700857754}
   m_Layer: 6
   m_Name: BarraDeVida
   m_TagString: Untagged
@@ -26214,27 +26206,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!65 &700857754
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 700857753}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &700857755
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -66897,7 +66868,6 @@ GameObject:
   - component: {fileID: 1603401265}
   - component: {fileID: 1603401264}
   - component: {fileID: 1603401263}
-  - component: {fileID: 1603401262}
   m_Layer: 6
   m_Name: BarraDeVida
   m_TagString: Untagged
@@ -66905,27 +66875,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!65 &1603401262
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1603401261}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1603401263
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -80597,7 +80546,6 @@ GameObject:
   - component: {fileID: 1894644406}
   - component: {fileID: 1894644409}
   - component: {fileID: 1894644408}
-  - component: {fileID: 1894644407}
   m_Layer: 6
   m_Name: PadreDeBarraDeVida
   m_TagString: Untagged
@@ -80621,27 +80569,6 @@ Transform:
   - {fileID: 1603401265}
   m_Father: {fileID: 1981789058}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1894644407
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1894644405}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1894644408
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -92198,27 +92125,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &849958319459436712
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3962281043467090406}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &919132148873009544
 GameObject:
   m_ObjectHideFlags: 0
@@ -92453,18 +92359,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 860799385180141359, guid: 69322e8bc557fcf40bcc2ef43be7120b, type: 3}
-      propertyPath: AtaqueActual
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 860799385180141359, guid: 69322e8bc557fcf40bcc2ef43be7120b, type: 3}
-      propertyPath: BolaDeAtaque
-      value: 
-      objectReference: {fileID: 3314820458270015711, guid: a08f35a6d1f17e9428cdc2949b7debd6, type: 3}
-    - target: {fileID: 1350890481453922120, guid: 69322e8bc557fcf40bcc2ef43be7120b, type: 3}
-      propertyPath: m_WarningMessage
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 2151781022342903189, guid: 69322e8bc557fcf40bcc2ef43be7120b, type: 3}
       propertyPath: m_Name
       value: Moustro
@@ -92510,8 +92404,7 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 710336703257713017, guid: 69322e8bc557fcf40bcc2ef43be7120b, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69322e8bc557fcf40bcc2ef43be7120b, type: 3}
@@ -92576,7 +92469,6 @@ GameObject:
   - component: {fileID: 8774986200635273670}
   - component: {fileID: 6369176021761687833}
   - component: {fileID: 3496015942235961753}
-  - component: {fileID: 849958319459436712}
   m_Layer: 6
   m_Name: PadreDeBarraDeVida
   m_TagString: Untagged
@@ -92670,7 +92562,6 @@ GameObject:
   - component: {fileID: 8724975224759552459}
   - component: {fileID: 2882093251867274274}
   - component: {fileID: 3692992070930348656}
-  - component: {fileID: 7372196330892236544}
   m_Layer: 6
   m_Name: BarraDeVida
   m_TagString: Untagged
@@ -92951,27 +92842,6 @@ BoxCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!65 &7372196330892236544
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5766780412665909001}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3

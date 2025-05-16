@@ -23,13 +23,17 @@ public class Feedbacks : MonoBehaviour
     {
         // Aquí podrías manejar lógica de actualización, como el movimiento
         ActualizarBarra();
-        Text_CantidadDeMonedas.text = "$ " + GameManager.Componente.ContadorDeMonedas.ToString();
+        if (GameManager.Componente)
+        {
+            Text_CantidadDeMonedas.text = "$ " + GameManager.Componente.ContadorDeMonedas.ToString();
+        }
     }
 
 
     private void ActualizarBarra()
     {
-        float nuevoValor = (S_AccionesJugador.Vida/ Vida_TamanoMaximo) * Vida_TamanoMaximo;
+
+        float nuevoValor = ((float)S_AccionesJugador.Vida / S_AccionesJugador.VidaMax) * Vida_TamanoMaximo;
         BarraDeVida.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, nuevoValor);
 
     }
@@ -64,7 +68,7 @@ public class Feedbacks : MonoBehaviour
     public RawImage feedbackImage;
     private Coroutine currentRoutine;
 
-    
+
     public void FeedbackRadialVisual(Color color, float duration)
     {
         // 1. Cancela la rutina previa si existe
