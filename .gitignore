@@ -7,3 +7,4 @@
 # PERMITIR carpeta y contenido de Assets
 !Assets/
 !Assets/**/*
+*.meta
