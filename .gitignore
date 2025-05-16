@@ -1,0 +1,9 @@
+# Ignorar TODO por defecto
+/*
+
+# PERMITIR solo el gitignore
+!.gitignore
+
+# PERMITIR carpeta y contenido de Assets
+!Assets/
+!Assets/**/*
