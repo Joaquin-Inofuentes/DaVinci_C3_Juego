@@ -12,10 +12,8 @@ public class A3_H3_Monedas : A3_Interactuable
 
     public void OnTriggerEnter(Collider collider)
     {
-        Debug.Log(collider.gameObject.name,gameObject);
         if (collider.gameObject.GetComponent<AccionesJugador>() != null)
         {
-            Debug.Log(1);
             Interactuar();
             collider.gameObject.GetComponent<AccionesJugador>().Feedbacks.FeedbackRadialVisual(
                 collider.gameObject.GetComponent<AccionesJugador>().Color_ObtieneMonedas
@@ -27,7 +25,7 @@ public class A3_H3_Monedas : A3_Interactuable
 
     public override void OnDestroy()
     {
-        throw new System.NotImplementedException();
+        Debug.LogWarning("Falta efecto de conseguir monedas de las monedas");
     }
 
     // +CantidadDeMonedas : int

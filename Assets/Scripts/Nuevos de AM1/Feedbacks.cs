@@ -6,17 +6,6 @@ using UnityEngine.UI;
 
 public class Feedbacks : MonoBehaviour
 {
-    /*
-     AccionesJugador
-     -Animator: animator
-+TipoDeAtaque: string
-
-    +AnimacionAtaque(): void
-+AnimacioMovimiento(): void
-+AnimacionMuerte(): void
-+CreacionDeProyectiles(): void
-    */
-
     // Propiedades
     public AccionesJugador S_AccionesJugador;
     private Animator animator;
@@ -27,23 +16,26 @@ public class Feedbacks : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>(); // Obtiene el Animator del GameObject
-        Vida_TamanoMaximo = BarraDeVida.rectTransform.sizeDelta.y;
+        Vida_TamanoMaximo = BarraDeVida.rectTransform.rect.width;
     }
 
     void Update()
     {
         // Aquí podrías manejar lógica de actualización, como el movimiento
         ActualizarBarra();
-        Text_CantidadDeMonedas.text = "$ " + GameManager.Componente.ContadorDeMonedas.ToString();
+        if (GameManager.Componente)
+        {
+            Text_CantidadDeMonedas.text = "$ " + GameManager.Componente.ContadorDeMonedas.ToString();
+        }
     }
 
 
     private void ActualizarBarra()
     {
-        float AlturaActualDeLaBarraDeVida = (S_AccionesJugador.Vida / 100f) * Vida_TamanoMaximo;
 
-        RectTransform rt = BarraDeVida.rectTransform;
-        rt.sizeDelta = new Vector2(rt.sizeDelta.x, AlturaActualDeLaBarraDeVida);
+        float nuevoValor = ((float)S_AccionesJugador.Vida / S_AccionesJugador.VidaMax) * Vida_TamanoMaximo;
+        BarraDeVida.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, nuevoValor);
+
     }
 
     public void AnimacionAtaque()
@@ -76,7 +68,7 @@ public class Feedbacks : MonoBehaviour
     public RawImage feedbackImage;
     private Coroutine currentRoutine;
 
-    
+
     public void FeedbackRadialVisual(Color color, float duration)
     {
         // 1. Cancela la rutina previa si existe
