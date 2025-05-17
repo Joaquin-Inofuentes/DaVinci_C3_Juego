@@ -45,9 +45,9 @@ public class A1_A1_H3_Duende : A1_A1_Enemigo
         if (AtaqueActual == null)
         {
 
-            Debug.Log("Atacando");
+            Debug.Log("Atacando",gameObject);
             // Crea un efecto de danio
-            //Debug.Log("Atacando");
+            // Debug.Log("Atacando");
             // Crea un efecto de daño
             GameObject Ataque = Instantiate(BolaDeAtaque, Destino, Quaternion.identity);
             if (Ataque.GetComponent<Proyectil>() != null)
