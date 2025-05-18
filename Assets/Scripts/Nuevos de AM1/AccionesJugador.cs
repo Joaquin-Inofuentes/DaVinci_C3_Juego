@@ -17,10 +17,25 @@ public class AccionesJugador : A1_Entidad
     public Transform Origen;
     private bool estaMuerto= false;
     private bool modoMelee =false;
+    public string AnimacionActual = ""; // Joaco_AnimacionActual
 
     public override void Atacar(Vector3 Destino, string Nombre)
     {
         if (estaMuerto) return;
+        // Joaco_ Indica q animacion se esta ejecutando
+        AnimatorStateInfo stateInfo = animacion.GetCurrentAnimatorStateInfo(0);
+        foreach (AnimationClip clip in animacion.runtimeAnimatorController.animationClips)
+        {
+            if (Animator.StringToHash(clip.name) == stateInfo.shortNameHash)
+            {
+                Debug.Log("Animación actual: " + clip.name);
+                AnimacionActual += clip.name;
+                break;
+            }
+        }
+        // Si no es walk o idle. Anula el metodo
+        if (!AnimacionActual.Contains("Idle") && !AnimacionActual.Contains("Run")) return;
+
         GameObject ProyectilUsado = null;
        //if nuevo agregado por damian
         if(Nombre == "BolaDeFuego")
