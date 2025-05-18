@@ -9,3 +9,4 @@
 !ProjectSettings/
 !Assets/**/*
 *.meta
+Packages/packages-lock.json
