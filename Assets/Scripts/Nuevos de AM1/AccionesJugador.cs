@@ -17,24 +17,13 @@ public class AccionesJugador : A1_Entidad
     public Transform Origen;
     private bool estaMuerto= false;
     private bool modoMelee =false;
-    public string AnimacionActual = ""; // Joaco_AnimacionActual
+    public float CoolDown = 0;
 
     public override void Atacar(Vector3 Destino, string Nombre)
     {
         if (estaMuerto) return;
         // Joaco_ Indica q animacion se esta ejecutando
-        AnimatorStateInfo stateInfo = animacion.GetCurrentAnimatorStateInfo(0);
-        foreach (AnimationClip clip in animacion.runtimeAnimatorController.animationClips)
-        {
-            if (Animator.StringToHash(clip.name) == stateInfo.shortNameHash)
-            {
-                Debug.Log("Animación actual: " + clip.name);
-                AnimacionActual += clip.name;
-                break;
-            }
-        }
-        // Si no es walk o idle. Anula el metodo
-        if (!AnimacionActual.Contains("Idle") && !AnimacionActual.Contains("Run")) return;
+        if (CoolDown != 0) return;
 
         GameObject ProyectilUsado = null;
        //if nuevo agregado por damian
@@ -86,6 +75,33 @@ public class AccionesJugador : A1_Entidad
         {
             rb.AddForce(direccion * fuerzaDisparo);
         }
+
+
+        Invoke("RegistrarCoolDown", 0.1f);
+    }
+
+    public void RegistrarCoolDown()
+    {
+        float speed = 1f;
+        string nombreAnimacion = animacion.GetCurrentAnimatorClipInfo(0)[0].clip.name;
+        Debug.Log(nombreAnimacion);
+        switch (nombreAnimacion)
+        {
+            case string n when n.Contains("01"):
+                speed = 8f;
+                break;
+            case string n when n.Contains("02"):
+                speed = 4f;
+                break;
+            case string n when n.Contains("03"):
+                speed = 4f;
+                break;
+            default:
+                speed = 1.0f;
+                break;
+        }
+        Debug.Log(animacion.GetCurrentAnimatorClipInfo(0)[0].clip.length + " | " + speed);
+        CoolDown = animacion.GetCurrentAnimatorClipInfo(0)[0].clip.length / speed;
     }
 
     public override void Detenerse()
@@ -157,6 +173,11 @@ public class AccionesJugador : A1_Entidad
     // Update is called once per frame
     void Update()
     {
+        if (CoolDown > 0)
+            CoolDown -= Time.deltaTime;
+        if (CoolDown < 0)
+            CoolDown = 0;
+
         float velocidadActual = agent.velocity.magnitude;
         animacion.SetFloat("velocidad", velocidadActual);
         if (Vector3.Distance(gameObject.transform.position, Destino) < 1)
