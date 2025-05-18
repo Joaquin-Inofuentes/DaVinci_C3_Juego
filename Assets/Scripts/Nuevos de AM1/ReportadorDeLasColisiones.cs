@@ -44,12 +44,6 @@ public class ReportadorDeLasColisiones : MonoBehaviour
                     Enemigo.Atacar(obj.transform.position, "Melee");
                 }
 
-                if (DistanciaAlEnemigo < Enemigo.DistanciaParaAtaqueMelee && Enemigo.ModoAtaqueMelee == true)
-                {
-                    Enemigo.agent.isStopped = true;
-                    Enemigo.Atacar(obj.transform.position, "Melee");
-                }
-
                 // Si esta debo acercarme
                 if (
                     (

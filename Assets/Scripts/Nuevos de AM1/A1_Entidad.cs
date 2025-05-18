@@ -12,7 +12,7 @@ public abstract class A1_Entidad : MonoBehaviour
     public int DañoDeAtaque;
     public float VelocidadDeAtaque;
     public NavMeshAgent agent;
-    public Animator animacion;
+    public Animator anim;
     public bool ModoAtaqueMelee;
     public float DistanciaParaAtaqueMelee;
     public float DistanciaParaAtaqueLargo;

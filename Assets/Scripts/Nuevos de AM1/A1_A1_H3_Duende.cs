@@ -60,7 +60,7 @@ public class A1_A1_H3_Duende : A1_A1_Enemigo
             Destroy(Ataque, 1f);
             if (ModoAtaqueMelee == true)
             {
-                animacion.SetTrigger("boss_ataque1");
+                anim.SetTrigger("boss_ataque1");
             }
         }
         if (AtaqueActual != null)
@@ -95,7 +95,7 @@ public class A1_A1_H3_Duende : A1_A1_Enemigo
         agent.enabled = false;
         // -0.591
         transform.Translate(0, -0.591f, 0);
-        animacion.SetBool("life", false);
+        anim.SetBool("life", false);
         Debug.Log("Falta animacion de morir");
         StartCoroutine(DesaparecerDespuesDeSegundos(10f)); // espera 3 segundos
         if (estaMuerto) return;
@@ -125,12 +125,12 @@ public class A1_A1_H3_Duende : A1_A1_Enemigo
 
     public override void RecibirDanio(int cantidad)
     {
-        animacion.SetTrigger("danio");
+        anim.SetTrigger("danio");
         Vida -= cantidad;
         if (Vida <= 0)
         {
             Morir();
-            animacion.SetBool("life", false);
+            anim.SetBool("life", false);
         }
     }
 
@@ -147,7 +147,7 @@ public class A1_A1_H3_Duende : A1_A1_Enemigo
         base.Update(); // Llama al Update del padre
         float velocidad = agent.velocity.magnitude;
         //Debug.Log("Velocidad agente: " + velocidad);
-        animacion.SetFloat("velocidad", velocidad);
+        anim.SetFloat("velocidad", velocidad);
         ActualizarBarraDevida();
         if (Objetivo)
         {

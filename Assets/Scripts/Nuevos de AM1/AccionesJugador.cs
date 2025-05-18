@@ -29,7 +29,7 @@ public class AccionesJugador : A1_Entidad
        //if nuevo agregado por damian
         if(Nombre == "BolaDeFuego")
         {
-            animacion.SetTrigger(modoMelee ? "melee1" : "magic1");
+            anim.SetTrigger(modoMelee ? "melee1" : "magic1");
             if (!modoMelee)
             {
                 ProyectilUsado = BolaDeFuego; 
@@ -39,20 +39,20 @@ public class AccionesJugador : A1_Entidad
         //if nuevo agregado por damian
         if( Nombre == "BolaDeHielo") 
         {
-            animacion.SetTrigger(modoMelee ? "melee2" : "magic2");
+            anim.SetTrigger(modoMelee ? "melee2" : "magic2");
             if (!modoMelee)
             {
                 ProyectilUsado = BolaDeHielo;
                 ProyectilUsado.GetComponent<Proyectil>().danio = 15; 
             }
-            animacion.SetFloat("velocidad", 0);
+            anim.SetFloat("velocidad", 0);
             agent.isStopped = true;
         }
         if(Nombre == "Rayo") 
         {
             ProyectilUsado = Rayo;
-            animacion.SetTrigger(modoMelee ? "melee3" : "magic3"); //nuevo
-            animacion.SetFloat("velocidad", 0);
+            anim.SetTrigger(modoMelee ? "melee3" : "magic3"); //nuevo
+            anim.SetFloat("velocidad", 0);
             agent.isStopped = true;
         }
         transform.LookAt(Destino);
@@ -80,11 +80,12 @@ public class AccionesJugador : A1_Entidad
         Invoke("RegistrarCoolDown", 0.1f);
     }
 
+    // Joaco_CoolDownTiempos
     public void RegistrarCoolDown()
     {
         float speed = 1f;
-        string nombreAnimacion = animacion.GetCurrentAnimatorClipInfo(0)[0].clip.name;
-        Debug.Log(nombreAnimacion);
+        string nombreAnimacion = anim.GetCurrentAnimatorClipInfo(0)[0].clip.name;
+        //Debug.Log(nombreAnimacion);
         switch (nombreAnimacion)
         {
             case string n when n.Contains("01"):
@@ -100,8 +101,8 @@ public class AccionesJugador : A1_Entidad
                 speed = 1.0f;
                 break;
         }
-        Debug.Log(animacion.GetCurrentAnimatorClipInfo(0)[0].clip.length + " | " + speed);
-        CoolDown = animacion.GetCurrentAnimatorClipInfo(0)[0].clip.length / speed;
+        //Debug.Log(animacion.GetCurrentAnimatorClipInfo(0)[0].clip.length + " | " + speed);
+        CoolDown = anim.GetCurrentAnimatorClipInfo(0)[0].clip.length / speed;
     }
 
     public override void Detenerse()
@@ -129,7 +130,7 @@ public class AccionesJugador : A1_Entidad
         if (estaMuerto) return;
         Feedbacks.FeedbackRadialVisual(Color_Muere, 4);
         estaMuerto = true;
-        animacion.SetTrigger("life"); //nuevo
+        anim.SetTrigger("life"); //nuevo
     }
 
     public override void OnCollision(Collision collider)
@@ -179,7 +180,7 @@ public class AccionesJugador : A1_Entidad
             CoolDown = 0;
 
         float velocidadActual = agent.velocity.magnitude;
-        animacion.SetFloat("velocidad", velocidadActual);
+        anim.SetFloat("velocidad", velocidadActual);
         if (Vector3.Distance(gameObject.transform.position, Destino) < 1)
         {
             Detenerse();
@@ -193,14 +194,14 @@ public class AccionesJugador : A1_Entidad
             if (modoMelee)
             {
                 Debug.Log("Modo cambiado a MELEE");
-                animacion.SetLayerWeight(0, 0f); // capa 0 = Rango
-                animacion.SetLayerWeight(1, 1f); // capa 1 = Melee
+                anim.SetLayerWeight(0, 0f); // capa 0 = Rango
+                anim.SetLayerWeight(1, 1f); // capa 1 = Melee
             }
             else
             {
                 Debug.Log("Modo cambiado a rango");
-                animacion.SetLayerWeight(0, 1f); // capa 0 = Rango
-                animacion.SetLayerWeight(1, 0f); // capa 1 = Melee
+                anim.SetLayerWeight(0, 1f); // capa 0 = Rango
+                anim.SetLayerWeight(1, 0f); // capa 1 = Melee
             }
             //fin el if nuevo
         }

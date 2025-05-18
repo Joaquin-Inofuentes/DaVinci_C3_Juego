@@ -61,11 +61,11 @@ public class A1_A1_H1_MoustroDelAverno : A1_A1_Enemigo
 
             if (ataqueIndex == 0)
             {
-                animacion.SetTrigger("ataque1");
+                anim.SetTrigger("ataque1");
             }
             else
             {
-                animacion.SetTrigger("ataque2");
+                anim.SetTrigger("ataque2");
             }
 
         }
@@ -100,7 +100,7 @@ public class A1_A1_H1_MoustroDelAverno : A1_A1_Enemigo
         agent.enabled = false;
         PadreDebarraDevida.SetActive(false);
         // transform.Translate(0, -0.7f, 0); Correcion del bug de eliminar al boss
-        animacion.SetBool("life", false);
+        anim.SetBool("life", false);
         Debug.Log("Falta animacion de morir");
         StartCoroutine(DesaparecerDespuesDeSegundos(10f)); // espera 3 segundos
         if (estaMuerto) return;
@@ -136,7 +136,7 @@ public class A1_A1_H1_MoustroDelAverno : A1_A1_Enemigo
         if(Vida <= 0) 
         {
             Morir();
-            animacion.SetBool("life", false);
+            anim.SetBool("life", false);
         }
     }
 
@@ -153,7 +153,7 @@ public class A1_A1_H1_MoustroDelAverno : A1_A1_Enemigo
         base.Update(); // Llama al Update del padre
         float velocidad = agent.velocity.magnitude;
         //Debug.Log("Velocidad agente: " + velocidad);
-        animacion.SetFloat("velocidad", velocidad);
+        anim.SetFloat("velocidad", velocidad);
         ActualizarBarraDevida();
 
     }

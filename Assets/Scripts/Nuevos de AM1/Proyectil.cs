@@ -5,6 +5,8 @@ using UnityEngine;
 public class Proyectil : MonoBehaviour
 {
     public GameObject Creador;
+    public GameObject EfectoEspecial;
+    public bool AutoDestruir = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,7 +34,7 @@ public class Proyectil : MonoBehaviour
 
     public int danio = 10;
 
-    private void ColisionoCon (GameObject collision, string TipoDeColision)
+    private void ColisionoCon(GameObject collision, string TipoDeColision)
     {
         //Debug.Log(collision.ToString() + TipoDeColision);
         if (collision == Creador) return;
@@ -43,8 +45,8 @@ public class Proyectil : MonoBehaviour
         if (enemigo != null)
         {
             enemigo.RecibirDanio(danio);
-            float DistanciaParaAtacar = 
-                enemigo.ModoAtaqueMelee ? 
+            float DistanciaParaAtacar =
+                enemigo.ModoAtaqueMelee ?
                 enemigo.DistanciaParaAtaqueMelee : enemigo.DistanciaParaAtaqueLargo;
             if (Vector3.Distance(
                 enemigo.transform.position
@@ -53,8 +55,8 @@ public class Proyectil : MonoBehaviour
                 enemigo.IrAlDestino(Creador.transform.position);
             }
         }
-        if (enemigo == null) 
-        { 
+        if (enemigo == null)
+        {
             return;
         }
 
@@ -65,34 +67,21 @@ public class Proyectil : MonoBehaviour
         {
             Destroy(rb);
         }
-        StartCoroutine(AnimarYDestruir());
-    }
 
-    private IEnumerator AnimarYDestruir()
-    {
-        // Escala inicial
-        transform.localScale = Vector3.one;
-
-        // 3. Escalar a 2x en 0.5s
-        float t = 0;
-        while (t < 1f)
+        if (gameObject.name == "BolaDeHielo" && EfectoEspecial)
         {
-            t += Time.deltaTime;
-            transform.localScale = Vector3.Lerp(Vector3.one, Vector3.one * 2f, t / 1f);
-            yield return null;
+            GameObject Efecto = Instantiate(EfectoEspecial, collision.transform.position, Quaternion.identity);
+            ATK_Congelar Componente = Efecto.GetComponent<ATK_Congelar>();
+            Componente.anim = enemigo.anim;
+            Componente.timer = 4;
+            Componente.padre = enemigo.transform;
         }
 
-        // 4. Escalar a 0 en 1s
-        t = 0;
-        while (t < 2f)
+        if (AutoDestruir)
         {
-            t += Time.deltaTime;
-            transform.localScale = Vector3.Lerp(Vector3.one * 2f, Vector3.zero, t / 2f);
-            yield return null;
+            // 5. Destruir objeto
+            Destroy(gameObject);
         }
-
-        // 5. Destruir objeto
-        Destroy(gameObject);
     }
 
 }
