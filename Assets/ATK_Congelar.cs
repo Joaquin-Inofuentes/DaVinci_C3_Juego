@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.AI;
 
 public class ATK_Congelar : MonoBehaviour
 {
@@ -17,7 +18,29 @@ public class ATK_Congelar : MonoBehaviour
         posOriginal = padre.position;
         rotOriginal = padre.rotation;
         timerActual = timer;
+        Invoke("DetenerAgente", 0.1f);
     }
+
+    public NavMeshAgent agent;
+    public Vector3 destinoGuardado;
+
+    void DetenerAgente()
+    {
+        if (agent == null) return;
+
+        destinoGuardado = agent.destination;
+        agent.isStopped = true;
+    }
+
+    void ReanudarAgente()
+    {
+        if (anim != null) anim.speed = 1;
+        if (agent == null) return;
+        agent.SetDestination(destinoGuardado);
+        agent.isStopped = false;
+    }
+
+
 
     void Update()
     {
@@ -31,9 +54,11 @@ public class ATK_Congelar : MonoBehaviour
         timerActual -= Time.deltaTime;
         if (timerActual <= 0)
         {
-            if (anim != null) anim.speed = 1;
-
             Destroy(gameObject); // eliminar congelador
         }
+    }
+    public void OnDestroy()
+    {
+        ReanudarAgente();
     }
 }

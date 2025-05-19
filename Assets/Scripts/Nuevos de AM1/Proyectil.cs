@@ -37,13 +37,29 @@ public class Proyectil : MonoBehaviour
     private void ColisionoCon(GameObject collision, string TipoDeColision)
     {
         //Debug.Log(collision.ToString() + TipoDeColision);
+        if (collision.tag == "Monedas")
+        {
+            Destroy(gameObject);
+            return;
+        }
         if (collision == Creador) return;
-        if (collision.tag == "Monedas") return;
         //Debug.Log("___" + collision.ToString() + " _ " + TipoDeColision);
         // 1. Verifica si es enemigo
         A1_Entidad enemigo = collision.gameObject.GetComponent<A1_Entidad>();
         if (enemigo != null)
         {
+            if (EfectoEspecial != null)
+            {
+                GameObject efecto = Instantiate(EfectoEspecial, collision.transform.position, Quaternion.identity);
+                Destroy(efecto, 1);
+                if (EfectoEspecial.GetComponent<ATK_Congelar>())
+                {
+                    ATK_Congelar Componente = EfectoEspecial.GetComponent<ATK_Congelar>();
+                    Componente.padre = collision.transform;
+                    Componente.agent = enemigo.agent;
+                    Componente.anim = enemigo.anim;
+                }
+            }
             enemigo.RecibirDanio(danio);
             float DistanciaParaAtacar =
                 enemigo.ModoAtaqueMelee ?
@@ -52,7 +68,10 @@ public class Proyectil : MonoBehaviour
                 enemigo.transform.position
                 , Creador.transform.position) > DistanciaParaAtacar)
             {
-                enemigo.IrAlDestino(Creador.transform.position);
+                if (!enemigo.name.Contains("Jugador"))
+                {
+                    enemigo.IrAlDestino(Creador.transform.position);
+                }
             }
         }
         if (enemigo == null)
@@ -80,7 +99,7 @@ public class Proyectil : MonoBehaviour
         if (AutoDestruir)
         {
             // 5. Destruir objeto
-            Destroy(gameObject);
+            Destroy(gameObject, 0.1f);
         }
     }
 

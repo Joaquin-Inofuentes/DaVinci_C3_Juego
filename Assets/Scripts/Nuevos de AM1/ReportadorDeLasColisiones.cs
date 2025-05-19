@@ -55,6 +55,7 @@ public class ReportadorDeLasColisiones : MonoBehaviour
                     DistanciaAlEnemigo <= Enemigo.DistanciaParaPerseguir
                     )
                 {
+                    if(!Enemigo.agent) return;
                     Enemigo.agent.isStopped = false;
                     Enemigo.Objetivo = obj.gameObject;
                     Enemigo.IrAlDestino(obj.transform.position);

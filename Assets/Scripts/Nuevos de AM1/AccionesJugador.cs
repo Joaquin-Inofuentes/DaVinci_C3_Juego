@@ -43,7 +43,6 @@ public class AccionesJugador : A1_Entidad
             if (!modoMelee)
             {
                 ProyectilUsado = BolaDeHielo;
-                ProyectilUsado.GetComponent<Proyectil>().danio = 15; 
             }
             anim.SetFloat("velocidad", 0);
             agent.isStopped = true;
@@ -68,6 +67,7 @@ public class AccionesJugador : A1_Entidad
         if (Ataque.GetComponent<Proyectil>() != null)
         {
             Ataque.GetComponent<Proyectil>().Creador = gameObject;
+            Ataque.GetComponent<Proyectil>().AutoDestruir = true;
         }
 
         Rigidbody rb = Ataque.GetComponent<Rigidbody>();

@@ -92,6 +92,11 @@ public class A1_A1_H3_Duende : A1_A1_Enemigo
 
     public override void Morir()
     {
+        PadreDebarraDevida.SetActive(false);
+        GetComponent<BoxCollider>().enabled = false;
+        GetComponent<Rigidbody>().isKinematic = true;
+        GetComponent<Rigidbody>().velocity = Vector3.zero;
+        GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
         agent.enabled = false;
         // -0.591
         transform.Translate(0, -0.591f, 0);
