@@ -30,7 +30,7 @@ public class AccionesJugador : A1_Entidad
             ActualizarBarraCoolDown();
         }
     }
-    private float _coolDown = 0f;
+    public float _coolDown = 0f;
 
     // Asume que tienes una referencia al RawImage de la barra de cooldown
     public UnityEngine.UI.RawImage barraCoolDown;
@@ -71,7 +71,7 @@ public class AccionesJugador : A1_Entidad
         // Joaco_ Indica q animacion se esta ejecutando
         if (CoolDown != 0) return;
 
-        GameObject ProyectilUsado = null;
+        GameObject ProyectilUsado = BolaDeFuego;
        //if nuevo agregado por damian
         if(Nombre == "BolaDeFuego")
         {
@@ -95,8 +95,11 @@ public class AccionesJugador : A1_Entidad
         }
         if(Nombre == "Rayo") 
         {
-            ProyectilUsado = Rayo;
             anim.SetTrigger(modoMelee ? "melee3" : "magic3"); //nuevo
+            if (!modoMelee)
+            {
+                ProyectilUsado = Rayo;
+            }
             anim.SetFloat("velocidad", 0);
             agent.isStopped = true;
         }
@@ -104,7 +107,7 @@ public class AccionesJugador : A1_Entidad
         Vector3 direccion = 
             (Destino - Origen.transform.position)
             .normalized;
-
+        Debug.Log(Nombre + " " + Destino, gameObject);
         GameObject Ataque = Instantiate(
             ProyectilUsado, 
             Origen.transform.position, 
@@ -143,12 +146,22 @@ public class AccionesJugador : A1_Entidad
             case string n when n.Contains("03"):
                 speed = 4f;
                 break;
+            case string n when n.Contains("ataque_pesadoPersonaje"):
+                speed = 2f;
+                break;
+            case string n when n.Contains("ataque_rapidoPersonaje"):
+                speed = 3f;
+                break;
+            case string n when n.Contains("ataque_fuertePersonaje"):
+                speed = 0.9f;
+                break;
             default:
                 speed = 1.0f;
                 break;
         }
         //Debug.Log(animacion.GetCurrentAnimatorClipInfo(0)[0].clip.length + " | " + speed);
-        CoolDown = anim.GetCurrentAnimatorClipInfo(0)[0].clip.length / speed;
+        float Tiempo = anim.GetCurrentAnimatorClipInfo(0)[0].clip.length / speed;
+        CoolDown = Tiempo > 2 ? 2 : Tiempo;
     }
 
     public override void Detenerse()
