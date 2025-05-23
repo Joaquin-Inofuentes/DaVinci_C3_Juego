@@ -8698,6 +8698,7 @@ MonoBehaviour:
   fuerzaDisparo: 2000
   Origen: {fileID: 294749043}
   maxCoolDown: 0
+  _coolDown: 0
   barraCoolDown: {fileID: 195683967}
   Particulas: {fileID: 1521204201}
   Feedbacks: {fileID: 5770832}
