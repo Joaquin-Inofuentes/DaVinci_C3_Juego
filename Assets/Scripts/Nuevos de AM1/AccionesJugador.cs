@@ -17,15 +17,76 @@ public class AccionesJugador : A1_Entidad
     public Transform Origen;
     private bool estaMuerto= false;
     private bool modoMelee =false;
-    public float CoolDown = 0;
+    // Agrega este campo y propiedad en tu clase AccionesJugador
+    public float maxCoolDown = 0f;
+    public float CoolDown
+    {
+        get => _coolDown;
+        set
+        {
+            _coolDown = value;
+            if (_coolDown > maxCoolDown)
+                maxCoolDown = _coolDown;
+            ActualizarBarraCoolDown();
+        }
+    }
+    private float _coolDown = 0f;
+
+    // Asume que tienes una referencia al RawImage de la barra de cooldown
+    public UnityEngine.UI.RawImage barraCoolDown;
+
+    // Llama a este método en Update y cuando cambie el CoolDown
+    private void ActualizarBarraCoolDown()
+    {
+        if (barraCoolDown == null || maxCoolDown == 0f) return;
+        float porcentaje = 1f - Mathf.Clamp01(_coolDown / maxCoolDown);
+        var rt = barraCoolDown.rectTransform;
+        float anchoBase = barraCoolDown.texture != null ? barraCoolDown.texture.width : rt.rect.width;
+        // Reemplaza la línea de cálculo de anchoBase y el ajuste de la barra por lo siguiente:
+        float anchoMaximo = 200f;
+        rt.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, anchoMaximo * porcentaje);
+    }
+
+    // En tu método Update, agrega:
+    void CargarBarraDeCoolDown()
+    {
+        if (CoolDown > 0)
+            CoolDown -= Time.deltaTime;
+        if (CoolDown < 0)
+            CoolDown = 0;
+
+        float velocidadActual = agent.velocity.magnitude;
+        anim.SetFloat("velocidad", velocidadActual);
+        if (Vector3.Distance(gameObject.transform.position, Destino) < 1)
+        {
+            Detenerse();
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            modoMelee = !modoMelee;
+            if (modoMelee)
+            {
+                Debug.Log("Modo cambiado a MELEE");
+                anim.SetLayerWeight(0, 0f);
+                anim.SetLayerWeight(1, 1f);
+            }
+            else
+            {
+                Debug.Log("Modo cambiado a rango");
+                anim.SetLayerWeight(0, 1f);
+                anim.SetLayerWeight(1, 0f);
+            }
+        }
+        ActualizarBarraCoolDown();
+    }
 
     public override void Atacar(Vector3 Destino, string Nombre)
     {
-        Debug.Log("Atacar " + gameObject.name + " " + Destino, gameObject);
         if (estaMuerto) return;
+        // Joaco_ Indica q animacion se esta ejecutando
         if (CoolDown != 0) return;
 
-        GameObject ProyectilUsado = BolaDeFuego;
+        GameObject ProyectilUsado = null;
        //if nuevo agregado por damian
         if(Nombre == "BolaDeFuego")
         {
@@ -55,11 +116,10 @@ public class AccionesJugador : A1_Entidad
             agent.isStopped = true;
         }
         transform.LookAt(Destino);
-        Debug.Log(Equals(ProyectilUsado, BolaDeFuego) + " " + Equals(ProyectilUsado, BolaDeHielo) + " " + Equals(ProyectilUsado, Rayo));
         Vector3 direccion = 
             (Destino - Origen.transform.position)
             .normalized;
-        Debug.Log(ProyectilUsado.name + " " + Origen.transform.position + " " + Destino + " " + direccion, gameObject);
+
         GameObject Ataque = Instantiate(
             ProyectilUsado, 
             Origen.transform.position, 
@@ -175,6 +235,9 @@ public class AccionesJugador : A1_Entidad
     // Update is called once per frame
     void Update()
     {
+
+        CargarBarraDeCoolDown();
+
         if (CoolDown > 0)
             CoolDown -= Time.deltaTime;
         if (CoolDown < 0)

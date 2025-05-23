@@ -98,7 +98,7 @@ GameObject:
   m_Layer: 9
   m_Name: BolaDeFuego
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -131,8 +131,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Creador: {fileID: 0}
-  EfectoEspecial: {fileID: 0}
+  EfectoEspecial: {fileID: 8769622906519228800, guid: f2485fc1ebfbf064181c395a4611e93d, type: 3}
+  AutoDestruir: 1
   danio: 10
+  PuntoDeColision: {x: 0, y: 0, z: 0}
 --- !u!65 &7342949865089916581
 BoxCollider:
   m_ObjectHideFlags: 0

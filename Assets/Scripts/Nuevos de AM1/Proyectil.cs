@@ -21,28 +21,66 @@ public class Proyectil : MonoBehaviour
 
 
 
-    private void OnCollisionEnter(Collision c) => ColisionoCon(c.gameObject, "CollisionEnter");
-    private void OnCollisionStay(Collision c) => ColisionoCon(c.gameObject, "CollisionStay");
-    private void OnCollisionExit(Collision c) => ColisionoCon(c.gameObject, "CollisionExit");
+    private void OnCollisionEnter(Collision c)
+    {
+        if (c.contactCount > 0)
+            PuntoDeColision = c.GetContact(0).point;
+        ColisionoCon(c.gameObject, "CollisionEnter");
+    }
+    private void OnCollisionStay(Collision c)
+    {
+        if (c.contactCount > 0)
+            PuntoDeColision = c.GetContact(0).point;
+        ColisionoCon(c.gameObject, "CollisionStay");
+    }
+    private void OnCollisionExit(Collision c)
+    {
+        if (c.contactCount > 0)
+            PuntoDeColision = c.GetContact(0).point;
+        ColisionoCon(c.gameObject, "CollisionExit");
+    }
 
-    private void OnTriggerEnter(Collider other) => ColisionoCon(other.gameObject, "TriggerEnter");
-    private void OnTriggerStay(Collider other) => ColisionoCon(other.gameObject, "TriggerStay");
-    private void OnTriggerExit(Collider other) => ColisionoCon(other.gameObject, "TriggerExit");
+    private void OnTriggerEnter(Collider other)
+    {
+        PuntoDeColision = other.ClosestPoint(transform.position);
+        ColisionoCon(other.gameObject, "TriggerEnter");
+    }
+    private void OnTriggerStay(Collider other)
+    {
+        PuntoDeColision = other.ClosestPoint(transform.position);
+        ColisionoCon(other.gameObject, "TriggerStay");
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        PuntoDeColision = other.ClosestPoint(transform.position);
+        ColisionoCon(other.gameObject, "TriggerExit");
+    }
 
 
 
 
     public int danio = 10;
-
+    public Vector3 PuntoDeColision;
     private void ColisionoCon(GameObject collision, string TipoDeColision)
     {
-        //Debug.Log(collision.ToString() + TipoDeColision);
-        if (collision.tag == "Monedas")
+        if (collision == Creador) return;
+        if(collision.tag == "Ambiente")
         {
+            //Debug.Log(collision.ToString() + TipoDeColision);
+            GameObject efecto = Instantiate(EfectoEspecial, PuntoDeColision, Quaternion.identity);
+            Destroy(efecto, 0.4f);
             Destroy(gameObject);
             return;
         }
-        if (collision == Creador) return;
+
+        if (collision.tag == "Monedas")
+        {
+            //Debug.Log(collision.ToString() + TipoDeColision);
+            GameObject efecto = Instantiate(EfectoEspecial, PuntoDeColision, Quaternion.identity);
+            Destroy(efecto, 0.3f);
+            Destroy(gameObject);
+            return;
+        }
         //Debug.Log("___" + collision.ToString() + " _ " + TipoDeColision);
         // 1. Verifica si es enemigo
         A1_Entidad enemigo = collision.gameObject.GetComponent<A1_Entidad>();

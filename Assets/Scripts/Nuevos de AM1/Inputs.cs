@@ -29,7 +29,7 @@ public class Inputs : MonoBehaviour
     {
 
         // 1. Detecta clic izquierdo
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1))
         {
             C_AccionesJugador.IrAlDestino(GameManager.PosicionDelMouseEnElEspacio);
         }
