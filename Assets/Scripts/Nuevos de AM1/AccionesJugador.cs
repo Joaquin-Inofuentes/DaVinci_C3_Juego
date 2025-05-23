@@ -235,7 +235,7 @@ public class AccionesJugador : A1_Entidad
     // Update is called once per frame
     void Update()
     {
-
+        
         CargarBarraDeCoolDown();
 
         if (CoolDown > 0)
@@ -269,7 +269,42 @@ public class AccionesJugador : A1_Entidad
             }
             //fin el if nuevo
         }
+        RotarFlechaHaciaElCursor();
     }
+
+
+    public GameObject Flecha;
+    public void RotarFlechaHaciaElCursor()
+    {
+        if (Flecha == null) return;
+
+        // 1. Obtener la posición del mouse en el mundo
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        Plane plano = new Plane(Vector3.up, Flecha.transform.position);
+        float distancia;
+        Vector3 puntoMundo = Flecha.transform.position;
+        if (plano.Raycast(ray, out distancia))
+        {
+            puntoMundo = ray.GetPoint(distancia);
+        }
+
+        // 2. Calcular la dirección desde la flecha al punto del mouse (solo en X y Z)
+        Vector3 direccion = puntoMundo - Flecha.transform.position;
+        direccion.y = 0; // Solo rotar en el eje Y
+
+        if (direccion.sqrMagnitude > 0.001f)
+        {
+            // 3. Calcular la rotación solo en el eje Y
+            Quaternion rotacion = Quaternion.LookRotation(direccion, Vector3.up);
+            // 4. Ajustar la rotación en X a 90 grados y sumar 90 en Z
+            Vector3 euler = rotacion.eulerAngles;
+            euler.x = 90;
+            euler.z -= 90;
+            Flecha.transform.rotation = Quaternion.Euler(euler);
+        }
+    }
+
+
 
     public override void Colisiono(GameObject col, string TipoDeColision)
     {

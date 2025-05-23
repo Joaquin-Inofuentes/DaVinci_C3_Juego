@@ -42,30 +42,36 @@ public class Inputs : MonoBehaviour
     // Método para realizar ataques según las teclas presionadas
     public void Ataque()
     {
-        if (Input.GetKeyDown(TeclaAtaque1))
+        // Permitir solo un ataque por frame, ignorando entradas simultáneas
+        if (Input.GetKeyDown(TeclaAtaque1) &&
+            !Input.GetKey(TeclaAtaque2) &&
+            !Input.GetKey(TeclaAtaque3) &&
+            !Input.GetKey(TeclaCambioModo))
         {
             C_AccionesJugador.Atacar(GameManager.PosicionDelMouseEnElEspacio, "BolaDeFuego");
-            // Lógica para Ataque 1
             Debug.Log("Ataque 1 ejecutado");
         }
-
-        if (Input.GetKeyDown(TeclaAtaque2))
+        else if (Input.GetKeyDown(TeclaAtaque2) &&
+                 !Input.GetKey(TeclaAtaque1) &&
+                 !Input.GetKey(TeclaAtaque3) &&
+                 !Input.GetKey(TeclaCambioModo))
         {
             C_AccionesJugador.Atacar(GameManager.PosicionDelMouseEnElEspacio, "BolaDeHielo");
-            // Lógica para Ataque 2
             Debug.Log("Ataque 2 ejecutado");
         }
-
-        if (Input.GetKeyDown(TeclaAtaque3))
+        else if (Input.GetKeyDown(TeclaAtaque3) &&
+                 !Input.GetKey(TeclaAtaque1) &&
+                 !Input.GetKey(TeclaAtaque2) &&
+                 !Input.GetKey(TeclaCambioModo))
         {
             C_AccionesJugador.Atacar(GameManager.PosicionDelMouseEnElEspacio, "Rayo");
-            // Lógica para Ataque 3
             Debug.Log("Ataque 3 ejecutado");
         }
-
-        if (Input.GetKeyDown(TeclaCambioModo))
+        else if (Input.GetKeyDown(TeclaCambioModo) &&
+                 !Input.GetKey(TeclaAtaque1) &&
+                 !Input.GetKey(TeclaAtaque2) &&
+                 !Input.GetKey(TeclaAtaque3))
         {
-            // Lógica para cambiar de modo (por ejemplo, activar modo mágico)
             Debug.Log("Modo cambiado");
         }
     }
