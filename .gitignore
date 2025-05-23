@@ -8,7 +8,6 @@
 !Assets/
 !ProjectSettings/
 !Assets/**/*
-*.meta
 
 /Assets/TextMesh Pro
 Packages/packages-lock.json
