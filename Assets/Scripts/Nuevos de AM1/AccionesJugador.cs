@@ -1,4 +1,4 @@
-using System.Collections;
+锘縰sing System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -12,7 +12,7 @@ public class AccionesJugador : A1_Entidad
     public GameObject Rayo;
     public GameObject ataqueRapido;
     public GameObject Flechazo;
-    
+    public GameObject hitboxCuboPrefab;
     public float fuerzaDisparo = 500f;
     public Transform Origen;
     private bool estaMuerto= false;
@@ -35,19 +35,19 @@ public class AccionesJugador : A1_Entidad
     // Asume que tienes una referencia al RawImage de la barra de cooldown
     public UnityEngine.UI.RawImage barraCoolDown;
 
-    // Llama a este m閠odo en Update y cuando cambie el CoolDown
+    // Llama a este m茅todo en Update y cuando cambie el CoolDown
     private void ActualizarBarraCoolDown()
     {
         if (barraCoolDown == null || maxCoolDown == 0f) return;
         float porcentaje = 1f - Mathf.Clamp01(_coolDown / maxCoolDown);
         var rt = barraCoolDown.rectTransform;
         float anchoBase = barraCoolDown.texture != null ? barraCoolDown.texture.width : rt.rect.width;
-        // Reemplaza la l韓ea de c醠culo de anchoBase y el ajuste de la barra por lo siguiente:
+        // Reemplaza la l铆nea de c谩lculo de anchoBase y el ajuste de la barra por lo siguiente:
         float anchoMaximo = 200f;
         rt.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, anchoMaximo * porcentaje);
     }
 
-    // En tu m閠odo Update, agrega:
+    // En tu m茅todo Update, agrega:
     void CargarBarraDeCoolDown()
     {
         if (CoolDown > 0)
@@ -70,62 +70,88 @@ public class AccionesJugador : A1_Entidad
         if (estaMuerto) return;
         // Joaco_ Indica q animacion se esta ejecutando
         if (CoolDown != 0) return;
-
-        GameObject ProyectilUsado = BolaDeFuego;
-       //if nuevo agregado por damian
+        GameObject ProyectilUsado = null;
+       
         if(Nombre == "BolaDeFuego")
         {
             anim.SetTrigger(modoMelee ? "melee1" : "magic1");
             if (!modoMelee)
             {
-                ProyectilUsado = BolaDeFuego; 
+                ProyectilUsado = BolaDeFuego;
             }
-            
+            else
+            {
+                Vector3 posicionHitbox = Origen.position + transform.forward * 2f;
+                Quaternion rotacionHitbox = transform.rotation;
+                GameObject hitbox = Instantiate(hitboxCuboPrefab, posicionHitbox, rotacionHitbox);
+                Destroy(hitbox, 1f);
+            }
         }
-        //if nuevo agregado por damian
-        if( Nombre == "BolaDeHielo") 
+       if (Nombre == "BolaDeHielo")
         {
+            
             anim.SetTrigger(modoMelee ? "melee2" : "magic2");
             if (!modoMelee)
             {
                 ProyectilUsado = BolaDeHielo;
             }
+            else
+            {
+                Vector3 posicionHitbox = Origen.position + transform.forward * 2f; 
+                Quaternion rotacionHitbox = transform.rotation;
+                GameObject hitbox = Instantiate(hitboxCuboPrefab, posicionHitbox, rotacionHitbox); 
+                Destroy(hitbox, 1f); 
+            }
             anim.SetFloat("velocidad", 0);
             agent.isStopped = true;
         }
-        if(Nombre == "Rayo") 
+       if (Nombre == "Rayo")
         {
             anim.SetTrigger(modoMelee ? "melee3" : "magic3"); //nuevo
             if (!modoMelee)
             {
                 ProyectilUsado = Rayo;
             }
+            else
+            {
+
+                Vector3 posicionHitbox = Origen.position + transform.forward * 2f;
+                Quaternion rotacionHitbox = transform.rotation;
+                GameObject hitbox = Instantiate(hitboxCuboPrefab, posicionHitbox, rotacionHitbox);
+                Destroy(hitbox, 1f);
+            }
             anim.SetFloat("velocidad", 0);
             agent.isStopped = true;
         }
         transform.LookAt(Destino);
-        Vector3 direccion = 
-            (Destino - Origen.transform.position)
-            .normalized;
+        Vector3 direccion =(Destino - Origen.transform.position).normalized;
         Debug.Log(Nombre + " " + Destino, gameObject);
         GameObject Ataque = Instantiate(
             ProyectilUsado, 
             Origen.transform.position, 
             Quaternion.LookRotation(direccion));
 
-        if (Ataque.GetComponent<Proyectil>() != null)
+            if (Ataque.GetComponent<Proyectil>() != null)
+            {
+                Ataque.GetComponent<Proyectil>().Creador = gameObject;
+                Ataque.GetComponent<Proyectil>().AutoDestruir = true;
+            }
+
+            Rigidbody rb = Ataque.GetComponent<Rigidbody>();
+            if (rb != null)
+            {
+                rb.AddForce(direccion * fuerzaDisparo);
+            }
+       
+     /*   else
         {
-            Ataque.GetComponent<Proyectil>().Creador = gameObject;
-            Ataque.GetComponent<Proyectil>().AutoDestruir = true;
+            Vector3 posicionHitbox = Origen.position + transform.forward * 1.5f; // 馃敶 NUEVO
+            Quaternion rotacionHitbox = transform.rotation; // 馃敶 NUEVO
+
+            GameObject hitbox = Instantiate(hitboxCuboPrefab, posicionHitbox, rotacionHitbox); // 馃敶 NUEVO
+            Destroy(hitbox, 0.5f); // 馃敶 NUEVO
         }
-
-        Rigidbody rb = Ataque.GetComponent<Rigidbody>();
-        if (rb != null)
-        {
-            rb.AddForce(direccion * fuerzaDisparo);
-        }
-
-
+        */
         Invoke("RegistrarCoolDown", 0.1f);
     }
 
@@ -206,7 +232,7 @@ public class AccionesJugador : A1_Entidad
     public override void RecibirDanio(int cantidad)
     {
         Vida -= cantidad;
-        Debug.Log(gameObject.name + " Recibio da駉 de " + cantidad + " le queda " + Vida, gameObject);
+        Debug.Log(gameObject.name + " Recibio da帽o de " + cantidad + " le queda " + Vida, gameObject);
         Feedbacks.FeedbackRadialVisual(Color_RecibeDano, 1);
         if (Vida <= 0) 
         {
@@ -278,7 +304,7 @@ public class AccionesJugador : A1_Entidad
     {
         if (Flecha == null) return;
 
-        // 1. Obtener la posici髇 del mouse en el mundo
+        // 1. Obtener la posici贸n del mouse en el mundo
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         Plane plano = new Plane(Vector3.up, Flecha.transform.position);
         float distancia;
@@ -288,15 +314,15 @@ public class AccionesJugador : A1_Entidad
             puntoMundo = ray.GetPoint(distancia);
         }
 
-        // 2. Calcular la direcci髇 desde la flecha al punto del mouse (solo en X y Z)
+        // 2. Calcular la direcci贸n desde la flecha al punto del mouse (solo en X y Z)
         Vector3 direccion = puntoMundo - Flecha.transform.position;
         direccion.y = 0; // Solo rotar en el eje Y
 
         if (direccion.sqrMagnitude > 0.001f)
         {
-            // 3. Calcular la rotaci髇 solo en el eje Y
+            // 3. Calcular la rotaci贸n solo en el eje Y
             Quaternion rotacion = Quaternion.LookRotation(direccion, Vector3.up);
-            // 4. Ajustar la rotaci髇 en X a 90 grados y sumar 90 en Z
+            // 4. Ajustar la rotaci贸n en X a 90 grados y sumar 90 en Z
             Vector3 euler = rotacion.eulerAngles;
             euler.x = 90;
             euler.z -= 90;
