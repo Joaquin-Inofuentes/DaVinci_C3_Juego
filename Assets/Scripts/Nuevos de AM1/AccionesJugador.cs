@@ -21,11 +21,11 @@ public class AccionesJugador : A1_Entidad
 
     public override void Atacar(Vector3 Destino, string Nombre)
     {
+        Debug.Log("Atacar " + gameObject.name + " " + Destino, gameObject);
         if (estaMuerto) return;
-        // Joaco_ Indica q animacion se esta ejecutando
         if (CoolDown != 0) return;
 
-        GameObject ProyectilUsado = null;
+        GameObject ProyectilUsado = BolaDeFuego;
        //if nuevo agregado por damian
         if(Nombre == "BolaDeFuego")
         {
@@ -55,10 +55,11 @@ public class AccionesJugador : A1_Entidad
             agent.isStopped = true;
         }
         transform.LookAt(Destino);
+        Debug.Log(Equals(ProyectilUsado, BolaDeFuego) + " " + Equals(ProyectilUsado, BolaDeHielo) + " " + Equals(ProyectilUsado, Rayo));
         Vector3 direccion = 
             (Destino - Origen.transform.position)
             .normalized;
-
+        Debug.Log(ProyectilUsado.name + " " + Origen.transform.position + " " + Destino + " " + direccion, gameObject);
         GameObject Ataque = Instantiate(
             ProyectilUsado, 
             Origen.transform.position, 
