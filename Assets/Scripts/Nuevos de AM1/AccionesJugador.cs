@@ -16,7 +16,7 @@ public class AccionesJugador : A1_Entidad
     public float fuerzaDisparo = 500f;
     public Transform Origen;
     private bool estaMuerto= false;
-    private bool modoMelee =false;
+    private bool modoMelee = false;
     // Agrega este campo y propiedad en tu clase AccionesJugador
     public float maxCoolDown = 0f;
     public float CoolDown
@@ -61,22 +61,7 @@ public class AccionesJugador : A1_Entidad
         {
             Detenerse();
         }
-        if (Input.GetKeyDown(KeyCode.Alpha4))
-        {
-            modoMelee = !modoMelee;
-            if (modoMelee)
-            {
-                Debug.Log("Modo cambiado a MELEE");
-                anim.SetLayerWeight(0, 0f);
-                anim.SetLayerWeight(1, 1f);
-            }
-            else
-            {
-                Debug.Log("Modo cambiado a rango");
-                anim.SetLayerWeight(0, 1f);
-                anim.SetLayerWeight(1, 0f);
-            }
-        }
+      
         ActualizarBarraCoolDown();
     }
 
@@ -238,10 +223,10 @@ public class AccionesJugador : A1_Entidad
 
         CargarBarraDeCoolDown();
 
-        if (CoolDown > 0)
-            CoolDown -= Time.deltaTime;
-        if (CoolDown < 0)
-            CoolDown = 0;
+     //  if (CoolDown > 0)
+         //   CoolDown -= Time.deltaTime;
+       // if (CoolDown < 0)
+           // CoolDown = 0;
 
         float velocidadActual = agent.velocity.magnitude;
         anim.SetFloat("velocidad", velocidadActual);
@@ -260,12 +245,14 @@ public class AccionesJugador : A1_Entidad
                 Debug.Log("Modo cambiado a MELEE");
                 anim.SetLayerWeight(0, 0f); // capa 0 = Rango
                 anim.SetLayerWeight(1, 1f); // capa 1 = Melee
+                
             }
             else
             {
                 Debug.Log("Modo cambiado a rango");
                 anim.SetLayerWeight(0, 1f); // capa 0 = Rango
                 anim.SetLayerWeight(1, 0f); // capa 1 = Melee
+
             }
             //fin el if nuevo
         }
