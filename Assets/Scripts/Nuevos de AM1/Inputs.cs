@@ -17,12 +17,16 @@ public class Inputs : MonoBehaviour
 
     public AccionesJugador C_AccionesJugador;
 
+    public GameObject Menu;
+
     // Update se llama una vez por frame
     void Update()
     {
         Movimiento();
         Ataque();
         Pausa();
+        //Debug.Log(Time.timeScale);
+        Menu.SetActive(Time.timeScale != 1); // Alternar entre pausa y reanudación
     }
     // Método para mover al jugador basado en el movimiento del mouse
     public void Movimiento()
@@ -73,9 +77,13 @@ public class Inputs : MonoBehaviour
         {
             // Lógica para pausar el juego
             Time.timeScale = Time.timeScale == 1 ? 0 : 1; // Alternar entre pausa y reanudación
-            Debug.Log("Juego pausado/despausado");
+            //Debug.Log("Juego pausado/despausado");
         }
     }
+
+
+
+
 
 
     // Start is called before the first frame update
@@ -83,5 +91,21 @@ public class Inputs : MonoBehaviour
     {
 
     }
+    // Método para reanudar el juego (quitar pausa)
+    public void ReanudarJuego()
+    {
+        Time.timeScale = 1;
+        //Debug.Log("Juego reanudado");
+    }
 
+    // Método para salir del juego
+    public void SalirDelJuego()
+    {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+        Application.Quit();
+#endif
+        Debug.Log("Saliendo del juego");
+    }
 }

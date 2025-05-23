@@ -17675,6 +17675,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa0c6d915d726cc4897bb450ba20aae2, type: 3}
+--- !u!1 &1791515828 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5138394536280555726, guid: 493fe3dc00b0ca949bf13904567079cc, type: 3}
+  m_PrefabInstance: {fileID: 6528671191732673792}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1792143516
 GameObject:
   m_ObjectHideFlags: 0
@@ -26747,10 +26752,18 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 609712280}
-    - target: {fileID: 5363674238076858894, guid: 493fe3dc00b0ca949bf13904567079cc, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 200
+    - target: {fileID: 5138394536280555726, guid: 493fe3dc00b0ca949bf13904567079cc, type: 3}
+      propertyPath: m_Name
+      value: Menu de opciones
       objectReference: {fileID: 0}
+    - target: {fileID: 5138394536280555726, guid: 493fe3dc00b0ca949bf13904567079cc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8238281289162882338, guid: 493fe3dc00b0ca949bf13904567079cc, type: 3}
+      propertyPath: Menu
+      value: 
+      objectReference: {fileID: 1791515828}
     - target: {fileID: 8238281289162882338, guid: 493fe3dc00b0ca949bf13904567079cc, type: 3}
       propertyPath: C_GameManager
       value: 
